@@ -1,0 +1,2156 @@
+<default_page="TabbedUI_Projects.a5w">
+<local<target_folder="projects">
+>
+<vars="">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="=a5.get_path()">
+<type="C">
+>
+>
+%str%>
+<db<files="">
+>
+<misc<RestrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.T.>
+<DefaultValuePublishSupportFiles=.T.>
+<DefaultValuePublishSelectedOnly=.F.>
+<DefaultflagCheckBeforePublish=.T.>
+<SecurityGuid="05ba6b1c4c4f45fbb304b364bdefa66c">
+<DefaultValueCreateAEX=.T.>
+<DefaultValuePublishDatabaseLibrary=.T.>
+<PublishAsBinary=.F.>
+<DefaultValueCheckSecurityAllowed=.F.>
+<PublishMetaData=.T.>
+>
+<rtClk<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<PublishSelectedOnly=.F.>
+<UseInBuilders=.F.>
+<CreateAEX=.F.>
+<CheckSecurityAllowed=.F.>
+>
+<profiles<[1]<name="IIS_web_config">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="undefined">
+<type="C">
+>
+>
+%str%>
+<local<target_folder="">
+>
+<vars="">
+<publishing_type="Publish to IIS">
+<default_page="TabbedUI_Projects.a5w">
+<lan<webroot="">
+<target_folder="">
+<hostname="">
+<server_port=80>
+>
+<ftp<address="">
+<lPassive=.F.>
+<username="">
+<password="">
+<path="">
+<port=21>
+<FTPProgram="InternalOptimized">
+<FTPCurl=.F.>
+<FTPCurlActiveMode=.F.>
+>
+<db<publish=.F.>
+<path="">
+<files="">
+>
+<misc<DefaultValuePublishDatabaseLibrary=.T.>
+<restrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.F.>
+<DefaultValuePublishSupportFiles=.T.>
+<SecurityGuid="127c0d07eab5432c9a1c8d5b4058855c">
+<DefaultValuePublishSelectedOnly=.F.>
+<DefaultflagCheckBeforePublish=.T.>
+<PublishAsBinary=.F.>
+<DefaultValueCheckSecurityAllowed=.T.>
+<DefaultValueCreateAEX=.T.>
+<DefaultValueCreateAEX as l=.F.>
+>
+<PublishLock="">
+<PublishLockPassword="">
+<rtClk<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<UseInBuilders=.F.>
+<CheckSecurityAllowed=.T.>
+<PublishSelectedOnly=.F.>
+<CreateAEX=.F.>
+<CreateAEX as  l=.F.>
+>
+<iis<type="Direct">
+<app_name="Projects_A">
+<site_name="Default Web Site">
+<managementServiceUrl="localhost">
+<packagePath="">
+<xbasicLoggingEnabled=.T.>
+<logPath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Default Web Site\Projects">
+<gridCacheEnabled=.T.>
+<gridCachePath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Grid Cache">
+<gridCacheSizeMB=55>
+<useIntegratedAuthentication=.T.>
+<username="">
+<password="">
+<ignoreCertificateErrors=.F.>
+<appServerLocationType="Default">
+<appServerBuildNumber="">
+<appServerPath="C:\Program Files (x86)\A5V12 Application Server for IIS">
+<appPoolType="Private">
+<appPoolName="">
+<customPhysicalPath=.F.>
+<physicalPath="%SystemDrive%\inetpub\wwwroot">
+<useHttps=.F.>
+<serverPort=80>
+<appPoolProcesses=5>
+<providers<publishMode="Preserve">
+<membership<type="SQLServer">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="26 00 2D F5 27 9D 26 B5 FA A6 67 48 3A FD 25 3F ">
+<version="2.0.0.0">
+>
+<role<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="26 00 2D F5 27 9D 26 B5 FA A6 67 48 3A FD 25 3F ">
+<version="">
+>
+<sessionState<type="LocalStateServer">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+<version="">
+>
+<profile<type="None">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+<version="">
+>
+>
+<remoteErrorDetailShow=.F.>
+>
+<securityStoreType="WebConfig">
+<AlphaDAOConnectionStrings=<<%str%
+<arrVars<[1]<name="A5WebSecurity">
+<value="(default value)">
+>
+<[2]<name="AADemo-Northwind">
+<value="(default value)">
+>
+<[3]<name="Access">
+<value="(default value)">
+>
+<[4]<name="Access_gantt">
+<value="(default value)">
+>
+<[5]<name="Access_Northwind_local">
+<value="(default value)">
+>
+<[6]<name="CHSTablesForNewChart">
+<value="(default value)">
+>
+<[7]<name="cking">
+<value="(default value)">
+>
+<[8]<name="conn">
+<value="(default value)">
+>
+<[9]<name="Connection1">
+<value="(default value)">
+>
+<[10]<name="Connection2">
+<value="(default value)">
+>
+<[11]<name="ContactManager">
+<value="(default value)">
+>
+<[12]<name="copy">
+<value="(default value)">
+>
+<[13]<name="CSH_Gantt">
+<value="(default value)">
+>
+<[14]<name="Dot_net_SQL_SERVER_LOCAL">
+<value="(default value)">
+>
+<[15]<name="DynamicConnection_chsdatafilepath">
+<value="(default value)">
+>
+<[16]<name="DynamicConnection_CHSTablesForNewChart">
+<value="(default value)">
+>
+<[17]<name="DynamicConnection_testconnection">
+<value="(default value)">
+>
+<[18]<name="ed_sicard">
+<value="(default value)">
+>
+<[19]<name="gantt">
+<value="(default value)">
+>
+<[20]<name="gantt_test">
+<value="(default value)">
+>
+<[21]<name="mapped_access">
+<value="(default value)">
+>
+<[22]<name="mysql">
+<value="(default value)">
+>
+<[23]<name="mysql_local">
+<value="(default value)">
+>
+<[24]<name="mysql_s_D">
+<value="(default value)">
+>
+<[25]<name="mysql_server">
+<value="(default value)">
+>
+<[26]<name="Northwind_Access">
+<value="(default value)">
+>
+<[27]<name="Northwind_local">
+<value="(default value)">
+>
+<[28]<name="oracle">
+<value="(default value)">
+>
+<[29]<name="postgreSQL">
+<value="(default value)">
+>
+<[30]<name="Projects">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=">
+>
+<[31]<name="R1Mdb">
+<value="(default value)">
+>
+<[32]<name="RandallBldrs">
+<value="(default value)">
+>
+<[33]<name="rolodex">
+<value="(default value)">
+>
+<[34]<name="sched2">
+<value="(default value)">
+>
+<[35]<name="Scheduler_access">
+<value="(default value)">
+>
+<[36]<name="sheduler">
+<value="(default value)">
+>
+<[37]<name="sql_server_2008_home">
+<value="(default value)">
+>
+<[38]<name="sql_server_local_ado">
+<value="(default value)">
+>
+<[39]<name="sql_sever_Local_dot_net">
+<value="(default value)">
+>
+<[40]<name="sqlserver">
+<value="(default value)">
+>
+<[41]<name="sqlserver_2012_home">
+<value="(default value)">
+>
+<[42]<name="SQLSERVEREXPRESS_Projects">
+<value="(default value)">
+>
+<[43]<name="WebCHSMaster">
+<value="(default value)">
+>
+>
+%str%>
+<alphaCloud<settings="">
+>
+<NamedResourceProviders="">
+<publishADConfiguration=.F.>
+<PublishLock as c="">
+<PublishLockPassword as c="">
+<securityStore<connectionString="">
+<connectionStringName="">
+<applicationName="/">
+<alphaDAOconnectionString="">
+<providerName="">
+<dataSource="">
+<membershipProviderClass="">
+>
+<ADOConnectionStrings="">
+<http<url="">
+<showProgress=.T.>
+<showTesting=.F.>
+<username="">
+<password="">
+<targetFolder="">
+>
+<activeDirectory<name="pennunited.com">
+<serverName="penndc01.pennunited.com">
+<userId="">
+<password="">
+<connectionString="LDAP://penndc01.pennunited.com/CN=Users,DC=pennunited,DC=com">
+<useImpersonation=.F.>
+<mode=1>
+>
+>
+<[2]<name="IIS_SQL_SERVER">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="=a5.get_path()">
+<type="C">
+>
+>
+%str%>
+<local<target_folder="">
+>
+<vars="">
+<publishing_type="Publish to IIS">
+<default_page="index.a5w">
+<lan<webroot="">
+<target_folder="">
+<hostname="">
+<server_port=80>
+>
+<ftp<address="">
+<lPassive=.F.>
+<username="">
+<password="">
+<path="">
+<port=21>
+<FTPProgram="InternalOptimized">
+<FTPCurl=.F.>
+<FTPCurlActiveMode=.F.>
+>
+<db<publish=.F.>
+<path="app_data">
+<files=<<%str%
+<all=.F.>
+<list="">
+<otherfiles="">
+%str%>
+>
+<misc<DefaultValuePublishDatabaseLibrary=.T.>
+<restrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.T.>
+<DefaultValuePublishSupportFiles=.T.>
+<SecurityGuid="127c0d07eab5432c9a1c8d5b4058855c">
+<DefaultValuePublishSelectedOnly=.F.>
+<DefaultflagCheckBeforePublish=.T.>
+<PublishAsBinary=.F.>
+<DefaultValueCheckSecurityAllowed=.T.>
+<DefaultValueCreateAEX=.T.>
+<DefaultValueCreateAEX as l=.F.>
+<PublishMetaData=.T.>
+<EnableServiceDiscoveryEndpoint=.F.>
+>
+<PublishLock="">
+<PublishLockPassword="">
+<rtClk<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<UseInBuilders=.F.>
+<CheckSecurityAllowed=.T.>
+<PublishSelectedOnly=.F.>
+<CreateAEX=.F.>
+<CreateAEX as  l=.F.>
+>
+<iis<type="Direct">
+<app_name="Projects">
+<site_name="Default Web Site">
+<managementServiceUrl="localhost">
+<packagePath="">
+<xbasicLoggingEnabled=.T.>
+<logPath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Default Web Site\Projects">
+<gridCacheEnabled=.T.>
+<gridCachePath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Grid Cache">
+<gridCacheSizeMB=55>
+<useIntegratedAuthentication=.T.>
+<username="">
+<password="">
+<ignoreCertificateErrors=.F.>
+<appServerLocationType="Default">
+<appServerBuildNumber="">
+<appServerPath="C:\Program Files (x86)\A5V12 Application Server for IIS">
+<appPoolType="Private">
+<appPoolName="">
+<customPhysicalPath=.F.>
+<physicalPath="%SystemDrive%\inetpub\wwwroot">
+<useHttps=.F.>
+<serverPort=80>
+<appPoolProcesses=5>
+<providers<publishMode="Merge">
+<membership<type="SqlServer">
+<connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=ASPNET;User ID=projects;Password=A5webserver">
+<alphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ForceStringsToUTF8=Y,A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='ASPNET'}">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=ASPNET;User ID=projects;Password=A5webserver">
+<publishAlphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='ASPNET'}">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="46 61 32 D3 C5 02 88 23 3C D1 5E DB 76 9B 6B E1 ">
+<publishProviderName="System.Data.SqlClient">
+<version="2.0.0.0">
+<RequireClientCertificate=.F.>
+<hashAlgorithm="HMACSHA512">
+<providerClassParameters<[1]>
+>
+>
+<role<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="46 61 32 D3 C5 02 88 23 3C D1 5E DB 76 9B 6B E1 ">
+<publishProviderName="System.Data.SqlClient">
+<version="">
+<providerClassParameters<[1]>
+>
+>
+<sessionState<type="SqlServer">
+<connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AspState;User ID=projects;Password=A5webserver">
+<alphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ForceStringsToUTF8=Y,A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='AspState'}">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="AC 5A C0 C6 79 A0 05 16 3A FF 55 CE C3 7A 7D E4 ">
+<publishProviderName="System.Data.SqlClient">
+<version="2.0.0.0">
+<storageConnectionString="">
+<jitLocking=.F.>
+<storageType="In Session Provider">
+<storageScope="Only this application">
+<providerClassParameters<[1]>
+>
+>
+<profile<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="46 61 32 D3 C5 02 88 23 3C D1 5E DB 76 9B 6B E1 ">
+<version="">
+<providerClassParameters<[1]>
+>
+>
+>
+<remoteErrorDetailShow=.T.>
+<enablePreload=.F.>
+<publishDiagnosticPath="C:\bugs\iis_pulblish_error.log">
+<deleteExistingFiles=.F.>
+<minidumpCleanupEnabled=.T.>
+<minidumpMaxFiles=5>
+<minidumpMaxStorageGB=10>
+<minidumpMaxAgeHours=24>
+>
+<securityStoreType="IISProviders">
+<AlphaDAOConnectionStrings=<<%str%
+<arrVars<[1]<name="A5WebSecurity">
+<value="(default value)">
+>
+<[2]<name="AADemo-Northwind">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUVjHe+KcTHcVeSKOFQR02r1TaEEC5S7GXuib3bOrlmTYk4hxl3WQGbLVmaT6Sgyl09ZXfq9423DQl1U3UmCL9IjUwsBnlJ7hXp897cwBk2BPAnmteeJtlV0kJXFLWJUd2FmCfGXPXOdLiVaoQ/htuIa">
+>
+<[3]<name="Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuV1Kx41CXXKlIWjIzvDhg2UAkx337ax4zHEmvM+cC5Y5Ug9HvE13M4o=">
+>
+<[4]<name="Access_gantt">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/19jL8zzzWNDAuWe8JGiuGy4egsMqiJcg29KVxEuCQqTuxgjbliTV+OmshenirxEfM=">
+>
+<[5]<name="Access_Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AbicLiYUYmO+9KABPGth15Gqh9XkZrwlfOXcuBkWIR74j1PB7poInZL">
+>
+<[6]<name="CHSTablesForNewChart">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==">
+>
+<[7]<name="cking">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==">
+>
+<[8]<name="conn">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2UlwQAuUTmYKQtzgt8TtaoaFIpXx0kisoOiMlux9uP8Y3hqKWcu+HI5iNzIrZbpH3P4Xyac9jmVTFNxFAjGvA2GQxG8QuLV+xOPx+xI/thD6MVBqaQfNh9ZFgoqyb8A1O//SMsnZZ6ZluOXROO211ww+d1hy05o6ewE62tsWK6YQ==">
+>
+<[9]<name="Connection1">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==">
+>
+<[10]<name="Connection2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3QjLyAf+Ldgi9xpi4+/ex+hxNtjUAGz3tLXR9PkFRZFBbHBjWvSv2Y">
+>
+<[11]<name="ContactManager">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJpK0oC5s51ClNuKbqFjVCfui78UgeniB7g7MWDjhk/cWwkLLSNpLgo9t5aI17B7/3">
+>
+<[12]<name="copy">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17G//Cct8YLCgEd9oYwj5URXZwwkvpp56JL">
+>
+<[13]<name="CSH_Gantt">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F86c+aqDC9uJu6M/jcOeEhH5/LcWJS+41DAKk/7XBMn8eMp3XwX+qvt/wcHcPM4IiDlsZRg/SCvA==">
+>
+<[14]<name="Dot_net_SQL_SERVER_LOCAL">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFgoHfOK+0OUrx3LBnq5LgTEr5H2WSVi4ETTTn6yyLmpaBC2lexH1NIqnYXbSRarPMv9qv8geGc54qEHq3xZubsTP5lfOACQLuA=">
+>
+<[15]<name="DynamicConnection_chsdatafilepath">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3H+UXapXlWGyAoZPrknTsigMriwHEIxAQZEIGA8Xv5gVmv0aMfPvqCvLoq8d8rsOSA=">
+>
+<[16]<name="DynamicConnection_CHSTablesForNewChart">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==">
+>
+<[17]<name="DynamicConnection_testconnection">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==">
+>
+<[18]<name="ed_sicard">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagy4wpKIqid+h/aluTXuZi6OR0cx8E9yeWsCdo7nmAYeV+3n0Jr5z5tinYS9ESJHeY5FaYsBL5Y6d2jQmlmtK8K+4pAsPCBsbFIUf5ogQ5OwezATKAIxkrXg==">
+>
+<[19]<name="gantt">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRMSROlrWA37D0Lql5Uh9CYk=">
+>
+<[20]<name="gantt_test">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRPEfw3YCPWpOIpJ5aAMO/iTUnuFgGG3HDg==">
+>
+<[21]<name="mapped_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/Yf512NoMflFrMNvaq55DLOKdALfc5Hn2mhOvd1O/jBa9TYDUyR8K1w==">
+>
+<[22]<name="mysql">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKJeiojvIdIRq4gA9psFVkF8KUocMvdCnEhwEdVtWnPxuAYfsxTmBPnU1b0BMna1JgeDgxmsA82hM=">
+>
+<[23]<name="mysql_local">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[24]<name="mysql_s_D">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYpxTqSgsTS2APSqxaG1TyTpPlfTeg91sHFZKxKlJ+MsvcdwMO2CjZLpoOqbdvUFU7Q6G0OUksbGqh8FecKN0pDkVKxTUfC3vXI3RCQ06k88C4AuwEnYATSVMGIxOB6MAXw==">
+>
+<[25]<name="mysql_server">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[26]<name="Northwind_Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJZyWfojT7zjgPxo/tW6MB+QEQsPLR8JS0Q00CYKBfQC+Swj3GUL4veA==">
+>
+<[27]<name="Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AZJvfy/sNN6GgxKGxCeJGDJQAXwMzfQkxggZw/2XZ5D6/1G40SGoYgA">
+>
+<[28]<name="oracle">
+<value="Encrypted:dQNDbLdo5xI6zjQPoI5XJt0SSqutvqbK4oYNeD+SZvn7X3fUOuZwIjLy3XfEy/kBYu2vbd3TFXw/fTCc7Rg1oazmE4soPijVCsRcCzdzZn7BicZ8u5W/Z2wT4dN1zCwye3q4X9uWoPM+nJp+vjCY1sNc545NSZ97rGeS6xueqkZF7/gshMeFY27YGw63I0QEFUtEnB2GChau+4SHMfQAM2UMwttcfcQUoEOvBFr8q2A=">
+>
+<[29]<name="postgreSQL">
+<value="Encrypted:YVKwF22JJmDqkse7TzVnMvav9USWBxvwJbjo7pLsOiLj8HinTGOWT7gf+iQ9bM1OS+ob6PTORsCDFomk2BbDJgso7JINDV84R3bCFSb/svwnwNi+112SN0iI3QrnlPvuiVRxTGxKRG2OJeDJ6o4TWTVxuLhT2rtz">
+>
+<[30]<name="Projects">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=">
+>
+<[31]<name="R1Mdb">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXFzr33IVoEWFdlhaOBeI34XW9Q4JvIyXPwGEWknmkjRYg==">
+>
+<[32]<name="RandallBldrs">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3H+UXapXlWGyAoZPrknTsigMriwHEIxAQZEIGA8Xv5gVmv0aMfPvqCvLoq8d8rsOSA=">
+>
+<[33]<name="rolodex">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOue9qrRrffN/rtalTYkNEG/sVFpoRXEFKmqn5DncNGtriJoBOZJRT0sc=">
+>
+<[34]<name="sched2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRB0ZL3XYHY76FuiNTwpIl06b1cg/tQqeUptQoCc4bNoti5YEZXqt7aEA==">
+>
+<[35]<name="Scheduler_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/24CcFR0ulViGSRtJIHwCxwb2JNu60456gzfplzw+dwBdzIv5mEecwG0RP/ov125qgmB7l3jbexHZ0NDNGdlfpEqJpxaqQvzdx/7Ia9AqXyrhx2wY2Pc6Kk6v5G/O4kMEzY7XPsYZ0bNA7RLEuhknDs">
+>
+<[36]<name="sheduler">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRBZVtF2s5cQ2AFq1hkx52nfw4FPl6pUzbMo7h6piMrc54=">
+>
+<[37]<name="sql_server_2008_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUUuRVcU+j88CF3vmrAk3v1Ez97jqx7H0vHR7FgWhSsMpxOykXIIUF+YBWS24ubc375KbiqAqa5Fz/IWRCeBupFU5LhTItfiX0JIzvx06rWkOJ6F6ONQjsPanT6MPwuh/d8=">
+>
+<[38]<name="sql_server_local_ado">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[39]<name="sql_sever_Local_dot_net">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFigrwepo8Re/f3x9z2gXsUS1iENkLVq1Vf+mF04+O8YF3wM4Cw9AKkwkQmy20ZCwydMzJH5zgwj4qTNU8pJsMbW0h9W5NssJAusLkFkpc5lFw==">
+>
+<[40]<name="sqlserver">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[41]<name="sqlserver_2012_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[42]<name="SQLSERVEREXPRESS_Projects">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUW8NybBUh1UEmBouTMWJk8iXfvtw2VccwjzWLjoCADcwjcFlH+IUyZKVy0rTu5bw3yW1dIRfAQHMFCKI2Gf6+sob0D1Aq7Ekv6b6wmQfLYpwBS+SrJEvY9vMqNi+adfrRQRiilsj83wh3lHeLGwot3WxcRuHYBYNRjxFgkUeJg/VA==">
+>
+<[43]<name="WebCHSMaster">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==">
+>
+>
+%str%>
+<alphaCloud<settings="">
+>
+<NamedResourceProviders="">
+<publishADConfiguration=.F.>
+<PublishLock as c="">
+<PublishLockPassword as c="">
+<securityStore<connectionString="">
+<connectionStringName="">
+<applicationName="/">
+<alphaDAOconnectionString="">
+<providerName="">
+<dataSource="">
+<membershipProviderClass="">
+>
+<ADOConnectionStrings="">
+<http<url="">
+<showProgress=.T.>
+<showTesting=.F.>
+<username="">
+<password="">
+<targetFolder="">
+>
+<debugger<allow=.F.>
+>
+<activeDirectory<name="pennunited.com">
+<serverName="penndc01.pennunited.com">
+<userId="">
+<password="">
+<connectionString="LDAP://penndc01.pennunited.com/CN=Users,DC=pennunited,DC=com">
+<useImpersonation=.F.>
+<mode=1>
+>
+<websocket>
+>
+<[3]<name="IIS_SQLSERVER_LAPTOP">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="undefined">
+<type="C">
+>
+>
+%str%>
+<local<target_folder="">
+>
+<vars="">
+<publishing_type="Publish to IIS">
+<default_page="TabbedUI_Projects.a5w">
+<lan<webroot="">
+<target_folder="">
+<hostname="">
+<server_port=80>
+>
+<ftp<address="">
+<lPassive=.F.>
+<username="">
+<password="">
+<path="">
+<port=21>
+<FTPProgram="InternalOptimized">
+<FTPCurl=.F.>
+>
+<db<publish=.F.>
+<path="">
+<files="">
+>
+<misc<DefaultValuePublishDatabaseLibrary=.T.>
+<restrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.F.>
+<DefaultValuePublishSupportFiles=.T.>
+<SecurityGuid="127c0d07eab5432c9a1c8d5b4058855c">
+<DefaultValuePublishSelectedOnly=.F.>
+<DefaultflagCheckBeforePublish=.T.>
+<PublishAsBinary=.F.>
+<DefaultValueCheckSecurityAllowed=.T.>
+<DefaultValueCreateAEX=.T.>
+<DefaultValueCreateAEX as l=.F.>
+>
+<PublishLock="">
+<PublishLockPassword="">
+<rtClk<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<UseInBuilders=.F.>
+<CheckSecurityAllowed=.T.>
+<PublishSelectedOnly=.F.>
+<CreateAEX=.F.>
+<CreateAEX as  l=.F.>
+>
+<iis<type="Direct">
+<app_name="Projects">
+<site_name="Default Web Site">
+<managementServiceUrl="localhost">
+<packagePath="">
+<xbasicLoggingEnabled=.T.>
+<logPath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Default Web Site\Projects">
+<gridCacheEnabled=.T.>
+<gridCachePath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Grid Cache">
+<gridCacheSizeMB=55>
+<useIntegratedAuthentication=.T.>
+<username="">
+<password="">
+<ignoreCertificateErrors=.F.>
+<appServerLocationType="Default">
+<appServerBuildNumber="">
+<appServerPath="C:\Program Files (x86)\A5V12 Application Server for IIS">
+<appPoolType="Private">
+<appPoolName="">
+<customPhysicalPath=.F.>
+<physicalPath="%SystemDrive%\inetpub\wwwroot">
+<useHttps=.F.>
+<serverPort=80>
+<appPoolProcesses=5>
+<providers<publishMode="Merge">
+<membership<type="SqlServer">
+<connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=ASPNET;User ID=projects;Password=A5webserver">
+<alphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ForceStringsToUTF8=Y,A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='ASPNET'}">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=ASPNET_LAPTOP;User ID=projects;Password=A5webserver">
+<publishAlphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='ASPNET_LAPTOP'}">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.T.>
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+<publishProviderName="System.Data.SqlClient">
+>
+<role<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+<publishProviderName="System.Data.SqlClient">
+>
+<sessionState<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+>
+<profile<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+>
+>
+>
+<securityStoreType="IISProviders">
+<AlphaDAOConnectionStrings=<<%str%
+<arrVars<[1]<name="A5WebSecurity">
+<value="(default value)">
+>
+<[2]<name="AADemo-Northwind">
+<value="(default value)">
+>
+<[3]<name="Access">
+<value="(default value)">
+>
+<[4]<name="Access_gantt">
+<value="(default value)">
+>
+<[5]<name="Access_Northwind_local">
+<value="(default value)">
+>
+<[6]<name="CHSTablesForNewChart">
+<value="(default value)">
+>
+<[7]<name="cking">
+<value="(default value)">
+>
+<[8]<name="conn">
+<value="(default value)">
+>
+<[9]<name="Connection1">
+<value="(default value)">
+>
+<[10]<name="Connection2">
+<value="(default value)">
+>
+<[11]<name="ContactManager">
+<value="(default value)">
+>
+<[12]<name="copy">
+<value="(default value)">
+>
+<[13]<name="CSH_Gantt">
+<value="(default value)">
+>
+<[14]<name="Dot_net_SQL_SERVER_LOCAL">
+<value="(default value)">
+>
+<[15]<name="DynamicConnection_chsdatafilepath">
+<value="(default value)">
+>
+<[16]<name="DynamicConnection_CHSTablesForNewChart">
+<value="(default value)">
+>
+<[17]<name="DynamicConnection_testconnection">
+<value="(default value)">
+>
+<[18]<name="ed_sicard">
+<value="(default value)">
+>
+<[19]<name="gantt">
+<value="(default value)">
+>
+<[20]<name="gantt_test">
+<value="(default value)">
+>
+<[21]<name="mapped_access">
+<value="(default value)">
+>
+<[22]<name="mysql">
+<value="(default value)">
+>
+<[23]<name="mysql_local">
+<value="(default value)">
+>
+<[24]<name="mysql_s_D">
+<value="(default value)">
+>
+<[25]<name="mysql_server">
+<value="(default value)">
+>
+<[26]<name="Northwind_Access">
+<value="(default value)">
+>
+<[27]<name="Northwind_local">
+<value="(default value)">
+>
+<[28]<name="oracle">
+<value="(default value)">
+>
+<[29]<name="postgreSQL">
+<value="(default value)">
+>
+<[30]<name="Projects">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=">
+>
+<[31]<name="R1Mdb">
+<value="(default value)">
+>
+<[32]<name="RandallBldrs">
+<value="(default value)">
+>
+<[33]<name="rolodex">
+<value="(default value)">
+>
+<[34]<name="sched2">
+<value="(default value)">
+>
+<[35]<name="Scheduler_access">
+<value="(default value)">
+>
+<[36]<name="sheduler">
+<value="(default value)">
+>
+<[37]<name="sql_server_2008_home">
+<value="(default value)">
+>
+<[38]<name="sql_server_local_ado">
+<value="(default value)">
+>
+<[39]<name="sql_sever_Local_dot_net">
+<value="(default value)">
+>
+<[40]<name="sqlserver">
+<value="(default value)">
+>
+<[41]<name="sqlserver_2012_home">
+<value="(default value)">
+>
+<[42]<name="SQLSERVEREXPRESS_Projects">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUW8NybBUh1UEmBouTMWJk8iXfvtw2VccwjzWLjoCADcwjcFlH+IUyZKVy0rTu5bw3yW1dIRfAQHMFCKI2Gf6+sob0D1Aq7Ekv6b6wmQfLYpwBS+SrJEvY9vMqNi+adfrRQRiilsj83wh3lHeLGwot3WxcRuHYBYNRjxFgkUeJg/VA==">
+>
+<[43]<name="WebCHSMaster">
+<value="(default value)">
+>
+>
+%str%>
+<alphaCloud<settings="">
+>
+<NamedResourceProviders="">
+<publishADConfiguration=.F.>
+<PublishLock as c="">
+<PublishLockPassword as c="">
+<securityStore<connectionString="">
+<connectionStringName="">
+<applicationName="/">
+<alphaDAOconnectionString="">
+<providerName="">
+<dataSource="">
+<membershipProviderClass="">
+>
+<activeDirectory<name="pennunited.com">
+<serverName="penndc01.pennunited.com">
+<userId="">
+<password="">
+<connectionString="LDAP://penndc01.pennunited.com/CN=Users,DC=pennunited,DC=com">
+<useImpersonation=.F.>
+<mode=1>
+>
+<ADOConnectionStrings="">
+>
+<[4]<name="Projecst_sql_server_test">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="undefined">
+<type="C">
+>
+>
+%str%>
+<local<target_folder="">
+>
+<vars="">
+<publishing_type="Publish to IIS">
+<default_page="TabbedUI_Projects.a5w">
+<lan<webroot="">
+<target_folder="">
+<hostname="">
+<server_port=80>
+>
+<ftp<address="">
+<lPassive=.F.>
+<username="">
+<password="">
+<path="">
+<port=21>
+<FTPProgram="InternalOptimized">
+<FTPCurl=.F.>
+<FTPCurlActiveMode=.F.>
+>
+<db<publish=.F.>
+<path="">
+<files="">
+>
+<misc<DefaultValuePublishDatabaseLibrary=.F.>
+<restrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.F.>
+<DefaultValuePublishSupportFiles=.T.>
+<SecurityGuid="fdc2278737204e56aa8748b0b19ba74d">
+<DefaultValuePublishSelectedOnly=.F.>
+<DefaultflagCheckBeforePublish=.T.>
+<PublishAsBinary=.F.>
+<DefaultValueCheckSecurityAllowed=.F.>
+<DefaultValueCreateAEX=.T.>
+<DefaultValueCreateAEX as l=.F.>
+>
+<PublishLock="">
+<PublishLockPassword="">
+<rtClk<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<UseInBuilders=.F.>
+<CheckSecurityAllowed=.F.>
+<PublishSelectedOnly=.F.>
+<CreateAEX=.F.>
+<CreateAEX as  l=.F.>
+>
+<iis<type="Direct">
+<app_name="ProjectsA">
+<site_name="Default Web Site">
+<managementServiceUrl="localhost">
+<packagePath="">
+<xbasicLoggingEnabled=.T.>
+<logPath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Default Web Site\ProjectsA">
+<gridCacheEnabled=.T.>
+<gridCachePath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Grid Cache">
+<gridCacheSizeMB=55>
+<useIntegratedAuthentication=.T.>
+<username="">
+<password="">
+<ignoreCertificateErrors=.F.>
+<appServerLocationType="Default">
+<appServerBuildNumber="">
+<appServerPath="C:\Program Files (x86)\A5V12 Application Server for IIS">
+<appPoolType="Private">
+<appPoolName="">
+<customPhysicalPath=.F.>
+<physicalPath="%SystemDrive%\inetpub\wwwroot">
+<useHttps=.F.>
+<serverPort=80>
+<appPoolProcesses=5>
+<remoteErrorDetailShow=.F.>
+<providers<publishMode="Preserve">
+<Membership<type="SqlServer">
+<connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AspNet;Integrated Security=True">
+<alphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ForceStringsToUTF8=Y,A5ANSINullPadWarn=Default,Trusted_connection=yes,Database='AspNet'}">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishDifferentThanConfiguration=.F.>
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<version="2.0.0.0">
+<digest="26 00 2D F5 27 9D 26 B5 FA A6 67 48 3A FD 25 3F ">
+>
+<Role<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishDifferentThanConfiguration=.F.>
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<version="2.0.0.0">
+<digest="26 00 2D F5 27 9D 26 B5 FA A6 67 48 3A FD 25 3F ">
+>
+<SessionState<type="LocalStateServer">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishDifferentThanConfiguration=.F.>
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<version="2.0.0.0">
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+>
+<Profile<type="None">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishDifferentThanConfiguration=.F.>
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<version="2.0.0.0">
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+>
+>
+>
+<securityStoreType="IISProviders">
+<AlphaDAOConnectionStrings=<<%str%
+<arrVars<[1]<name="A5WebSecurity">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJaBSyDofCDjq/5ew2hOGdocqTdqC4piyiGktor1Ela6HHH87NkhVJn1ie8k0UqJP0">
+>
+<[2]<name="AADemo-Northwind">
+<value="(default value)">
+>
+<[3]<name="Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNYD8pKazb+uxKo2INA4JGcFu1qvWKVMdMxsykf/NBqPZP8pblIzV+tVeDv9nPVLwnw==">
+>
+<[4]<name="Access_gantt">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3QjLyAf+Ldgi9xpi4+/ex+hxNtjUAGz3tLXR9PkFRZFBbHBjWvSv2Y">
+>
+<[5]<name="Access_Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AbicLiYUYmO+9KABPGth15Gqh9XkZrwlfOXcuBkWIR74j1PB7poInZL">
+>
+<[6]<name="CHSTablesForNewChart">
+<value="(default value)">
+>
+<[7]<name="cking">
+<value="(default value)">
+>
+<[8]<name="conn">
+<value="(default value)">
+>
+<[9]<name="Connection1">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYgjRa4bHfgJ5eK/KXpDq4/9KGyEV9RsPNu/On2RvUhcbOGDlNJiKpAtm95C9OJ43RWvECyvLC9T/Ir0OXC5VSU9SO9cF7t+vX6qlvQCIplYXyclDB7LrwHLwu4/7j4vsWek+HigyzSbD">
+>
+<[10]<name="Connection2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3QjLyAf+Ldgi9xpi4+/ex+hxNtjUAGz3tLXR9PkFRZFBbHBjWvSv2Y">
+>
+<[11]<name="ContactManager">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJpK0oC5s51ClNuKbqFjVCfui78UgeniB7g7MWDjhk/cWwkLLSNpLgo9t5aI17B7/3">
+>
+<[12]<name="copy">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17G//Cct8YLCgEd9oYwj5URXZwwkvpp56JL">
+>
+<[13]<name="CSH_Gantt">
+<value="(default value)">
+>
+<[14]<name="Dot_net_SQL_SERVER_LOCAL">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFgoHfOK+0OUrx3LBnq5LgTEr5H2WSVi4ETTTn6yyLmpaBC2lexH1NIqnYXbSRarPMv9qv8geGc54qEHq3xZubsTP5lfOACQLuA=">
+>
+<[15]<name="DynamicConnection_chsdatafilepath">
+<value="(default value)">
+>
+<[16]<name="DynamicConnection_CHSTablesForNewChart">
+<value="(default value)">
+>
+<[17]<name="DynamicConnection_testconnection">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==">
+>
+<[18]<name="ed_sicard">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagy4wpKIqid+h/aluTXuZi6OR0cx8E9yeWsCdo7nmAYeV+3n0Jr5z5tinYS9ESJHeY5FaYsBL5Y6d2jQmlmtK8K+4pAsPCBsbFIUf5ogQ5OwezATKAIxkrXg==">
+>
+<[19]<name="gantt">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRMSROlrWA37D0Lql5Uh9CYk=">
+>
+<[20]<name="gantt_test">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRPEfw3YCPWpOIpJ5aAMO/iTUnuFgGG3HDg==">
+>
+<[21]<name="mapped_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/Yf512NoMflFrMNvaq55DLOKdALfc5Hn2mhOvd1O/jBa9TYDUyR8K1w==">
+>
+<[22]<name="mysql">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKJeiojvIdIRq4gA9psFVkF8KUocMvdCnEhwEdVtWnPxuAYfsxTmBPnU1b0BMna1JgeDgxmsA82hM=">
+>
+<[23]<name="mysql_local">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[24]<name="mysql_s_D">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYpxTqSgsTS2APSqxaG1TyTpPlfTeg91sHFZKxKlJ+MsvcdwMO2CjZLpoOqbdvUFU7Q6G0OUksbGqh8FecKN0pDkVKxTUfC3vXI3RCQ06k88C4AuwEnYATSVMGIxOB6MAXw==">
+>
+<[25]<name="mysql_server">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[26]<name="Northwind_Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJZyWfojT7zjgPxo/tW6MB+QEQsPLR8JS0Q00CYKBfQC+Swj3GUL4veA==">
+>
+<[27]<name="Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AZJvfy/sNN6GgxKGxCeJGDJQAXwMzfQkxggZw/2XZ5D6/1G40SGoYgA">
+>
+<[28]<name="oracle">
+<value="Encrypted:dQNDbLdo5xI6zjQPoI5XJt0SSqutvqbK4oYNeD+SZvn7X3fUOuZwIjLy3XfEy/kBYu2vbd3TFXw/fTCc7Rg1oazmE4soPijVCsRcCzdzZn7BicZ8u5W/Z2wT4dN1zCwye3q4X9uWoPM+nJp+vjCY1sNc545NSZ97rGeS6xueqkZF7/gshMeFY27YGw63I0QEFUtEnB2GChau+4SHMfQAM2UMwttcfcQUoEOvBFr8q2A=">
+>
+<[29]<name="postgreSQL">
+<value="Encrypted:YVKwF22JJmDqkse7TzVnMvav9USWBxvwJbjo7pLsOiLj8HinTGOWT7gf+iQ9bM1OS+ob6PTORsCDFomk2BbDJgso7JINDV84R3bCFSb/svwnwNi+112SN0iI3QrnlPvuiVRxTGxKRG2OJeDJ6o4TWTVxuLhT2rtz">
+>
+<[30]<name="Projects">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=">
+>
+<[31]<name="R1Mdb">
+<value="(default value)">
+>
+<[32]<name="RandallBldrs">
+<value="(default value)">
+>
+<[33]<name="rolodex">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOue9qrRrffN/rtalTYkNEG/sVFpoRXEFKmqn5DncNGtriJoBOZJRT0sc=">
+>
+<[34]<name="sched2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRB0ZL3XYHY76FuiNTwpIl06b1cg/tQqeUptQoCc4bNoti5YEZXqt7aEA==">
+>
+<[35]<name="Scheduler_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/24CcFR0ulViGSRtJIHwCxwb2JNu60456gzfplzw+dwBdzIv5mEecwG0RP/ov125qgmB7l3jbexHZ0NDNGdlfpEqJpxaqQvzdx/7Ia9AqXyrhx2wY2Pc6Kk6v5G/O4kMEzY7XPsYZ0bNA7RLEuhknDs">
+>
+<[36]<name="sheduler">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRBZVtF2s5cQ2AFq1hkx52nfw4FPl6pUzbMo7h6piMrc54=">
+>
+<[37]<name="sql_server_2008_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUUuRVcU+j88CF3vmrAk3v1Ez97jqx7H0vHR7FgWhSsMpxOykXIIUF+YBWS24ubc375KbiqAqa5Fz/IWRCeBupFU5LhTItfiX0JIzvx06rWkOJ6F6ONQjsPanT6MPwuh/d8=">
+>
+<[38]<name="sql_server_local_ado">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[39]<name="sql_sever_Local_dot_net">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFigrwepo8Re/f3x9z2gXsUS1iENkLVq1Vf+mF04+O8YF3wM4Cw9AKkwkQmy20ZCwydMzJH5zgwj4qTNU8pJsMbW0h9W5NssJAusLkFkpc5lFw==">
+>
+<[40]<name="sqlserver">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[41]<name="sqlserver_2012_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[42]<name="SQLSERVEREXPRESS_Projects">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUW8NybBUh1UEmBouTMWJk8iXfvtw2VccwjzWLjoCADcwjcFlH+IUyZKVy0rTu5bw3yW1dIRfAQHMFCKI2Gf6+sob0D1Aq7Ekv6b6wmQfLYpwBS+SrJEvY9vMqNi+adfrRQRiilsj83wh3lHeLGwot3WJF6TbogtB9qaQysOP99JJw==">
+>
+<[43]<name="WebCHSMaster">
+<value="(default value)">
+>
+>
+%str%>
+<http<url="">
+<showProgress=.T.>
+<showTesting=.F.>
+<username="">
+<password="">
+<targetFolder="">
+>
+<alphaCloud<settings="">
+>
+<NamedResourceProviders="">
+<publishADConfiguration=.F.>
+<PublishLock as c="">
+<PublishLockPassword as c="">
+<ADOConnectionStrings="">
+<securityStore<connectionString="">
+<connectionStringName="">
+<applicationName="/">
+<alphaDAOconnectionString="">
+<providerName="">
+<dataSource="">
+<membershipProviderClass="">
+>
+<activeDirectory<name="">
+<serverName="">
+<userId="">
+<password="">
+<connectionString="">
+<useImpersonation=.F.>
+>
+>
+<[5]<name="Junk_iis">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="undefined">
+<type="C">
+>
+>
+%str%>
+<local<target_folder="">
+>
+<vars="">
+<publishing_type="Publish to IIS">
+<default_page="TabbedUI_Projects.a5w">
+<lan<webroot="">
+<target_folder="">
+<hostname="">
+<server_port=80>
+>
+<ftp<address="">
+<lPassive=.F.>
+<username="">
+<password="">
+<path="">
+<port=21>
+<FTPProgram="InternalOptimized">
+>
+<db<publish=.F.>
+<path="">
+<files="">
+>
+<misc<DefaultValuePublishDatabaseLibrary=.F.>
+<restrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.F.>
+<DefaultValuePublishSupportFiles=.T.>
+<SecurityGuid="b87b5fa9bd644607b8589ce446a63c0d">
+>
+<PublishLock="">
+<PublishLockPassword="">
+<rtClk<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<UseInBuilders=.F.>
+>
+<iis<type="Direct">
+<app_name="P_test">
+<site_name="Default Web Site">
+<managementServiceUrl="172.16.3.182">
+<packagePath="">
+<xbasicLoggingEnabled=.T.>
+<logPath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Default Web Site\P_test">
+<gridCacheEnabled=.T.>
+<gridCachePath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Grid Cache">
+<gridCacheSizeMB=55>
+<useIntegratedAuthentication=.T.>
+<username="">
+<password="">
+<ignoreCertificateErrors=.F.>
+<appServerLocationType="Default">
+<appServerBuildNumber="">
+<appServerPath="C:\Program Files (x86)\A5V12 Application Server for IIS">
+<appPoolType="Private">
+<appPoolName="">
+<customPhysicalPath=.F.>
+<physicalPath="%SystemDrive%\inetpub\wwwroot">
+<useHttps=.F.>
+<serverPort=80>
+<appPoolProcesses=5>
+<remoteErrorDetailShow=.T.>
+<providers<publishMode="Preserve">
+>
+>
+<securityStoreType="WebConfig">
+<AlphaDAOConnectionStrings=<<%str%
+<arrVars<[1]<name="A5WebSecurity">
+<value="(default value)">
+>
+<[2]<name="AADemo-Northwind">
+<value="(default value)">
+>
+<[3]<name="Access">
+<value="(default value)">
+>
+<[4]<name="Access_gantt">
+<value="(default value)">
+>
+<[5]<name="Access_Northwind_local">
+<value="(default value)">
+>
+<[6]<name="CHSTablesForNewChart">
+<value="(default value)">
+>
+<[7]<name="cking">
+<value="(default value)">
+>
+<[8]<name="conn">
+<value="(default value)">
+>
+<[9]<name="Connection1">
+<value="(default value)">
+>
+<[10]<name="Connection2">
+<value="(default value)">
+>
+<[11]<name="ContactManager">
+<value="(default value)">
+>
+<[12]<name="copy">
+<value="(default value)">
+>
+<[13]<name="CSH_Gantt">
+<value="(default value)">
+>
+<[14]<name="Dot_net_SQL_SERVER_LOCAL">
+<value="(default value)">
+>
+<[15]<name="DynamicConnection_chsdatafilepath">
+<value="(default value)">
+>
+<[16]<name="DynamicConnection_CHSTablesForNewChart">
+<value="(default value)">
+>
+<[17]<name="DynamicConnection_testconnection">
+<value="(default value)">
+>
+<[18]<name="ed_sicard">
+<value="(default value)">
+>
+<[19]<name="gantt">
+<value="(default value)">
+>
+<[20]<name="gantt_test">
+<value="(default value)">
+>
+<[21]<name="mapped_access">
+<value="(default value)">
+>
+<[22]<name="mysql">
+<value="(default value)">
+>
+<[23]<name="mysql_local">
+<value="(default value)">
+>
+<[24]<name="mysql_s_D">
+<value="(default value)">
+>
+<[25]<name="mysql_server">
+<value="(default value)">
+>
+<[26]<name="Northwind_Access">
+<value="(default value)">
+>
+<[27]<name="Northwind_local">
+<value="(default value)">
+>
+<[28]<name="oracle">
+<value="(default value)">
+>
+<[29]<name="postgreSQL">
+<value="(default value)">
+>
+<[30]<name="Projects">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=">
+>
+<[31]<name="R1Mdb">
+<value="(default value)">
+>
+<[32]<name="RandallBldrs">
+<value="(default value)">
+>
+<[33]<name="rolodex">
+<value="(default value)">
+>
+<[34]<name="sched2">
+<value="(default value)">
+>
+<[35]<name="Scheduler_access">
+<value="(default value)">
+>
+<[36]<name="sheduler">
+<value="(default value)">
+>
+<[37]<name="sql_server_2008_home">
+<value="(default value)">
+>
+<[38]<name="sql_server_local_ado">
+<value="(default value)">
+>
+<[39]<name="sql_sever_Local_dot_net">
+<value="(default value)">
+>
+<[40]<name="sqlserver">
+<value="(default value)">
+>
+<[41]<name="sqlserver_2012_home">
+<value="(default value)">
+>
+<[42]<name="SQLSERVEREXPRESS_Projects">
+<value="(default value)">
+>
+<[43]<name="WebCHSMaster">
+<value="(default value)">
+>
+>
+%str%>
+>
+<[6]<name="IIS_SQL_Server_Mobile">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="=a5.get_path()">
+<type="C">
+>
+>
+%str%>
+<local<target_folder="">
+>
+<vars="">
+<publishing_type="Publish to IIS">
+<default_page="index.a5w">
+<lan<webroot="">
+<target_folder="">
+<hostname="">
+<server_port=80>
+>
+<ftp<address="">
+<lPassive=.F.>
+<username="">
+<password="">
+<path="">
+<port=21>
+<FTPProgram="InternalOptimized">
+<FTPCurl=.F.>
+<FTPCurlActiveMode=.F.>
+>
+<db<publish=.F.>
+<path="">
+<files="">
+>
+<misc<DefaultValuePublishDatabaseLibrary=.T.>
+<restrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.T.>
+<DefaultValuePublishSupportFiles=.T.>
+<SecurityGuid="b4ee88cb1bc7446b873a4bdff116039e">
+<DefaultValuePublishSelectedOnly=.F.>
+<DefaultflagCheckBeforePublish=.T.>
+<PublishAsBinary=.F.>
+<DefaultValueCheckSecurityAllowed=.T.>
+<DefaultValueCreateAEX=.T.>
+<DefaultValueCreateAEX as l=.F.>
+<PublishMetaData=.T.>
+<EnableServiceDiscoveryEndpoint=.F.>
+>
+<PublishLock="">
+<PublishLockPassword="">
+<rtClk<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<UseInBuilders=.F.>
+<CheckSecurityAllowed=.T.>
+<PublishSelectedOnly=.F.>
+<CreateAEX=.F.>
+<CreateAEX as  l=.F.>
+>
+<iis<type="Direct">
+<app_name="Projects_Mobile">
+<site_name="Default Web Site">
+<managementServiceUrl="localhost">
+<packagePath="">
+<xbasicLoggingEnabled=.T.>
+<logPath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Default Web Site\Projects_mobile">
+<gridCacheEnabled=.T.>
+<gridCachePath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Grid Cache">
+<gridCacheSizeMB=55>
+<useIntegratedAuthentication=.T.>
+<username="">
+<password="">
+<ignoreCertificateErrors=.F.>
+<appServerLocationType="Default">
+<appServerBuildNumber="">
+<appServerPath="C:\Program Files (x86)\A5V12 Application Server for IIS">
+<appPoolType="Private">
+<appPoolName="">
+<customPhysicalPath=.F.>
+<physicalPath="%SystemDrive%\inetpub\wwwroot">
+<useHttps=.F.>
+<serverPort=80>
+<appPoolProcesses=5>
+<providers<publishMode="Merge">
+<membership<type="SqlServer">
+<connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=ASPNET;User ID=projects;Password=A5webserver">
+<alphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ForceStringsToUTF8=Y,A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='ASPNET'}">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=ASPNET;User ID=projects;Password=A5webserver">
+<publishAlphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='ASPNET'}">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.T.>
+<digest="46 61 32 D3 C5 02 88 23 3C D1 5E DB 76 9B 6B E1 ">
+<publishProviderName="System.Data.SqlClient">
+<version="2.0.0.0">
+<RequireClientCertificate=.F.>
+<hashAlgorithm="SHA1">
+>
+<role<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="46 61 32 D3 C5 02 88 23 3C D1 5E DB 76 9B 6B E1 ">
+<publishProviderName="System.Data.SqlClient">
+<version="">
+>
+<sessionState<type="SqlServer">
+<connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AspState;User ID=projects;Password=A5webserver">
+<alphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ForceStringsToUTF8=Y,A5ANSINullPadWarn=Default,UserName='projects',Password=':A5:B64:QTV3ZWJzZXJ2ZXI=',Database='AspState'}">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="AC 5A C0 C6 79 A0 05 16 3A FF 55 CE C3 7A 7D E4 ">
+<publishProviderName="System.Data.SqlClient">
+<version="2.0.0.0">
+<jitLocking=.F.>
+>
+<profile<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<digest="46 61 32 D3 C5 02 88 23 3C D1 5E DB 76 9B 6B E1 ">
+<version="">
+>
+>
+<remoteErrorDetailShow=.T.>
+<enablePreload=.T.>
+<publishDiagnosticPath="C:\bugs\iis_pulblish_error.log">
+<deleteExistingFiles=.F.>
+<minidumpCleanupEnabled=.T.>
+<minidumpMaxFiles=5>
+<minidumpMaxStorageGB=10>
+<minidumpMaxAgeHours=24>
+>
+<securityStoreType="IISProviders">
+<AlphaDAOConnectionStrings=<<%str%
+<arrVars<[1]<name="A5WebSecurity">
+<value="(default value)">
+>
+<[2]<name="AADemo-Northwind">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUVjHe+KcTHcVeSKOFQR02r1TaEEC5S7GXuib3bOrlmTYk4hxl3WQGbLVmaT6Sgyl09ZXfq9423DQl1U3UmCL9IjUwsBnlJ7hXp897cwBk2BPAnmteeJtlV0kJXFLWJUd2FmCfGXPXOdLiVaoQ/htuIa">
+>
+<[3]<name="Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuV1Kx41CXXKlIWjIzvDhg2UAkx337ax4zHEmvM+cC5Y5Ug9HvE13M4o=">
+>
+<[4]<name="Access_gantt">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/19jL8zzzWNDAuWe8JGiuGy4egsMqiJcg29KVxEuCQqTuxgjbliTV+OmshenirxEfM=">
+>
+<[5]<name="Access_Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AbicLiYUYmO+9KABPGth15Gqh9XkZrwlfOXcuBkWIR74j1PB7poInZL">
+>
+<[6]<name="CHSTablesForNewChart">
+<value="(default value)">
+>
+<[7]<name="cking">
+<value="(default value)">
+>
+<[8]<name="conn">
+<value="(default value)">
+>
+<[9]<name="Connection1">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==">
+>
+<[10]<name="Connection2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3QjLyAf+Ldgi9xpi4+/ex+hxNtjUAGz3tLXR9PkFRZFBbHBjWvSv2Y">
+>
+<[11]<name="ContactManager">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJpK0oC5s51ClNuKbqFjVCfui78UgeniB7g7MWDjhk/cWwkLLSNpLgo9t5aI17B7/3">
+>
+<[12]<name="copy">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17G//Cct8YLCgEd9oYwj5URXZwwkvpp56JL">
+>
+<[13]<name="CSH_Gantt">
+<value="(default value)">
+>
+<[14]<name="Dot_net_SQL_SERVER_LOCAL">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFgoHfOK+0OUrx3LBnq5LgTEr5H2WSVi4ETTTn6yyLmpaBC2lexH1NIqnYXbSRarPMv9qv8geGc54qEHq3xZubsTP5lfOACQLuA=">
+>
+<[15]<name="DynamicConnection_chsdatafilepath">
+<value="(default value)">
+>
+<[16]<name="DynamicConnection_CHSTablesForNewChart">
+<value="(default value)">
+>
+<[17]<name="DynamicConnection_testconnection">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==">
+>
+<[18]<name="ed_sicard">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagy4wpKIqid+h/aluTXuZi6OR0cx8E9yeWsCdo7nmAYeV+3n0Jr5z5tinYS9ESJHeY5FaYsBL5Y6d2jQmlmtK8K+4pAsPCBsbFIUf5ogQ5OwezATKAIxkrXg==">
+>
+<[19]<name="gantt">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRMSROlrWA37D0Lql5Uh9CYk=">
+>
+<[20]<name="gantt_test">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRPEfw3YCPWpOIpJ5aAMO/iTUnuFgGG3HDg==">
+>
+<[21]<name="mapped_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/Yf512NoMflFrMNvaq55DLOKdALfc5Hn2mhOvd1O/jBa9TYDUyR8K1w==">
+>
+<[22]<name="mysql">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKJeiojvIdIRq4gA9psFVkF8KUocMvdCnEhwEdVtWnPxuAYfsxTmBPnU1b0BMna1JgeDgxmsA82hM=">
+>
+<[23]<name="mysql_local">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[24]<name="mysql_s_D">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYpxTqSgsTS2APSqxaG1TyTpPlfTeg91sHFZKxKlJ+MsvcdwMO2CjZLpoOqbdvUFU7Q6G0OUksbGqh8FecKN0pDkVKxTUfC3vXI3RCQ06k88C4AuwEnYATSVMGIxOB6MAXw==">
+>
+<[25]<name="mysql_server">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[26]<name="Northwind_Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJZyWfojT7zjgPxo/tW6MB+QEQsPLR8JS0Q00CYKBfQC+Swj3GUL4veA==">
+>
+<[27]<name="Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AZJvfy/sNN6GgxKGxCeJGDJQAXwMzfQkxggZw/2XZ5D6/1G40SGoYgA">
+>
+<[28]<name="oracle">
+<value="Encrypted:dQNDbLdo5xI6zjQPoI5XJt0SSqutvqbK4oYNeD+SZvn7X3fUOuZwIjLy3XfEy/kBYu2vbd3TFXw/fTCc7Rg1oazmE4soPijVCsRcCzdzZn7BicZ8u5W/Z2wT4dN1zCwye3q4X9uWoPM+nJp+vjCY1sNc545NSZ97rGeS6xueqkZF7/gshMeFY27YGw63I0QEFUtEnB2GChau+4SHMfQAM2UMwttcfcQUoEOvBFr8q2A=">
+>
+<[29]<name="postgreSQL">
+<value="Encrypted:YVKwF22JJmDqkse7TzVnMvav9USWBxvwJbjo7pLsOiLj8HinTGOWT7gf+iQ9bM1OS+ob6PTORsCDFomk2BbDJgso7JINDV84R3bCFSb/svwnwNi+112SN0iI3QrnlPvuiVRxTGxKRG2OJeDJ6o4TWTVxuLhT2rtz">
+>
+<[30]<name="Projects">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=">
+>
+<[31]<name="R1Mdb">
+<value="(default value)">
+>
+<[32]<name="RandallBldrs">
+<value="(default value)">
+>
+<[33]<name="rolodex">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOue9qrRrffN/rtalTYkNEG/sVFpoRXEFKmqn5DncNGtriJoBOZJRT0sc=">
+>
+<[34]<name="sched2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRB0ZL3XYHY76FuiNTwpIl06b1cg/tQqeUptQoCc4bNoti5YEZXqt7aEA==">
+>
+<[35]<name="Scheduler_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/24CcFR0ulViGSRtJIHwCxwb2JNu60456gzfplzw+dwBdzIv5mEecwG0RP/ov125qgmB7l3jbexHZ0NDNGdlfpEqJpxaqQvzdx/7Ia9AqXyrhx2wY2Pc6Kk6v5G/O4kMEzY7XPsYZ0bNA7RLEuhknDs">
+>
+<[36]<name="sheduler">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRBZVtF2s5cQ2AFq1hkx52nfw4FPl6pUzbMo7h6piMrc54=">
+>
+<[37]<name="sql_server_2008_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUUuRVcU+j88CF3vmrAk3v1Ez97jqx7H0vHR7FgWhSsMpxOykXIIUF+YBWS24ubc375KbiqAqa5Fz/IWRCeBupFU5LhTItfiX0JIzvx06rWkOJ6F6ONQjsPanT6MPwuh/d8=">
+>
+<[38]<name="sql_server_local_ado">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[39]<name="sql_sever_Local_dot_net">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFigrwepo8Re/f3x9z2gXsUS1iENkLVq1Vf+mF04+O8YF3wM4Cw9AKkwkQmy20ZCwydMzJH5zgwj4qTNU8pJsMbW0h9W5NssJAusLkFkpc5lFw==">
+>
+<[40]<name="sqlserver">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[41]<name="sqlserver_2012_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[42]<name="SQLSERVEREXPRESS_Projects">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUW8NybBUh1UEmBouTMWJk8iXfvtw2VccwjzWLjoCADcwjcFlH+IUyZKVy0rTu5bw3yW1dIRfAQHMFCKI2Gf6+sob0D1Aq7Ekv6b6wmQfLYpwBS+SrJEvY9vMqNi+adfrRQRiilsj83wh3lHeLGwot3WxcRuHYBYNRjxFgkUeJg/VA==">
+>
+<[43]<name="WebCHSMaster">
+<value="(default value)">
+>
+>
+%str%>
+<alphaCloud<settings="">
+>
+<NamedResourceProviders="">
+<publishADConfiguration=.F.>
+<PublishLock as c="">
+<PublishLockPassword as c="">
+<securityStore<connectionString="">
+<connectionStringName="">
+<applicationName="/">
+<alphaDAOconnectionString="">
+<providerName="">
+<dataSource="">
+<membershipProviderClass="">
+>
+<ADOConnectionStrings="">
+<http<url="">
+<showProgress=.T.>
+<showTesting=.F.>
+<username="">
+<password="">
+<targetFolder="">
+>
+<debugger<allow=.F.>
+>
+<activeDirectory<name="pennunited.com">
+<serverName="penndc01.pennunited.com">
+<userId="">
+<password="">
+<connectionString="LDAP://penndc01.pennunited.com/CN=Users,DC=pennunited,DC=com">
+<useImpersonation=.F.>
+<mode=1>
+>
+>
+<[7]<name="Local_alphaLaunch">
+<lan<port=8081>
+<target_folder="">
+<hostname="http://JCOLTZ-7-PC">
+<server_port=80>
+<webroot="">
+>
+<local<target_folder="projects_mobile">
+>
+<publishing_type="Publish Locally">
+<vars="">
+<aliases=<<%str%
+<arrVars<[1]<name="[PathAlias.ADB_Path]">
+<value="">
+<type="C">
+>
+>
+%str%>
+<default_page="TabbedUI_Projects.a5w">
+<ftp<address="">
+<lPassive=.F.>
+<username="">
+<password="">
+<path="">
+<port=21>
+<FTPProgram="InternalOptimized">
+<FTPCurl=.F.>
+<FTPCurlActiveMode=.F.>
+>
+<db<publish=.F.>
+<path="">
+<files="">
+>
+<NamedResourceProviders="">
+<PublishLock="">
+<PublishLockPassword="">
+<misc<DefaultValuePublishDatabaseLibrary=.T.>
+<PublishAsBinary=.F.>
+<restrictWebDataPublish=.F.>
+<AutoRestrictWebDataPublish=.F.>
+<WebDataPublished=.T.>
+<DefaultValuePublishSupportFiles=.T.>
+<DefaultValuePublishSelectedOnly=.F.>
+<DefaultflagCheckBeforePublish=.T.>
+<DefaultValueCheckSecurityAllowed=.F.>
+<DefaultValueCreateAEX=.T.>
+<DefaultValueCreateAEX as l=.F.>
+<SecurityGuid="72d5e439ab4c42399b50941ed682dfcd">
+>
+<securityStoreType="BuiltInSecurityTables">
+<http<url="">
+<showProgress=.T.>
+<showTesting=.F.>
+<username="">
+<password="">
+<targetFolder="">
+>
+<iis<type="Direct">
+<packagePath="">
+<site_name="Default Web Site">
+<app_name="ProjectsA">
+<managementServiceUrl="localhost">
+<appServerLocationType="Default">
+<appServerBuildNumber="">
+<appServerPath="C:\Program Files (x86)\A5V12 Application Server for IIS">
+<appPoolType="Private">
+<appPoolName="">
+<useIntegratedAuthentication=.T.>
+<username="">
+<password="">
+<ignoreCertificateErrors=.F.>
+<xbasicLoggingEnabled=.T.>
+<logPath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Default Web Site\ProjectsA">
+<gridCacheEnabled=.T.>
+<gridCachePath="C:\ProgramData\Alpha Software\Alpha Anywhere Application Server for IIS Version 12.0\Grid Cache">
+<gridCacheSizeMB=55>
+<customPhysicalPath=.F.>
+<physicalPath="%SystemDrive%\inetpub\wwwroot">
+<useHttps=.F.>
+<serverPort=80>
+<appPoolProcesses=5>
+<providers<publishMode="Preserve">
+<membership<type="SQLServer">
+<RequireClientCertificate=.F.>
+<connectionString="">
+<alphaDAOConnectionString="{A5API='SQLServer',A5DBVersion=2014,Server='.\SQLEXPRESS',A5ForceStringsToUTF8=Y,A5ANSINullPadWarn=Default,Trusted_connection=yes,Database='AspNet'}">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="26 00 2D F5 27 9D 26 B5 FA A6 67 48 3A FD 25 3F ">
+<version="2.0.0.0">
+<hashAlgorithm="SHA1">
+>
+<role<type="SameAsMembershipProvider">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="26 00 2D F5 27 9D 26 B5 FA A6 67 48 3A FD 25 3F ">
+<version="">
+>
+<sessionState<type="LocalStateServer">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+<version="">
+>
+<profile<type="None">
+<connectionString="">
+<alphaDAOConnectionString="">
+<applicationName="/">
+<dataSource="SQLServer">
+<providerName="System.Data.SqlClient">
+<connectionStringName="">
+<providerClass="">
+<publishConnectionString="">
+<publishAlphaDAOConnectionString="">
+<publishDataSource="SQLServer">
+<publishDifferentThanConfiguration=.F.>
+<publishProviderName="System.Data.SqlClient">
+<publishPrevConnectionString="">
+<digest="EF 7A FE 60 72 4F 64 AC 09 8E 89 63 67 26 69 77 ">
+<version="">
+>
+>
+<remoteErrorDetailShow=.F.>
+<enablePreload=.T.>
+>
+<alphaCloud<settings="">
+>
+<rtClk<CheckSecurityAllowed=.F.>
+<CheckBeforePublish=.F.>
+<PublishSupportFiles=.T.>
+<PublishSelectedOnly=.F.>
+<UseInBuilders=.F.>
+<CreateAEX=.F.>
+<CreateAEX as  l=.F.>
+>
+<publishADConfiguration=.F.>
+<debugger<allow=.F.>
+>
+<PublishLock as c="">
+<PublishLockPassword as c="">
+<AlphaDAOConnectionStrings=<<%str%
+<arrVars<[1]<name="A5WebSecurity">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJaBSyDofCDjq/5ew2hOGdocqTdqC4piyiGktor1Ela6HHH87NkhVJn1ie8k0UqJP0">
+>
+<[2]<name="AADemo-Northwind">
+<value="(default value)">
+>
+<[3]<name="Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNYD8pKazb+uxKo2INA4JGcFu1qvWKVMdMxsykf/NBqPZP8pblIzV+tVeDv9nPVLwnw==">
+>
+<[4]<name="Access_gantt">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3QjLyAf+Ldgi9xpi4+/ex+hxNtjUAGz3tLXR9PkFRZFBbHBjWvSv2Y">
+>
+<[5]<name="Access_Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AbicLiYUYmO+9KABPGth15Gqh9XkZrwlfOXcuBkWIR74j1PB7poInZL">
+>
+<[6]<name="CHSTablesForNewChart">
+<value="(default value)">
+>
+<[7]<name="cking">
+<value="(default value)">
+>
+<[8]<name="conn">
+<value="(default value)">
+>
+<[9]<name="Connection1">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYgjRa4bHfgJ5eK/KXpDq4/9KGyEV9RsPNu/On2RvUhcbOGDlNJiKpAtm95C9OJ43RWvECyvLC9T/Ir0OXC5VSU9SO9cF7t+vX6qlvQCIplYXyclDB7LrwHLwu4/7j4vsWek+HigyzSbD">
+>
+<[10]<name="Connection2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3QjLyAf+Ldgi9xpi4+/ex+hxNtjUAGz3tLXR9PkFRZFBbHBjWvSv2Y">
+>
+<[11]<name="ContactManager">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJpK0oC5s51ClNuKbqFjVCfui78UgeniB7g7MWDjhk/cWwkLLSNpLgo9t5aI17B7/3">
+>
+<[12]<name="copy">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17G//Cct8YLCgEd9oYwj5URXZwwkvpp56JL">
+>
+<[13]<name="CSH_Gantt">
+<value="(default value)">
+>
+<[14]<name="Dot_net_SQL_SERVER_LOCAL">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFgoHfOK+0OUrx3LBnq5LgTEr5H2WSVi4ETTTn6yyLmpaBC2lexH1NIqnYXbSRarPMv9qv8geGc54qEHq3xZubsTP5lfOACQLuA=">
+>
+<[15]<name="DynamicConnection_chsdatafilepath">
+<value="(default value)">
+>
+<[16]<name="DynamicConnection_CHSTablesForNewChart">
+<value="(default value)">
+>
+<[17]<name="DynamicConnection_testconnection">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==">
+>
+<[18]<name="ed_sicard">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagy4wpKIqid+h/aluTXuZi6OR0cx8E9yeWsCdo7nmAYeV+3n0Jr5z5tinYS9ESJHeY5FaYsBL5Y6d2jQmlmtK8K+4pAsPCBsbFIUf5ogQ5OwezATKAIxkrXg==">
+>
+<[19]<name="gantt">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRMSROlrWA37D0Lql5Uh9CYk=">
+>
+<[20]<name="gantt_test">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRPEfw3YCPWpOIpJ5aAMO/iTUnuFgGG3HDg==">
+>
+<[21]<name="mapped_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/Yf512NoMflFrMNvaq55DLOKdALfc5Hn2mhOvd1O/jBa9TYDUyR8K1w==">
+>
+<[22]<name="mysql">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKJeiojvIdIRq4gA9psFVkF8KUocMvdCnEhwEdVtWnPxuAYfsxTmBPnU1b0BMna1JgeDgxmsA82hM=">
+>
+<[23]<name="mysql_local">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[24]<name="mysql_s_D">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYpxTqSgsTS2APSqxaG1TyTpPlfTeg91sHFZKxKlJ+MsvcdwMO2CjZLpoOqbdvUFU7Q6G0OUksbGqh8FecKN0pDkVKxTUfC3vXI3RCQ06k88C4AuwEnYATSVMGIxOB6MAXw==">
+>
+<[25]<name="mysql_server">
+<value="Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==">
+>
+<[26]<name="Northwind_Access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJZyWfojT7zjgPxo/tW6MB+QEQsPLR8JS0Q00CYKBfQC+Swj3GUL4veA==">
+>
+<[27]<name="Northwind_local">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AZJvfy/sNN6GgxKGxCeJGDJQAXwMzfQkxggZw/2XZ5D6/1G40SGoYgA">
+>
+<[28]<name="oracle">
+<value="Encrypted:dQNDbLdo5xI6zjQPoI5XJt0SSqutvqbK4oYNeD+SZvn7X3fUOuZwIjLy3XfEy/kBYu2vbd3TFXw/fTCc7Rg1oazmE4soPijVCsRcCzdzZn7BicZ8u5W/Z2wT4dN1zCwye3q4X9uWoPM+nJp+vjCY1sNc545NSZ97rGeS6xueqkZF7/gshMeFY27YGw63I0QEFUtEnB2GChau+4SHMfQAM2UMwttcfcQUoEOvBFr8q2A=">
+>
+<[29]<name="postgreSQL">
+<value="Encrypted:YVKwF22JJmDqkse7TzVnMvav9USWBxvwJbjo7pLsOiLj8HinTGOWT7gf+iQ9bM1OS+ob6PTORsCDFomk2BbDJgso7JINDV84R3bCFSb/svwnwNi+112SN0iI3QrnlPvuiVRxTGxKRG2OJeDJ6o4TWTVxuLhT2rtz">
+>
+<[30]<name="Projects">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=">
+>
+<[31]<name="R1Mdb">
+<value="(default value)">
+>
+<[32]<name="RandallBldrs">
+<value="(default value)">
+>
+<[33]<name="rolodex">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOue9qrRrffN/rtalTYkNEG/sVFpoRXEFKmqn5DncNGtriJoBOZJRT0sc=">
+>
+<[34]<name="sched2">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRB0ZL3XYHY76FuiNTwpIl06b1cg/tQqeUptQoCc4bNoti5YEZXqt7aEA==">
+>
+<[35]<name="Scheduler_access">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/24CcFR0ulViGSRtJIHwCxwb2JNu60456gzfplzw+dwBdzIv5mEecwG0RP/ov125qgmB7l3jbexHZ0NDNGdlfpEqJpxaqQvzdx/7Ia9AqXyrhx2wY2Pc6Kk6v5G/O4kMEzY7XPsYZ0bNA7RLEuhknDs">
+>
+<[36]<name="sheduler">
+<value="Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRBZVtF2s5cQ2AFq1hkx52nfw4FPl6pUzbMo7h6piMrc54=">
+>
+<[37]<name="sql_server_2008_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUUuRVcU+j88CF3vmrAk3v1Ez97jqx7H0vHR7FgWhSsMpxOykXIIUF+YBWS24ubc375KbiqAqa5Fz/IWRCeBupFU5LhTItfiX0JIzvx06rWkOJ6F6ONQjsPanT6MPwuh/d8=">
+>
+<[38]<name="sql_server_local_ado">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[39]<name="sql_sever_Local_dot_net">
+<value="Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFigrwepo8Re/f3x9z2gXsUS1iENkLVq1Vf+mF04+O8YF3wM4Cw9AKkwkQmy20ZCwydMzJH5zgwj4qTNU8pJsMbW0h9W5NssJAusLkFkpc5lFw==">
+>
+<[40]<name="sqlserver">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[41]<name="sqlserver_2012_home">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==">
+>
+<[42]<name="SQLSERVEREXPRESS_Projects">
+<value="Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUW8NybBUh1UEmBouTMWJk8iXfvtw2VccwjzWLjoCADcwjcFlH+IUyZKVy0rTu5bw3yW1dIRfAQHMFCKI2Gf6+sob0D1Aq7Ekv6b6wmQfLYpwBS+SrJEvY9vMqNi+adfrRQRiilsj83wh3lHeLGwot3WJF6TbogtB9qaQysOP99JJw==">
+>
+<[43]<name="WebCHSMaster">
+<value="(default value)">
+>
+>
+%str%>
+<ADOConnectionStrings="">
+<securityStore<connectionString="">
+<connectionStringName="">
+<applicationName="/">
+<alphaDAOconnectionString="">
+<providerName="">
+<dataSource="">
+<membershipProviderClass="">
+>
+<activeDirectory<name="">
+<serverName="">
+<userId="">
+<password="">
+<connectionString="">
+<useImpersonation=.F.>
+>
+>
+>
+<publishADConfiguration=.F.>
+<securityStoreType="BuiltInSecurityTables">
+<NamedResourceProviders="">
+<PublishLock="">
+<PublishLockPassword="">
+<debugger<allow=.F.>
+>
+<activeDirectory>

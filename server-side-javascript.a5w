@@ -1,0 +1,54 @@
+<!--A5Language:Javascript--> 
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Little Example</title>
+
+
+
+ </head>
+<body>
+<h1>My Little Example Template</h1>
+<%a5 var a5 = "AlphaAnywhere";
+	print(a5 +" <br><br>");
+ %>
+ 
+<%a5
+var country = request.variables.country;
+if(typeof country === 'undefined') country='uk';
+var a5 = AlphaAnywhere;
+print(a5.date()+" <br><br>");
+var cn = new a5.sql.connection();
+var args = new a5.sql.arguments();
+args.add('whatCountry',country);
+//var cs = '::Name::Access_Northwind_local';
+var cs = "{A5API=Access,FileName='C:\\Dropbox\\Projects\\Projects.WebProjects\\Default.WebProject\\Northwind.mdb',UserName='Admin'}";
+cs = cs.replace(/[\\]/g,"/");
+var flag = cn.open(cs);
+print('Connection was opened: '+flag+'<br><br>');
+var sql = "select * from customers where country = :whatCountry";
+flag = cn.execute(sql,args);
+if(flag === false) {
+	print('error executing sql');
+} else {
+	var rs = cn.resultset;
+	var flag = rs.nextRow();
+	var count = 0;
+	var arr = [];
+	while(flag){
+		count = count + 1;
+		arr.push('<p>'+rs.data("customerId")+'</p>');
+		flag = rs.nextRow();
+	}
+	var html = arr.join('');
+	print(html);
+	print('<br><br>');
+	print('rows in query:'+count);
+}
+cn.close();
+%>
+
+ 
+ </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="Alpha Five HTML Editor Version 11 Build 3719-4169">
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+<title></title>
+</head>
+<body>
+<%a5 
+a5ws_logoutuser()
+response.redirect("login.a5w")
+%>
+<p>&nbsp;</p>
+</body></html>

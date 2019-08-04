@@ -1,0 +1,50 @@
+<!--A5Language:Javascript-->
+<html>
+<head>
+<meta name="generator" content="Alpha Anywhere HTML Editor Version 12 Build 2689-4440">
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<title>SQL from Javascript</title>
+</head>
+<body>
+<p>The code block on this page is server-side javascript</p>
+
+<%a5
+debugger;
+var a5 = AlphaAnywhere;
+var cn = new a5.sql.connection();
+var args = new a5.sql.arguments();
+args.set('Userid',1);
+var cs = '::Name::Northwind_access';
+var flag = cn.open(cs);
+print('Connection was opened:'+flag+'<br><br>');
+var sql = "SELECT lastname FROM employees where employeeid = :Userid";
+flag = cn.execute(sql,args);
+if(flag === false) {
+print('error executing sql');
+} else {
+var rs = cn.resultset;
+var flag = rs.nextRow();
+var count = 0;
+var arr = [];
+debugger;
+while(flag){
+count = count + 1;
+arr.push('<p>'+rs.data(1)+'</p>');
+flag = rs.nextRow();
+}
+var html = arr.join('');
+print(html);
+print('<br><br>');
+print('rows in query:'+count);
+}
+cn.close();
+%>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "messageboard" : {
+      "max" : 10
+  }
+}    
