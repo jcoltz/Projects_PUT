@@ -1,0 +1,28 @@
+{
+	"version": "1.0",
+	"description": "Available App Info",
+	"hostname": "Test Server",
+	"message": "Sample message",
+	"messageVersion": 1,
+	"appList": [
+	{
+		"id": "One",
+		"name": "ListWorkOrders",
+		"description": "",
+		"url": "list_workorders_751a792a236d4f4aa8f7a3ab267d1754/appblob.b",
+		"version": "1.0.1",
+		"installMessage": "",
+		"minSize": "",
+		"maxSize": "",
+		"ajaxURL": "http://172.16.3.170/projects_mobile/list_workorders_751a792a236d4f4aa8f7a3ab267d1754/",
+		"type": "singleWithHeader",
+		"template": "<table style=\"background-color:#5345f2; padding-top:0px;padding-bottom:12px;width:100%;padding-top:12px\">  <tr>   <td style=\"width:64px;\">             <svg  style=\" stroke: #000000;\" height=\"42\" width=\"42\"  id=\"alpha-icon-comment\" viewBox=\"0 0 26 26\"> <path d=\"m 3.5,5.5 v 15 H 10 l 3,3 3,-3 h 6.5 v -15 z\" transform=\"\" style=\"opacity: 1; fill: none; fill-opacity: 1; stroke: inherit000; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0; stroke-opacity: 1;\" /> <path d=\"m 6.5,8.5 13,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" /> <path d=\"m 6.5,11.5 13,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" /> <path d=\"m 6.5,14.5 13,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" /> <path d=\"m 6.5,17.5 8,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" /> </svg>   </td>   <td>    <p style=\"font-size: 20px; padding-left:20px; color:#fff; font-family:arial; margin-bottom:0px;\">{name}</p>    <p style=\"font-size: 14px; padding-left:20px; color:#fff; font-family:arial; margin-top:0px;\">{desc}</p>   </td>  </tr> </table> ",
+		"options": {
+			"iOSStatusBar": {
+				"statusBarOverlaysWebView": 1,
+				"statusBarTextWhite": 0,
+				"statusBarBackgroundHexColor": "#FFF"
+			}
+		}
+	}]
+}

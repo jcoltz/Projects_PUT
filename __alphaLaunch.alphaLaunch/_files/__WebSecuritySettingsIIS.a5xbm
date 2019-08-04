@@ -1,0 +1,7 @@
+function EmailParametersIIS as p()
+	dim EmailParametersIIS.PasswordResetAllow as l = .T.
+	dim EmailParametersIIS.LoginLostSendMethod as c = "Show on Screen"
+	dim EmailParametersIIS.LoginLostAltSendMethod as c = "Show on screen"
+end function
+
+exports.EmailParametersIIS  = EmailParametersIIS
