@@ -1,0 +1,461 @@
+html {
+padding: 0px;
+margin: 0px;
+width: 100%;
+height: 100%;
+}
+.toolBotton {
+background: url(images/share/tbg.gif) repeat-x 50% top #ccc;
+border-style: none;
+border-bottom: 1px solid #99bbe8;
+padding: 0;
+margin: 0;
+overflow: hidden;
+position: relative;
+height: 25px;
+}
+.toolBotton a {
+display: block;
+cursor: pointer;
+width: auto;
+}
+.toolBotton a span {
+display: block;
+float: left;
+cursor: pointer;
+width: auto;
+}
+body {
+background-color: #E8F1F8;
+font: 12px Lucida Grande",  Lucida Sans Unicode", Arial, Verdana, sans-serif;
+padding: 0;
+margin: 0;
+width: 100%;
+height: 100%;
+}
+div, span, td {
+font: 12px "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+}
+a:link, a:visited {
+text-decoration: none;
+color: #333;
+}
+input {
+border: 1px solid #3C7FB1;
+}
+select {
+border: 1px solid #3C7FB1;
+}
+input[type='text'] {
+border: 1px solid #3C7FB1;
+height: 18px;
+}
+input[type='checkbox'] {
+border-style: none;
+}
+input[type='radio'] {
+border-style: none;
+}
+textarea {
+border: 1px solid #3C7FB1;
+overflow: auto;
+}
+.ellipsis {
+white-space: nowrap;
+display: block;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+html > body .ellipsis {
+clear: both;
+}
+.bbit-main {
+background-color: #E8F1F8;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+}
+a.linkdelete span {
+text-decoration: underline;
+color: #000000;
+background: url(./images/icons/delete.png) no-repeat left 6px;
+padding-top: 5px;
+padding-left: 18px;
+}
+a.imgbtn {
+color: #000000;
+}
+a.imgbtn span {
+padding: 4px 4px 3px 21px;
+cursor: point;
+}
+a.imgbtn:hover span {
+background-color: #EDF1D5;
+border: 1px solid #466094;
+padding: 3px 3px 2px 20px;
+cursor: point;
+}
+a.imgbtn span.Save {
+background: url(./images/icons/Item.Save.gif) no-repeat 3px 4px;
+}
+a.imgbtn span.Close {
+background: url(./images/icons/Btn.Close.gif) no-repeat 3px 4px;
+}
+a.imgbtn span.Delete {
+background: url(./images/icons/delete.png) no-repeat 3px 4px;
+}
+span.addcal {
+background: url(./images/icons/date_add.png) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.showdayview {
+background: url(./images/icons/cal-day.gif) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.showweekview {
+background: url(./images/icons/cal-week.gif) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.showwkweekview {
+background: url(./images/icons/cal-wk-week.gif) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.chinese {
+background: url(./images/icons/cn.gif) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.english {
+background: url(./images/icons/us.gif) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.english_au {
+background: url(./images/icons/au.gif) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.showmonthview {
+background: url(./images/icons/cal-month.gif) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.showtoday {
+background: url(./images/icons/date.png) no-repeat 1px 50%;
+padding-left: 20px;
+}
+span.fprev {
+background: url("./images/icons/resultset_previous.png") no-repeat 1px bottom;
+width: 18px;
+}
+span.fnext {
+background: url("./images/icons/resultset_next.png") no-repeat 1px bottom;
+width: 18px;
+}
+span.showdayflash {
+background: url("./images/icons/date_reflash.png") no-repeat 1px 50%;
+padding-left: 20px;
+}
+.size1 {
+width: 50px;
+}
+.size2 {
+width: 100px;
+}
+.size3 {
+width: 160px;
+}
+.size4 {
+width: 200px;
+}
+.size5 {
+width: 260px;
+}
+.size6 {
+width: 300px;
+}
+.size7 {
+width: 360px;
+}
+.X {
+color: #555;
+padding-right: 3px;
+float: right;
+cursor: pointer;
+height: 16px;
+}
+.nodisplay {
+display: none;
+}
+/* JQuery Validation */
+label.error {
+background: url(images/validation/exclamation.png) no-repeat 2px center;
+padding: 2px 0 2px 20px;
+display: block;
+}
+input.error,select.error,textarea.error, input.cusErrorPanel,cusErrorPanel.cusErrorPanel,textarea.cusErrorPanel {
+border: 1px solid red;
+}
+label.checked {
+background: url(images/validation/accept.png) no-repeat 2px center;
+padding: 0px 0 0px 18px;
+float: none;
+position: relative;
+}
+div.error {
+}
+div.cusErrorPanel {
+text-indent: 5px;
+background: url(images/validation/tooltop.gif) no-repeat left top;
+font: 12px Arial;
+overflow: hidden;
+position: absolute;
+width: 276px;
+height: 35px;
+line-height: 40px;
+z-index: auto;
+opacity: 0.9;
+filter: alpha(opacity=90);
+}
+.infocontainer {
+background-color: #fff;
+border: 1px solid #999;
+padding: 4px;
+margin: 2px;
+}
+.fform {
+margin: 0px;
+}
+.fform label {
+padding: 2px;
+margin-top: 2px;
+display: block;
+vertical-align: top;
+}
+.fform label.checkp {
+display: inline;
+}
+.fform label span {
+font-weight: bold;
+display: block;
+}
+input.noborder {
+border-style: none;
+}
+.doing {
+color: red;
+background-color: #FFFF00;
+border: 1px solid #555;
+padding: 5px;
+display: none;
+vertical-align: middle;
+position: absolute;
+top: 20%;
+left: 20%;
+}
+div.clear {
+clear: both;
+}
+div.cHead {
+white-space: nowrap;
+background: url(images/calendar/headbg.gif) repeat-x top;
+font-weight: bold;
+border: 1px solid #99bbe8;
+border-top-width: 0px;
+display: block;
+overflow: hidden;
+position: relative;
+}
+div.cHead div {
+white-space: nowrap;
+padding: 4px;
+}
+div.cHead div.ftitle {
+color: #15428b;
+background: url("images/calendar/grid.png") no-repeat left;
+padding-left: 20px;
+margin-left: 10px;
+}
+div.cHead div.ptogtitle {
+font-weight: normal;
+padding: 1px 2px 1px 2px;
+position: absolute;
+top: 3px;
+right: 15px;
+height: 18px;
+}
+div.cHead div.loadicon {
+color: #fff;
+background-color: #c44;
+}
+div.cHead div.loaderror {
+background-color: #fad163;
+padding: 1px 4px 1px 4px;
+}
+div.cHead div.ptogtitle input {
+background-color: #fff;
+border: 1px solid #ccc;
+padding-left: 4px;
+height: 16px;
+}
+div.ctoolbar {
+background: url(images/calendar/tbg.gif) repeat-x 50% top #ccc;
+border-top: 0px solid #99bbe8;
+border-left: 1px solid #99bbe8;
+border-right: 1px solid #99bbe8;
+border-bottom: 1px solid #99bbe8;
+overflow: hidden;
+position: relative;
+height: 25px;
+}
+div.ctoolbar div.fbutton {
+padding-top: 1px;
+padding-left: 1px;
+padding-right: 1px;
+padding-bottom: 1px;
+margin-left: 1px;
+display: block;
+float: left;
+cursor: pointer;
+height: 22px;
+}
+div.ctoolbar div.fbutton div {
+padding: 2px 3px;
+float: left;
+}
+div.ctoolbar div.fbutton span {
+display: block;
+float: left;
+height: 18px;
+}
+div.ctoolbar div.fbutton.fcurrent {
+background-color: #EDF1D5;
+border: 1px solid #555;
+padding: 0;
+cursor: pointer;
+}
+div.ctoolbar div.fbutton.fcurrent div {
+border-top: 1px solid #fff;
+border-left: 1px solid #fff;
+border-right: 1px solid #eee;
+border-bottom: 1px solid #eee;
+padding: 1px 2px;
+}
+div.ctoolbar div.fbutton:hover, .div.ctoolbar div.fbutton.fbOver {
+background-color: #EDF1D5;
+border: 1px solid #466094;
+padding: 0;
+cursor: pointer;
+}
+div.ctoolbar div.fbutton:hover div, .div.ctoolbar div.fbutton.fbOver div {
+border-top: 1px solid #fff;
+border-left: 1px solid #fff;
+border-right: 1px solid #eee;
+border-bottom: 1px solid #eee;
+padding: 1px 2px;
+}
+div.ctoolbar div.btnseparator {
+border-left: 1px solid #ccc;
+border-right: 1px solid #fff;
+margin: 1px;
+float: left;
+height: 18px;
+}
+div.ctoolbar div.fshowdatep {
+padding-top: 1px;
+padding-left: 1px;
+padding-right: 1px;
+padding-bottom: 1px;
+display: block;
+float: left;
+cursor: default;
+height: 22px;
+}
+div.ctoolbar div.fshowdatep div {
+padding: 2px 3px;
+float: left;
+}
+div.ctoolbar div.fshowdatep span {
+display: block;
+float: left;
+}
+div.cbody div.ctablehead {
+background: url('images/calendar/gridth.gif') repeat-x left bottom #e3f7ff;
+border-top: 1px solid #fff;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 0px solid #9c9c9c;
+overflow: hidden;
+position: relative ;
+height: 25px;
+}
+div.cbody div.ctablehead th div,div.cbody div.ctablebody td div {
+border-left-style: none;
+padding: 4px;
+overflow: hidden;
+}
+div.cbody div.ctablehead th /* common cell properties*/ {
+text-align: left;
+white-space: nowrap;
+font-weight: normal;
+border-left: 1px solid #fff;
+border-right: 1px solid #ddd;
+overflow: hidden;
+vertical-align: top !important;
+cursor: default;
+}
+div.cbody div.ctablehead div.ctableheadp {
+float: left;
+}
+div.cbody div.ctablehead th div {
+height: 17px;
+}
+div.cbody div.ctablebody {
+background-color: #dfe8f6;
+border-top: 0px solid #ccc;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+overflow: auto;
+position: relative;
+}
+div.cbody div.ctablebody td /* common cell properties*/ {
+text-align: left;
+white-space: nowrap;
+background-color: #fff;
+border-top-style: none;
+border-left: 1px solid #fff;
+border-right: 1px solid #ddd;
+border-bottom: 1px dotted #ddd;
+overflow: hidden;
+vertical-align: top !important;
+cursor: default;
+}
+div.cbody div.ctablebody tr.erow td {
+background-color: #F5FFEF;
+}
+div.cbody div.ctablebody tr:hover td, div.cbody div.ctablebody tr.trOver td {
+background-color: #FFFFBB;
+border-left: 1px solid #eef8ff;
+border-bottom: 1px dotted #a8d8eb;
+}
+div.cbody div.ctablebody td div {
+border-top: 0px solid #fff;
+padding-bottom: 2px;
+}
+div.ViewgBlock {
+background: url('images/calendar/load-bg.png') #E3E3E3;
+}
+div.ViewgBlock>div.loading {
+background: url('images/calendar/indicator_web20_working.gif') no-repeat center center #f4f4f4;
+display: block;
+width: 100%;
+height: 100%;
+opacity: 0.5;
+filter: alpha(opacity=50);
+}
+.transparent {
+background-color: #000;
+filter: alpha(opacity=0);
+-moz-opacity: 0;
+opacity: 0;
+}
