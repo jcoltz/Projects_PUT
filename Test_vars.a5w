@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="Alpha Five HTML Editor Version 11 Build 2699-3931">
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+<title></title>
+</head>
+<body>
+
+<%a5
+'session.__protected__testconnection = "{A5API=Access,FileName='C:\Dropbox\JQCalendar_Full_V3.6\jq_calendar.mdb',UserName='Admin'}" 'jq_calendar
+'session.__protected__testconnection = "{A5API=Access,FileName='C:\Dropbox\JQCalendar_Full_V3.6\mapped_tables.mdb',UserName='Admin'}" 'mapped_tables
+'session.__protected__testconnection = "{A5API=Access,FileName='C:\Dropbox\JQCalendar_Full_V3.6\northwind.mdb',UserName='Admin'}" 'Northwind
+'session.__protected__testconnection = "{A5API=MySQL,Server='localhost',Port='3306',UserName='calendar',Password='דבלומהבע',Database='jqcalendar'}" 'mysql
+
+'session.Add("test","n") 
+'session.test = 6
+?"User ID = <strong>" + A5ws_GetCurrentUser() + "</strong></br>"
+?"<strong>Browser's Cookies Enabled:</strong></br> " + Request.Browser.CookiesEnabled + "</br>"+crlf() + "</br>"
+?"<strong>Request Cookies:</strong></br> " + strtran(properties_enum(Request.Cookies),crlf(),"</br>"+crlf()) + "</br>"
+?"<strong>Request.Cookies.A5WSessionId:</strong></br> " +Request.Cookies.A5WSessionId + "</br> </br>"
+
+
+?"<strong>Session Variables:</strong> </br>" + strtran(properties_enum(Session.variables,"R"),crlf(),"</br>"+crlf()) + "</br>"
+?"<strong>Request Variables:</strong> </br> " + strtran(properties_enum(Request.variables,"R;O=p--v"),crlf(),"</br>"+crlf()) + "</br>"
+?a5w_info()
+?"<strong>Response:</strong></br> " + strtran(properties_enum(Response,"R;O=p--v"),crlf(),"</br>"+crlf()) + "</br>"
+%>
+
+<p>&nbsp;</p>
+</body></html>

@@ -1,0 +1,13 @@
+<profile="IIS_SQLSERVER_LAPTOP">
+<pubType=1>
+<files="">
+<optimize=.T.>
+<pubALB=.T.>
+<pubSecurity=.F.>
+<default_page="TabbedUI_Projects.a5w">
+<open_in_browser=.T.>
+<pubSupport=.T.>
+<pubSelected=.F.>
+<flagCreateAex=.T.>
+<flagCheckSec=.F.>
+<remoteTest=.F.>

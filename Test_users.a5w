@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="Alpha Anywhere HTML Editor Version 12 Build 3633-4676">
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<%a5 
+dim roles as c = Context.Security.GetUserRoles()
+if Context.Security.CallResult.Success then
+	?"Logged in User Roles = " + roles
+end if
+%>
+
+
+<title></title>
+</head>
+<body>
+<p>&nbsp;</p>
+</body></html>
