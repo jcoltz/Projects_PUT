@@ -1,0 +1,18 @@
+
+<%a5
+'this page is used to handle the data requests from the calendar
+'all vars not dimmed on this page passed in from calendar
+'updated 3/1/2012 to add in support for DBF tables.
+
+if eval_valid("context.session.web2cal")
+	if eval_valid("context.request.variables") then 'look for the request object from the POST
+		dim r as p = context.request
+		?jqcal_response(r)
+	else
+		?"Error, request variable not available"
+	end if
+else
+	?"{\"IsSuccess\":false,\"Msg\":\"Session has expired\"}"
+	
+end if
+%>
