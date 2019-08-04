@@ -1,0 +1,26 @@
+{
+	"_id": "",
+	"_icon": "",
+	"_ssL": "",
+	"_ssP": "",
+	"_initialUxComponent": "list_workorders",
+	"_componentLastUpdated": "10/09/2015 03:34:12 48 pm",
+	"_ajaxUrl": "replaceMeAtRuntime",
+	"_additionalFiles": "",
+	"_userName": "dR5PYIFexxE3AFm26lURFmzlXj4+4VQk2Ub+tODaZUY=",
+	"_pw": "9cVolK3TBvRyMP+Y8SPMDQ==",
+	"_token": "",
+	"timeout": {
+		"phoneGapBuild": "<default>",
+		"phoneGapBuildLogin": "<default>",
+		"getAppIcon": "<default>"
+	},
+	"apperian": {
+		"enableOptions": false,
+		"loginName": "osLnGM4pUcQ=",
+		"password": "c5JMXi9Y+Ko=",
+		"serverURL": "https://easesvc.apperian.com/ease.interface.php"
+	},
+	"backupConfigFile": true,
+	"indexHTMLMetaTags": "<meta name=\"format-detection\" content=\"email=no\">\n<meta name=\"format-detection\" content=\"telephone=no\">"
+}
