@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="Alpha Anywhere HTML Editor Version 12 Build 4315-4881">
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<title></title>
+</head>
+<body>
+<p>Copy the dropzone folder and the dropzone_uploads.a5w page into your webproject and also into your LivePreview folder if you want to use livepreview. 
+Also copy the dropzone_ux.a5wcmp UX component into your webproject.
+</p><p>
+In the UX the dropzone is set up in a staticText control with the following definition. The size, syling, etc. can be set to suit your tastes.</p>
+<pre>
+&lt;button onclick="myDropzone.removeAllFiles(true);"&gt;Clear Dropzone Window&lt;/button&gt;  <font color="#ff0000"><<-- button to clear the dropzone</font><br />
+&lt;div class="dropzone dz-clickable" id="mydropzone" style="height:6in; width:4in; border:solid 4px; background-color: #dc9797;"&gt;<br />
+	&lt;div class="dz-message"&gt;<br />
+	Drop files here or click to upload.<br />
+	&lt;br&gt;<br />
+	&lt;span class="note"&gt;<br />
+	(This is just a Note area. Selected files <br />
+	&lt;strong&gt;are&lt;/strong&gt;<br />
+	actually uploaded.)<br />
+	&lt;/span&gt;<br />
+	&lt;/div&gt; <br />
+&lt;/div&gt;
+</pre>
+<p> In the UX's head section tag area the dropzone source file locations are added. (Note, if running in tabbed_ui you will need to copy this to the "User Defined Head Content" area of the component builder.
+<pre>
+&lt;script src="dropzone/dropzone.min.js"&gt;&lt;/script&gt;<br />
+&lt;link href="dropzone/dropzone.min.css" rel="stylesheet" type="text/css" /&gt; 
+</pre>
+
+</p>
+
+<p> Then, in the UX's client side afterPerpae event the following javascript is added to set up some parameters and client side validation:
+
+	<pre>
+	Dropzone.autoDiscover = false;
+	myDropzone = new Dropzone("#mydropzone",
+	{
+	url: "dropzone_uploads.a5w",
+	paramName: "file", // The name of the param that will be used to transfer the file name
+	maxFilesize: 50, // MB
+	addRemoveLinks :true, //shows remove link
+	dictRemoveFile : "Remove File",
+	dictFileTooBig : "File is too big ({{filesize}}MB). Max filesize: {{maxFilesize}}MB.",
+	parallelUploads : 2, // how many files at a time are uploaded
+	acceptedFiles : "image/*,application/pdf,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,audio/*,video/*,application/zip",
+	accept: function(file, done) {
+		if (file.name == "justinbieber.jpg") { //used for validation
+	      done("Naha, you don't.");
+	    }
+	    else { done(); } //return done(); witho no parameter for success.
+	  	}
+	});
+</pre>
+</p>
+<p>
+The dropzone_upload.a5w page will need modified to have the files uploaded to the location you want. See line 18 of the code.
+</p>
+</body></html>

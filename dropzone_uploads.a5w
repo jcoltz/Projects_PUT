@@ -1,0 +1,33 @@
+<%a5 
+if variable_exists("request.variables.file") then 'file is passed in by dropzone and contains various properties of the uploaded file.
+	dim filename as c = request.variables.file.filename
+	dim filesize as n = request.variables.file.size
+	dim filedata as b = request.variables.file.data
+	dim success as l = request.variables.file.callresult.Success
+	dim num as n
+	dim ext as c = word(filename,-1,".") 'get file extension for validation purposes.
+	
+	'look at file extension and check if allowed. (server side validation)
+	'if  .not. inlist2(ext,"jpg,pdf")	
+	'	response.statuscode = 428
+	'	response.write("Oops! You tried to upload a file of type "+upper(ext)+". I can only accept JPG or PDF files.")
+	'	end 		
+	'end if
+	'make sure the file was uploaded and it has a size
+	if success .and. filesize > 0 then
+		filename = "c:\dropbox\photos\aaconference\\" + filename 'path on sever to save files.
+		num = file.From_blob(filename,filedata)
+	end if 
+	if num > 10 then 'check size of file for validation that the file was saved.
+		response.statuscode = 202
+		response.write("Cool! This worked out like we wanted.")
+	else
+		response.statuscode = 428
+		response.write("Oops! Something got messed up along the way.")
+	end if
+else
+	response.statuscode = 428
+	response.write("No file submitted for upload!!")
+
+end if
+%>

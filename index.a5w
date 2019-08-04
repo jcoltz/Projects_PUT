@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<head>
+
+
+<%a5
+Delete tmpl_mobile_one
+DIM tmpl_mobile_one as P
+tmpl_mobile_one = a5w_load_component("mobile_one") ''SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:mobile_one)
+
+'Override settings start -----------------------------------------
+with tmpl_mobile_one
+.alias = "mobile_one"
+_dialogFilename = "mobile_one"
+end with 
+'Override settings end -----------------------------------------
+
+delete x_mobile_one
+dim x_mobile_one as p
+x_mobile_one = a5w_run_Component(tmpl_mobile_one) 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl) (EDIT:mobile_one)
+
+?x_mobile_one.Output.Head.JavaScript
+?x_mobile_one.Output.Head.CSS_Link
+
+?x_mobile_one.Output.Head.Title 
+%>
+
+
+<!--Alpha Five Temporary Code Start - Will be automatically removed when page is published -->
+<!--CSS for tmpl -->
+<link rel="stylesheet" type="text/css" href="file:///C:/Program Files (x86)/a5V12/css/iOS7/style.css">
+<!--Alpha Five Temporary Code End -->
+
+</head>
+
+
+<body class="iOS7Page">
+
+
+
+
+<%a5 ?x_mobile_one.Output.Body.Dialog2_HTML %>
+
+</body>
+
+</html>
+

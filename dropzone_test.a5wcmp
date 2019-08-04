@@ -1,0 +1,161 @@
+{
+    "$schema": "UX",
+    "$definition": {
+        "builderType": "CustomComponent",
+        "subtype": "Dropzone",
+        "minimumBuildNumber": "",
+        "guid": "1b73c62f-8b0e-4eab-8bba-2e49b76fadb5",
+        "style_name": "Alpha",
+        "componentName": "dropzone_test",
+        "componentFilename": "C:\\Dropbox\\Projects\\Projects.WebProjects\\Default.WebProject\\dropzone_test.a5wcmp",
+        "style_type": "Alpha Five",
+        "overrideStyleName": "Default",
+        "resolveAbstractClassNames": true,
+        "builder": {
+            "workingPreviewEnabled": false,
+            "previewEnabled": true
+        },
+        "mustRunInIFrame": true,
+        "IframeInlineStyle": "height: 6in; width: 90%; border-style: solid; border-width: 1px; border-color: #000000; padding: 15px;",
+        "dz": {
+            "parallelUploads": 2,
+            "maxFilesize": 256,
+            "uploadMultiple": "false",
+            "headers": "",
+            "addRemoveLinks": "false",
+            "maxThumbnailFilesize": 10,
+            "maxFiles": "null"
+        },
+        "arguments": [
+            {
+                "Name": "URL",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "dropzone_uploads.a5w"
+            },
+            {
+                "Name": "dictCancelUpload",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "Cancel?"
+            },
+            {
+                "Name": "dictCancelUploadConfirmation",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "You sure you want to cancel the upload?"
+            },
+            {
+                "Name": "dictRemoveFile",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "Remove"
+            },
+            {
+                "Name": "thumbnailWidth",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "50"
+            },
+            {
+                "Name": "thumbnailHeight",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "50"
+            },
+            {
+                "Name": "acceptedFiles",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "image/*,application/pdf,.txt"
+            },
+            {
+                "Name": "dictInvalidFileType",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "Invalid file type."
+            },
+            {
+                "Name": "dictFileTooBig",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "Files size is too big to upload"
+            },
+            {
+                "Name": "dictMaxFilesExceeded",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "Too many files added!"
+            }
+        ],
+        "FontSize": "Medium",
+        "serverSideEvents": {
+            "onInitialRender": "",
+            "onComponentInitialize": "",
+            "onComponentExecute": "",
+            "systemOnInitialRender": "function systemOnInitialRender as v (e as p)\n e.html = bootstrap_dz_UDC(e)\nend function \n",
+            "systemOnComponentInitialize": "function systemOnComponentInitialize as v (e as p)\nend function \n",
+            "systemOnComponentExecute": "function systemOnComponentExecute as v (e as p)\nend function \n\n\n\n\n"
+        },
+        "activeLanguage": "<Default>",
+        "fontScalingOption": "All",
+        "masterTemplate": "",
+        "saveFileType": "Formatted JSON",
+        "info": {
+            "dateLastEdited": "2018-9-20"
+        },
+        "pageTitle": "Component",
+        "SVGLinkedFiles": "",
+        "localsvg": "",
+        "selected": "",
+        "designPaneIndex": 1,
+        "masterPaneC": "TabbedUIProps",
+        "serverSideEventIndex": 1,
+        "clientSideEventIndex": 1,
+        "clientSideEventIndexC": "1",
+        "__WPhostName": "Chrome",
+        "__LPhostName": "Chrome",
+        "embeddedMode": false,
+        "_style_versionNumber": 4,
+        "_style_hasSassOverrides": false,
+        "_style_hasCSSTweaks": false,
+        "_style_hassubthemeTweaks": false,
+        "_style_hasCSS_or_subtheme_tweaks": false,
+        "repeatingSectionsAreDirty": true,
+        "toolBox_value": "",
+        "addinBuildNumber": "5176",
+        "addinBuildNumberHighestUsed": "5176",
+        "alphaFiveBuildNumber": "12",
+        "openedFromTemplate": false,
+        "builderVersionNumber": 1,
+        "builtWithVersionNumer": 1,
+        "_buildCount": "2",
+        "securityEnabled": false,
+        "showHideIsUsed": false,
+        "systemXbasicFunctionDeclarations": "'define xbasic functions that the component uses when it is executing\n",
+        "componentType": "CustomComponent",
+        "version": 1,
+        "A5SaveTimeStamp": "20180920135753020",
+        "style_color_palette": ""
+    }
+}
