@@ -1,0 +1,25 @@
+<%a5
+'copyright 2015 Alpha Custom Database Solutions, LLC
+'www.a5customsolutions.com
+'required code for the Gantt control to function. Alter at your own risk.
+'debug(1) 
+
+if variable_exists("Context.Request.HttpMethod") then
+	if Context.HostContextName <> "IIS" then 'Xbasic server running
+		if  "XMLHttpRequest" !$ request.headers then 'security check to prevent generic GET or POST retrieving data 
+			end
+		end if
+	else 'IIS running
+		if  "XMLHttpRequest" !$ context.request.variables.Http_x_requested_with then 'security check to prevent generic GET or POST retrieving data 
+			end
+		end if
+	end if
+	dim context.request.variables.ganttid as c = default ""
+	if request.variables.ganttid <> "" then
+		?ACDS_gantt_response(context.session)
+	else	
+		end
+	end if
+end if
+%>
+

@@ -1,0 +1,1118 @@
+<%a5
+
+
+
+ 
+'This page is auto-generated every time files are published. It is used to print
+'reports using Ajax callbacks.
+'DO NOT MODIFY THE CODE IN THIS PAGE------------------------------------------------
+dim localArguments as c = default ""
+dim parameterBucket as c = default ""
+dim flagLocal as c = default "No"
+dim reportName as c = default ""
+dim reportDiv as c = default ""
+dim reportIframe as c = default ""
+dim _download as c = default ""
+dim _gridId as c = default ""
+dim _clientSideFilename as c = default ""
+dim _xbasicFunction as c = default ""
+dim _reportMessagesDivId as c = default ""
+dim _pdfOpenParameters as c = default ""
+dim _hostComponent as c = default "Grid"
+dim _htmlReportContent as p
+dim _objectName as c
+
+dim _afterExecuteJavascript as c = default ""
+
+
+
+dim originalReportname as c = ""
+
+dim flagSSRSImported as l 
+if atc(".ssrs@",reportName) > 0 then 
+	flagSSRSImported = .f. 
+	dim flagWorkingPreview as l = .f.
+	flagWorkingPreview = a5w_FlagWorkingPreviewOrPreview()
+
+	originalReportname = reportName
+
+	dim folder as c 
+	if flagWorkingPreview = .f. then 
+		folder = a5_removetrailingbackslash( a5_default_path)
+	else
+		folder = a5_removetrailingbackslash(a5_WebProjectPath())
+	end if 
+	'reportName = folder + chr(92) + word(reportName,1,"@") + singletonExtension
+	dim ssrsfn as c
+	ssrsfn = folder + chr(92) + word(reportName,1,"@") + ".a5rpt"
+	dim fileExists as l
+	fileExists = file.exists(ssrsfn)
+	
+	if flagWorkingPreview then 
+		if fileExists = .f. then 
+			folder = a5_removetrailingbackslash(a5_WebProjectPath())
+			ssrsfn = folder + chr(92) + word(reportName,1,"@") + ".a5rpt"
+			
+			dim fileExists as l
+			fileExists = file.exists(ssrsfn)
+		end if 
+	end if
+	
+	if fileExists then 
+		dim json as c 
+		json = file.to_string(ssrsfn)
+		if json <> "" then 
+			dim p as p
+			p = json_parse(json)
+			reportname = "ssrs:" + p.reportname + "@" + p.connectionstring
+		else
+			end
+		end if
+	else
+		end 
+		
+	end if 
+	
+end if 
+
+
+  
+dim __initialView as c  = "PDF"
+dim _htmlReporting as c = default ""
+if _htmlReporting <> "" then
+	dim htmlTargetType as c
+	dim htmlTargetDIVId as c
+	dim phtml as p
+	phtml = json_parse(_htmlReporting)
+	phtml.hostComponentType = _hostComponent
+	if word(phtml.initialView,1,"-") = "HTML" .and. _download <> "Y" then
+		__initialView = "HTML"
+		dim txt2 as c
+		txt2 = property_to_string(phtml)
+		if eval_valid("reportDiv") then
+			'phtml.reportTargetType
+			reportDiv = stritran(reportDiv,".CONTENT",".PANE")
+			if reportIframe = "" .and. reportDiv <> "" then
+				reportIframe = reportDiv
+			end if 
+		end if 
+		txt2 = txt2 + crlf(2) + "reportIframe: " + reportIframe + crlf(2)
+		'txt2 = txt2 + crlf(2) + "reportDiv: " + reportDiv
+		htmlTargetType = phtml.reportTargetType
+		if htmlTargetType = "div" then
+			'htmlTargetDIVId = ut(phtml.reportTargetId)
+			htmlTargetDIVId = phtml.reportTargetId
+		else if eval_valid("reportIFrame") then
+			' Provide a window target
+			phtml.reportIFrame = reportIFrame
+		end if
+	end if
+end if
+
+
+
+if _hostComponent = "Grid" then
+	_objectName = "_GridObj"
+else
+	_objectName = "_DlgObj"
+end if
+
+if .not.( _download = "Y" .or. _download = "X" )then
+	if reportDiv + reportIframe = "" then
+		js_cmd = "alert('Div or Iframe ID for report was not specified.');"
+		?js_cmd
+		end 'end processing'
+	end if
+end if
+
+if reportName = "" then
+	js_cmd = "alert('Report name was not specified.');"
+	?js_cmd
+	end 'end processing'
+end if
+
+dim flagWorkingPreview as l = .f.
+flagWorkingPreview = a5w_FlagWorkingPreviewOrPreview()
+
+
+
+
+dim dict as c 
+dim flagSingleton as l = .f.
+dim flagSSRS as l = .f. 
+
+dim flagSSRS as l 
+if atc("ssrs:",reportname) = 1 then 
+	flagSSRS = .t. 
+end if 
+
+if flagSSRS = .f. then
+	dict = word(reportname,2,"@") 
+	if inlist2(dict,"ProjectReport,ProjectLabel,ProjectLetter") then 
+		flagSingleton = .t.
+		dim singletonExtension as c 
+		if dict = "ProjectReport" then 
+			singletonExtension = ".a5rpt"
+		else if dict = "ProjectLabel" then 
+			singletonExtension = ".a5lab"
+		else if dict = "ProjectLetter" then 
+			singletonExtension = ".a5ltr"
+		end if 
+		
+		dim folder as c 
+		if flagWorkingPreview = .f. then 
+			folder = a5_removetrailingbackslash( a5_default_path)
+		else
+			folder = a5_removetrailingbackslash(a5_WebProjectPath())
+		end if 
+		reportName = folder + chr(92) + word(reportName,1,"@") + singletonExtension
+	end if 
+	dim ext as c 
+	ext = file.filename_parse(reportname,"e")
+	if ext = ".a5rpt" then 
+		flagSingleton = .t.
+		singletonExtension = ".a5rpt"
+	else if ext = ".a5lab" then 
+		flagSingleton = .t.
+		singletonExtension = ".a5lab"
+	else if ext = ".a5ltr" then 
+		flagSingleton = .t.
+		singletonExtension = ".a5ltr"
+	end if 
+end if 
+
+
+
+dim __mode as c
+if reportDiv <> "" .or. __initialView = "HTML"  then
+	__mode = "div"
+else
+	__mode = "iframe"
+end if
+
+dim filter as c = default ""
+dim order as c = default ""
+dim sqlFilter as c = default ""
+dim sqlOrder as c = default ""
+dim arguments as c = default ""
+
+dim sqlFilter_incremental as c = default ""
+dim filter_incremental as c = default ""
+dim arguments_incremental as c = default ""
+
+filter = stritran(filter,"`","\"")
+filter_incremental = stritran(filter_incremental,"`","\"")
+sqlFilter = stritran(sqlFilter,"`","\"")
+sqlFilter_incremental = stritran(sqlFilter_incremental,"`","\"")
+
+filter = a5_combine_filters(filter,filter_incremental)
+sqlFilter = a5_combine_filters(sqlFilter,sqlFilter_incremental,.f.,.t.) 'use sql syntax
+if arguments <> "" .and. arguments_incremental <> "" then
+	arguments = alltrim(arguments) + "||" + arguments_incremental
+else
+	arguments = arguments + arguments_incremental
+end if
+
+dim width as c = default "9in"
+dim height as c = default "11in"
+
+
+dim pdfoptions as c = default ""
+dim reportType as c = default "Report"
+
+filter = stritran(filter,"`","\"")
+order = stritran(order,"`","\"")
+
+'in case the filter has hard coded a value with UTF8 values, such as Lulea (with accented a)
+sqlFilter = convert_utf8_to_acp(sqlFilter)
+
+sqlFilter = stritran(sqlFilter,"`","\"")
+sqlOrder = stritran(sqlOrder,"`","\"")
+
+
+
+
+if eval_valid("request.variables.sqlOrder_defined") then 
+	if request.variables.sqlOrder_defined <> "" then 
+		sqlOrder = request.variables.sqlOrder_defined
+	end if 
+end if 
+
+dim args as sql::arguments
+
+if atc("session.",sqlFilter) > 0 then
+	sqlFilter = replace_variables_in_string(sqlFilter,session,"session",.f.)
+end if
+
+if atc("session.",Filter) > 0 then
+	Filter = replace_variables_in_string(Filter,session,"session",.f.)
+end if
+
+'-----------------process special currentGridFilter() and currentGridOrder() placeholders ------------------
+dim _gridCurrentDBType as c = default ""
+dim _gridCurrentFilter as c = default ""
+dim _gridCurrentOrder as c = default ""
+
+dim _gridCurrentArguments as c = default ""
+if _gridCurrentArguments <> "" then
+	a5_populate_sql_arguments_from_parameters(args,_gridCurrentArguments)
+end if
+
+dim _gridCurrentFilterDBFSyntax as c
+dim _gridCurrentFilterSQLSyntax as c
+
+'this is to handle the use case where the report is sql and the grid is dbf, or vice versa.
+if _gridCurrentDBType = "dbf" then
+	_gridCurrentFilterDBFSyntax = _gridCurrentFilter
+	_gridCurrentFilterSQLSyntax = convert_filter_syntax(_gridCurrentFilter,"dbf_to_sql")
+else
+	_gridCurrentFilterSQLSyntax = _gridCurrentFilter
+	_gridCurrentFilterDBFSyntax = convert_filter_syntax(_gridCurrentFilter,"sql_to_dbf")
+end if
+
+if atc("currentGridFilter()",filter) > 0 then
+	filter = stritran(filter,"currentGridFilter()",_gridCurrentFilterDBFSyntax)
+end if
+if order = "currentGridOrder()" then
+	order = _gridCurrentOrder
+end if
+if atc("currentGridFilter()",sqlfilter) > 0 then
+	sqlFilter = stritran(sqlFilter,"currentGridFilter()",_gridCurrentFilterSQLSyntax)
+end if
+
+if sqlOrder = "currentGridOrder()" then
+	sqlOrder = _gridCurrentOrder
+end if
+
+'if the placeholders have not been replaced by now, then just null them out.
+'(in the case of a Page Layout component, if no search has been run, _gridCurrentDBType will be null and so the placeholders will not have been replaced).
+filter = stritran(filter,"currentGridFilter()","1=1")
+sqlFilter = stritran(sqlFilter,"currentGridFilter()","1=1")
+order = stritran(order,"currentGridOrder()","")
+sqlOrder = stritran(sqlOrder,"currentGridOrder()","")
+
+'--------------------------------------------------------------------------------
+
+
+
+dim options as p
+options.filter = sqlFilter
+options.order = sqlOrder
+
+'if arguments <> "" then
+'	
+'	debug(1)
+'	
+'	'when arguments are passed in by a grid they look like this
+'	'whatcountry|Character|france||whatcity|Character|paris
+'	'argName1|type1|value1||argname2|type2|value2
+'	
+'	'when arguments come from currentListFilter('listName') they come in in this format:
+'	'%france%|||C|whatcountry_country1
+'	'%paris%|||C|whatcity_city
+'	
+'	dim argFormat as c 
+'	argFormat = getArgFormat(arguments)
+'
+'	if atc("format1:",argFormat) > 0 then 
+'		'protect against a blank argument value
+'		arguments = stritran(arguments,"|||","{pipe}||")
+'		arguments = fixArguments(arguments)
+'		arguments = stritran(arguments,"`","\"")
+'		arguments = stritran(arguments,"||",crlf())
+'		arguments = stritran(arguments,"{pipe}","|")
+'		'arguments is now a crlf delimited string of this form:
+'		'argumentName|type|value
+'	else
+'		'arguments will be transformed in "argumentName|type|value" format inside a5_xbasic_to_arguments()
+'		arguments = "__value__|||__type__|__name__FORMAT" + arguments 
+'	end if 
+'	dim pageVar as p
+'	
+'	dim __dtfmt as c = default "mm/dd/yy"
+'	'arguments might also refer to a variable, e.g.:
+'	'state|character|pageVar.statename
+'	a5_xbasic_to_arguments(arguments,args,2,pageVar,"pageVar",session,__dtfmt)
+'end if
+
+
+if arguments <> "" then
+	
+	dim argFormat as c 
+	argFormat = getArgFormat(arguments)
+	
+	
+	'"format2:value1|||type1|name1{crlf}value2|||type2|value2"
+	'"format1:name1|type1|value1||name2|type2|value2"
+	dim format as c
+	format = word(argFormat,1,":")
+	
+	'%uk%|||C|txtcountry_country1
+	'%london%|||C|txtcity_city1
+	dim _txt as c = ""
+	if format = "format2" then 
+		format = "format1"
+		for each tx in arguments 
+			'name1|type|value
+			_txt = _txt + word(tx.value,-1,"|",1) + "|" +word(word(tx.value,2,"|||"),1,"|") + "|" + word(tx.value,1,"|||") + crlf()
+		next 
+		
+		arguments = _txt
+	
+	end if 
+	if format = "format1" then 
+		
+		arguments = stritran(arguments,"|||","{pipe}||")
+		arguments = fixArguments(arguments)
+		arguments = stritran(arguments,"`","\"")
+		arguments = stritran(arguments,"||",crlf())
+		arguments = stritran(arguments,"{pipe}","|")
+		dim pageVar as p
+		dim __dtfmt as c = default "mm/dd/yy"
+		'arguments might also refer to a variable, e.g.:
+		'state|character|pageVar.statename
+		a5_xbasic_to_arguments(arguments,args,2,pageVar,"pageVar",session,__dtfmt)
+	end if 
+end if
+
+'this is the handler for reports based on currentListFilter
+if eval_valid("request.variables.argumentsListFilter") then 
+	dim argListFilter as c = request.variables.argumentsListFilter 
+	if argListFilter <> "" then 
+		dim _txt as c = ""
+		for each tx in argListFilter 
+			_txt = _txt + word(tx.value,-1,"|",1) + "|" +word(word(tx.value,2,"|||"),1,"|") + "|" + word(tx.value,1,"|||") + crlf()
+		next 
+		arguments = _txt
+		
+		arguments = stritran(arguments,"|||","{pipe}||")
+		arguments = fixArguments(arguments)
+		arguments = stritran(arguments,"`","\"")
+		arguments = stritran(arguments,"||",crlf())
+		arguments = stritran(arguments,"{pipe}","|")
+		
+		dim pageVar as p
+		dim __dtfmt as c = default "mm/dd/yy"
+		a5_xbasic_to_arguments(arguments,args,2,pageVar,"pageVar",session,__dtfmt)
+	end if 
+end if 
+
+
+if localArguments <> "" then
+	localArguments = stritran(localArguments,"||",crlf())
+	dim request_cookies as p
+    if eval_valid("request.cookies") then
+        request_cookies = request.cookies
+    end if
+	a5GridHelper_processLocalArgumentDefinitions(localArguments,Request.Variables,Request_Cookies,Session,args)
+end if
+
+if parameterBucket <> "" then
+	a5GridHelper_args_from_parameterBucket(parameterBucket, Args)
+end if
+
+'if any arguments are bound to other arguments, resolve them.
+a5_resolveArgumentsBoundToArguments(args)
+
+
+dim printOptions as p
+dim projProp as p
+projProp = a5_getWebProjectProperties()
+if variable_exists("projProp.pdfOptions") ' set in project properties
+	if projProp.pdfOptions <> ""
+		projProp.pdfOptions = strtran(projProp.pdfOptions,"||",crlf())
+		with printOptions
+			evaluate_template(projProp.pdfOptions)
+		end with
+	end if 
+end if 
+
+
+if pdfoptions <> "" then ' override project print options with options set in report
+	pdfoptions = stritran(pdfoptions,"`","\"")
+	pdfoptions = stritran(pdfoptions,"||",crlf())
+
+	dim pTemp as p
+	with pTemp
+		result = evaluate_template(pdfoptions)
+	end with
+	with printOptions
+		result = evaluate_template(pdfoptions)
+		printOptions.isWebApp = .t.
+	end with
+	if eval_valid("ptemp.hasWatermark") then
+		if pTemp.hasWatermark = .f. then 
+			printOptions.hasWatermark = .f.
+			printOptions.watermarkText = ""
+		end if 
+	end if 
+end if
+
+
+
+dim filename as c
+dim Saveas as c
+if Saveas = "XLS" .or. Saveas = "Excel"
+    Saveas = "Excel"
+end if 
+
+if saveas = "word" then 
+	saveas = "rtf"
+end if 
+
+if saveas = "ascii" then 
+	saveas = "text"
+end if
+
+if eval_valid("phtml.initialView")
+   if phtml.initialView = "HTML-Paged" then
+       Saveas = "SVG"
+   end if
+end if
+
+if saveas = "" then
+    Saveas = "PDF"
+end if
+
+dim reportNameShort as c = word(reportName,1,"@")
+dim randNum as c = time("ddMMyyhms3",now())
+
+dim extension as c 
+extension = ".pdf"
+
+
+if Saveas = "excel" then 
+	extension = ".xls"
+else if Saveas = "word" .or. Saveas = "rtf" then 
+	extension = ".rtf"
+else if Saveas = "html" then 
+	extension = ".html"
+else if Saveas = "text" then 
+	extension = ".txt"
+end if 
+
+dim extension2 as c 
+extension2 = stritran(extension,".","")
+
+
+if flagWorkingPreview then 
+	filename = session.session_folder + reportNameShort + "_" + randNum + extension
+else
+	filename = convert_utf8_to_acp(request.GetRequestTempFileName(extension2))
+end if
+
+if atc("session.",filter) > 0 then
+	filter = replace_variables_in_string(filter,session,"session",.f.)
+end if
+
+if flagSSRS = .f. then 
+	if flagSingleton = .f. then 
+		'the libraries (.alb, .alm and .alx) for sql reports are published into the webroot and the fully qualified report name does not have a drive path
+		'e.g. report1@myApp.alb. we need to translate the dictionary to a fully qualified filename.
+		if flagWorkingPreview = .f. then 
+			dim reportDictionary as c
+			reportDictionary = word(reportName,2,"@")
+			
+			if atc("[",reportDictionary) > 0 then
+				reportDictionary = filename_decode(reportDictionary)
+			end if
+			
+			if file.filename_parse(reportDictionary,"DP") = "" then
+				reportDictionary =  a5_removetrailingbackslash( a5_default_path) + chr(92) + reportDictionary
+			
+				'In the case of LivePreview, the .alb files do NOT get published to the LivePreview folder.
+				if file.exists(reportDictionary) = .f. then
+					dim originalReportDictionary as c
+					originalReportDictionary = word(reportName,2,"@")
+					reportDictionary = filename_decode("[PathAlias.ADB_Path]" + chr(92) + originalReportDictionary )
+				end if
+			
+				reportName = word(reportName,1,"@")
+				reportName = reportName + "@" + reportDictionary
+			end if
+			
+			if .not. file.exists(filename_decode(reportDictionary))
+				goto reportDictionaryNotFound
+			end if
+			
+			if atc("[",reportname) > 0 then
+				dim reportDictionary as c
+				reportDictionary = word(reportname,2,"@")
+				if reportDictionary <> "" then
+					dim reportNameShort as c
+					reportNameShort = word(reportName,1,"@")
+					reportDictionary = filename_decode(reportDictionary)
+					reportName = reportNameShort + "@" + reportDictionary
+				end if
+			end if
+		end if  'not in working previw mode
+	else 'report is a singleton
+		dim flagFound as l
+		flagFound = file.exists(reportName)
+		'Check if in LivePreview mode - if so, look for the report in the Web Project folder
+		if flagFound = .f. then 
+			if file.filename_parse(a5_default_path,"N") = "livePreview" then 
+				dim newReportName as c 
+				newReportName =  a5_removetrailingbackslash( a5_WebProjectPath() ) + chr(92) + file.filename_parse(reportName,"NE")
+				if file.exists(newReportName) then 
+					flagFound = .t.
+					reportName = newReportName
+				end if 
+			end if 
+		end if 
+		if flagFound = .f. then
+			goto reportSingletonNotFound
+		end if 
+	end if 
+end if 'not flagSSRS
+
+
+
+if atc(":",filter) > 0 then
+	filter = replace_arguments_in_string(filter,args)
+end if
+
+
+filter = alltrim(filter)
+order = alltrim(order)
+
+
+if flagWorkingPreview
+	dim g as p = global_variables()
+	g.session = session
+end if
+on error goto reportFailed
+
+dim _gridId as c = default ""
+
+
+if _gridId = "" then 
+	if eval_valid("phtml.ComponentAlias")  then 
+		_gridId = phtml.componentAlias 
+		'phtml.hostComponentType := "dialog2"
+	end if 
+end if 
+
+
+
+if flagWorkingPreview then 
+	if saveAs = "pdf" then
+		if __initialView <> "HTML" then 
+			js_cmd = "alert('Report preview for PDF reports not supported in Working Preview.');"
+			?js_cmd
+			end 'end processing'
+		end if 
+	end if
+end if 
+
+'execute the 'beforeReportPrint' event
+
+
+A5_installFonts()
+
+
+
+dim _rootPath as c 
+if flagWorkingPreview then 
+	_rootPath = a5_webprojectpath()
+else
+	_rootPath = a5_default_path
+end if 
+
+options._rootPath = _rootPath
+
+
+
+
+
+
+if flagSSRS .and.  __initialView  <> "HTML" then
+	dim p as p
+	dim ro_reportName as c 
+	
+	dim reportDiv as c = default ""
+	dim reportIframe as c = default ""
+	
+	ro_reportname = word_i(reportname,2,"ssrs:")
+	dim sr as sql::SQLServerReporting::ServiceClient
+	dim parametersJSON as c = ""
+	
+	
+	dim saveas as c = default "pdf"
+	extension = ".pdf"
+	if saveas = "excel" then
+		extension = ".xls"
+	else if saveas = "word" .or. saveas = "rtf" then
+		saveas = "word"
+		extension = ".rtf"
+	end if
+	
+	runssrsreport: 
+	p = a5ssrs_runReport(sr,ro_reportname,saveas,extension,parametersJson)
+	if p.error = .f. then 
+		if eval_valid("p.state") then 
+			if p.state = "PromptForParameter" then 
+				parametersJSON = a5ssrs_args_to_paramJson(p.parameters,args)
+				goto runssrsreport
+			else if p.state = "reporthasrun" then 	
+				if eval_valid("p.filename") then 
+					if file.exists(p.filename) then 
+						'sys_open(p.filename)
+						filename = p.filename
+					else
+						dim jsOut as c
+						jsOut = customError("Report output file not found.",__mode,reportIframe, reportDiv)
+						
+						?jsOUt 
+						end 'end processing'
+					end if 
+				else
+					dim jsOut as c
+					jsOut = customError("Report output file not found.",__mode,reportIframe, reportDiv)
+					?jsOUt 
+					end 'end processing'
+				end if 
+
+			end if 
+		end if 
+	else  'p.error = .t.
+		'showvar(p.errorText,"Report Error")
+		dim __errorText as c
+		__errorText = "Report has no records. Error reported was: " + p.errorText
+		dim jsOut as c
+		jsOut = customError(__errorText,__mode,reportIframe, reportDiv)
+		?jsOUt 
+		end 'end processing'
+	end if 
+	
+end if 
+
+
+
+
+if flagSSRS then 
+	if reportType = "" then 
+		reportType = "Report"
+	end if 
+end if 
+
+dim msg as c = "Report timing for :"+ reportName
+if eval_valid("a5Helper_reportTiming") then 
+	a5Helper_reportTiming(msg,now(),.t.)
+end if 
+
+if flagSSRS = .f. .or. (flagSSRS .and. __initialView = "HTML") then 
+	if reportType = "Report" then
+		if __initialView = "HTML" then
+		    if saveAs = "svg" then
+			    options.usePagedHTML = .t.
+			else
+			    options.usePagedHTML = .f.
+			end if    
+			options.jsonBookmarks = .t.
+			options.return_bookmarks  = .t.
+			options.namespace = "R" + time("hms3",now()) + "_"
+			options.flagWorkingPreview = flagWorkingPreview
+			
+			options._gridId = _gridId
+			options.propogateErrors = .t.
+			options.noRecordsHTML = "No records in report."
+			if variable_exists("phtml.maxDisplayRecords")
+				options.maxDisplayRecords = phtml.maxDisplayRecords
+				if variable_exists("phtml.moreRecordsTemplate")
+					options.moreRecordsTemplate = phtml.moreRecordsTemplate
+				end if
+			end if
+			
+			
+			options.originalReportName = originalReportname
+	
+			_htmlReportContent = a5w_report_html_saveAs(reportName, filter,order,phtml,global_variables(),printOptions,args,options)
+		else
+			a5w_report_saveAs(reportName,saveAs,filter,order,filename,global_variables(),printOptions,args,options)
+		end if
+	else if reportType = "Label" then
+		a5w_label_saveAs(reportName,saveAs,filter,order,filename,global_variables(),printOptions,args,options)
+	else if reportType = "Letter" then
+		a5w_letter_saveAs(reportName,saveAs,filter,order,filename,global_variables(),printOptions,args,options)
+	end if
+end if 
+'execute the 'afterReportPrint' event
+
+
+
+
+
+if __initialView = "HTML" then
+	if flagWorkingPreview then 
+		_htmlReportContent.js = embeddedIcons(_htmlReportContent.js)
+		_htmlReportContent.html = embeddedIcons(_htmlReportContent.html)
+		
+	end if 
+end if 
+
+
+'if __initialView = "pdf" then
+'	if flagConvertXPSToPDF then
+'		if .not. file.exists(filename)
+'		
+'		else 'file does exist
+'			dim filenameXPS as c = filename
+'			filename = file.filename_parse(filenameXPS,"dpn") + ".pdf"
+'			xps_to_pdf(filenameXPS,filename,printOptions)
+'		end if
+'	end if 
+'end if 
+
+
+'_objectName =  _GridObj or _DlgObj
+'------------------handle situation where user wants call an xbasic event handler
+if _download = "X" then
+	dim js as c = ""
+
+	if __initialView = "HTML" then 
+		filename = file.filename_parse(filename,"dpn") + ".html"
+		file.from_string(filename,_htmlReportContent.html)
+	end if 
+	
+	
+	if _reportMessagesDivId <> "" then
+		js = "if($('" + _reportMessagesDivId + "')) $('" + _reportMessagesDivId + "').style.display = 'none';" + crlf()
+	end if
+	dim fileSessionKey as c 
+	fileSessionKey = "Report_" + remspecial(api_uuidcreate()) + file.filename_parse(filename,"e")
+	Session.SaveDataAsFile(fileSessionKey,file.to_Blob(fileName)) 
+	
+	
+	if eval_valid("session.session_folder") then
+		'this code will not work under IIS in V12 because there are no session folders.
+		'this code is included so that legacy applications that use e.reportFilename in the Xbasic event handler continue to work.
+		'in V12 and under IIS, users should use the e.fileSessionKey property to read the report from session storage.
+		'at some point, this code will be removed.
+		dim session_file_name as c 
+		session_file_name = session.session_folder + reportNameShort + "_" + randNum + ".pdf"
+		file.copy(filename,session_file_name)
+		fileName = session_file_name
+	end if 
+	
+	dim rowNumberSource as c = "1"
+	if eval_valid("request.variables._rowNumber") then 
+		rowNumberSource = "" + request.variables._rowNumber
+	end if 
+	
+	dim flagSendEmail as c 
+	dim emailJSON as c = ""
+	if _xbasicFunction = "system:sendemail" then 
+		flagSendEmail = .t.
+		emailJSON = request.variables._sendemailsettingsJSON
+	end if 
+	
+	
+	js = js + _gridID +_objectName + "._executeEvent('afterAjaxCallbackComplete',{ ajaxEvent: 'printReport'});" + crlf()
+	
+	if flagSendEmail = .f. then 
+		js = js + _gridId + _objectName+".ajaxCallback('G','"+rowNumberSource+":all','"+_xbasicFunction+"','','fileSessionKey="+js_escape(fileSessionKey)+"&reportFilename="+js_escape(filename)+"');" + crlf()
+	else
+		dim afterevent as c 
+		if eval_valid("request.variables._afterExecuteJavascript") then 
+			afterevent = request.variables._afterExecuteJavascript
+			afterevent = "afterReportJavascript=" + js_escape(afterevent) + "&"
+		end if 
+		
+		js = js + _gridId + _objectName+".ajaxCallback('G','"+rowNumberSource+":all','"+_xbasicFunction+"','','"+afterevent+"emailsendJSON="+js_escape(emailjson)+"&fileSessionKey="+js_escape(fileSessionKey)+"&reportFilename="+js_escape(filename)+"');" + crlf()
+	end if 
+	
+	?js
+	end 'end processing'
+end if
+'-------------------------------------------------------
+
+
+
+'------------------handle situation where user wants to download the report
+if _download = "Y"  then
+	
+	
+	dim key as c = file.filename_parse(filename,"ne")
+	session.saveFileToSessionFile(filename,"A5SessionFile__" +key)
+	filename = "A5SessionFile__" +key
+	
+	
+	'pj.afterExecuteJavascript = _afterExecuteJavascript
+	dim _gridId as c = default ""
+	dim pu as p
+	pu.c = "_a5filedownload"
+	pu.action = ""
+	pu.message = ""
+	pu.fileToDownload = filename
+	pu.folder = ""
+	
+	if _clientSideFilename = "" then
+		_clientSideFilename = word(reportName,1,"@")
+	end if 
+	_clientSideFilename = file.filename_parse(_clientSideFilename,"N") + extension
+	pu.csfilename = _clientSideFilename
+	dim url as c = "__A5FileDownload.a5w?" + a5_property_to_attribute(pu,.t.)
+	dim js as c = ""
+	
+
+	
+
+	if _reportMessagesDivId <> "" then
+		js = "if($('" + _reportMessagesDivId + "')) $('" + _reportMessagesDivId + "').style.display = 'none';" + crlf()
+	end if
+
+	if _hostComponent = "tabbedUI" then 
+		js = js + "tbiObj" + "._executeEvent('afterAjaxCallbackComplete',{ ajaxEvent: 'printReport'});" + crlf()
+		js = js + "var e = $('TBIOBJ.__IFRAME1');" + crlf()
+	else
+		'this code was failing if a tabbedUI opened a Grid. the Grid has a button to open html report in a tabbedUI pane. user then click the excel button
+		'js = js + _gridID +_objectName+"._executeEvent('afterAjaxCallbackComplete',{ ajaxEvent: 'printReport'});" + crlf()
+		'js = js + "var e = $('"+_gridID+".__IFRAME1');" + crlf()
+		
+		'this pattern works if the report was opened in a tabbed UI pane from a button in a grid/ux that was in a .a5w page that had been opened in another tabbedUI pane
+		dim jsTUI as c 
+		jsTUI = jsTUI + "tbiObj" + "._executeEvent('afterAjaxCallbackComplete',{ ajaxEvent: 'printReport'});" + crlf()
+		jsTUI = jsTUI + "var e = $('TBIOBJ.__IFRAME1');" + crlf()
+		
+		js = js + "var flag = typeof " + _gridID +_objectName + ";" + crlf()
+		js = js + "if(flag == 'undefined') {if(typeof tbiObj != 'undefined') { "+jsTUI+" }  } else {"
+		js = js + _gridID +_objectName+"._executeEvent('afterAjaxCallbackComplete',{ ajaxEvent: 'printReport'});" + crlf()
+		js = js + "var e = $('"+_gridID+".__IFRAME1');" + crlf()
+		js = js + "};"
+		
+		
+	end if 
+	js = js + "e.src = '" + url + "';"
+	?js
+	end 'end processing'
+end if
+'-------------------------------------------------------
+
+dim sFN as c
+
+'debug(1)
+
+
+if flagLocal = "No" then
+	if flagWorkingPreview then 
+		sfn = session.session_url + file.filename_parse(filename,"NE")
+	else
+		if __initialView = "PDF" then
+			dim b as b 
+			b = file.to_blob(filename)
+			dim sessionFileKey as c 
+			sessionFileKey = file.filename_parse(filename,"NE")
+			Session.SaveDataAsFile(sessionFileKey,b)
+			SFN = session.FormatFileDataURL(sessionFileKey)
+			sfn = a5UXHelper_Session_FormatFileDataURL_Prefix() + sfn
+		end if 
+	end if 
+
+else
+	sfn = stritran(filename,chr(92),"/")
+end if
+
+
+
+
+if _pdfOpenParameters <> "" then
+	sfn = sfn + _pdfOpenParameters
+end if
+
+dim js_cmd as c
+dim pj as p
+pj.reportFileName = js_escape(sfn)
+
+if __mode = "div" then
+	pj.reportDiv = reportDiv
+	pj.reportIFrame = reportDiv + ".IFRAME"
+else
+	pj.reportIFrame = reportIframe
+end if
+
+'__initialView = "HTML"
+
+pj.afterExecuteJavascript = _afterExecuteJavascript
+
+a5_json_prep(pj)
+js_cmd = "a5reportInfo = " + vartojson(pj) + ";"
+
+if _gridID <> "" then
+	js_cmd = js_cmd + "if( typeof "+_gridID +_objectName+" != 'undefined' ) " +  _gridID +_objectName+"._executeEvent('afterAjaxCallbackComplete',{ ajaxEvent: 'printReport'});" + crlf()
+end if
+
+if __mode = "DIV" then
+	js_cmd = Js_cmd + "$('"+reportDiv+"').innerHTML = '<iframe src=\"\" id=\""+\
+			reportDiv+".IFRAME\" style=\"width: "+width+"; height: "+\
+			height+";\"></iframe>'"
+else
+	'it is an iframe - we don't need to do anything more than just send back the a5reportInfo object
+end if
+
+
+if __initialView = "HTML" then
+	if htmlTargetType = "div" then
+		js_cmd = "$('" + htmlTargetDIVId + ".__REPORTHTML" + "').innerHTML = '"+js_escape(_htmlReportContent.html)+"';"
+		js_cmd = js_cmd + crlf() + _htmlReportContent.js
+	else
+		js_cmd = _htmlReportContent.js
+	end if
+	dim _afterExecuteJavascript as c = default ""
+	js_cmd = js_cmd + _afterExecuteJavascript
+	
+end if
+
+
+
+?js_cmd
+
+end 'end processing'
+reportFailed:
+dim errorText as c
+errorText = "Report did not print. Error reported was: <br />" + error_text_get()
+errorText = stritran(errorText,"Amyuni Low Level Print:","")
+errorText = js_escape(errorText)
+if __mode = "DIV" then
+	js_cmd = "$('"+reportDiv+"').innerHTML = '<span style=\"color: red;\">"+errorText+"</span>'; a5reportInfo = {};"
+elseif reportIFrame = ""
+	js_cmd = "A5.msgBox.show('Error','<div style=\"color: red;padding: 15pt;\">" + errorText + "</div>',[{html: 'OK', value: 'ok'}],function(){});a5reportInfo = {};"
+else
+	errorText = stritran(errorText,"<br />", "___br___")
+	errorText = stritran(errorText,"<br>", "___br___")
+	js_cmd = "$('"+reportIFrame+"').src='__workingMessage.a5w?errorText='+urlencode('" + errorText + "'); a5reportInfo = {};"
+end if
+?js_cmd
+end 'end processing'
+
+reportDictionaryNotFound:
+	dim errorText as c
+	errorText = "Report did not print because the Data Dictionary that contains the Report definition was not found.<br />" +\
+	"Missing Data Dictionary: " + reportDictionary
+	
+	dim errorTextPlain as c 
+	errorTextPlain = "Report did not print because the Data Dictionary that contains the Report definition was not found. Missing Data Dictionary: " + reportDictionary
+	
+	
+	if atc(".alb",reportDictionary) > 0 then
+		errorText = errorText + "<br />" + "To fix the problem, make sure that the 'Publish Workspace Library' option is checked when you publish your Application."
+		errorTextPlain = errorTextPlain + crlf()+ "TIP: To fix the problem, make sure that the 'Publish Workspace Library' option is checked when you publish your Application."
+	end if
+	
+	errorText = js_escape(errorText)
+	if __mode = "DIV" then
+		if reportDiv = "" then 
+			js_cmd = "alert('" + js_escape(errorTextPlain) + "');"
+		else
+			js_cmd = "$('"+reportDiv+"').innerHTML = '<span style=\"color: red;\">"+errorText+"</span>'; a5reportInfo = {};"
+		end if 
+	else
+		errorText = stritran(errorText,"<br />", "___br___")
+		js_cmd = "$('"+reportIFrame+"').src='__workingMessage.a5w?errorText='+urlencode('" + errorText + "'); a5reportInfo = {};"
+	end if
+	?js_cmd
+	
+	end 
+
+reportSingletonNotFound: 
+
+	dim errorText as c
+	errorText = "Report did not print because the Report Definition file was not found.<br />" +\
+	"Missing Report Filename: " + reportName
+	
+	errorText = js_escape(errorText)
+	dim eleId as c 
+	eleId = reportDiv
+	if eleId = "" then 
+		eleId = reportIframe
+	end if 
+	js_cmd = "$('"+eleId+"').innerHTML = '<span style=\"color: red;\">"+errorText+"</span>'; a5reportInfo = {};"
+	?js_cmd
+	
+	end 
+
+
+
+
+end 'end processing'
+
+
+'end of code --------------------------------------------------------------------------------
+
+function customError as c (errorText as c, __mode as c, reportIframe as c  , reportDiv as c  )
+errorText = "Report did not print. Error reported was: <br />" + errorText
+errorText = stritran(errorText,"Amyuni Low Level Print:","")
+errorText = js_escape(errorText)
+if __mode = "DIV" then
+	js_cmd = "$('"+reportDiv+"').innerHTML = '<span style=\"color: red;\">"+errorText+"</span>'; a5reportInfo = {};"
+else if reportIFrame = ""
+	js_cmd = "A5.msgBox.show('Error','<div style=\"color: red;padding: 15pt;\">" + errorText + "</div>',[{html: 'OK', value: 'ok'}],function(){});a5reportInfo = {};"
+else
+	errorText = stritran(errorText,"<br />", "___br___")
+	errorText = stritran(errorText,"<br>", "___br___")
+	js_cmd = "$('"+reportIFrame+"').src='__workingMessage.a5w?errorText='+urlencode('" + errorText + "'); a5reportInfo = {};"
+end if
+customError = js_cmd
+
+end function 
+
+
+function getArgFormat as c (args as c )
+dim ix as n 
+ix = atc("|",args)
+dim chr2 as c
+chr2 = substr(args,ix+1,1)
+if chr2 = "|" then 
+	getArgFormat = "format2:value1|||type1|name1{crlf}value2|||type2|value2"
+else
+	getArgFormat = "format1:name1|type1|value1||name2|type2|value2"
+end if 
+end function 
+	
+
+function embeddedIcons as c (txt as c )
+dim sr as c
+sr = <<%txt%
+"images/=="\"a5res:images/"
+(images/=="(a5res:images/"
+'images/=="'a5res:images/"
+.a5image==""
+css/="a5res:css/"
+{a5_web_project_folder}=="a5res:"
+%txt%
+txt = stritran_multi_expressions(txt,sr)
+embeddedIcons = txt
+end function
+
+
+function fixArguments as c ( txt as c )
+'if arguments were submitted by calling the {dialog.object}.listFilterOrder() method then they are in the form of a crlf delimited string like value|||type|name
+if atc("|||",txt) = 0 then 
+	fixArguments = txt
+	exit function 
+end if
+dim count as n 
+count = line_count(txt)
+dim a[count] as p
+a.initialize_properties("value|||type|name",txt)
+dim newTxt as c 
+newTxt = a.dump_properties("name|type|value")
+fixArguments = newTxt
+'arguments is now a crlf delimited string of this form:
+'argumentName|type|value	
+end function 
+
+function convert_filter_syntax as c (filter as c, mode as c )
+if mode = "sql_to_dbf" then
+	filter = stritran(filter," and "," .and. ")
+	filter = stritran(filter," or "," .or. ")
+else 'dbf to sql
+	filter = stritran(filter," .and. "," AND ")
+	filter = stritran(filter," .or. "," OR ")
+	filter = stritran(filter,"\"","'")
+end if
+convert_filter_syntax = filter
+
+
+end function
+%>

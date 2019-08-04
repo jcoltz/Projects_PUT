@@ -1,0 +1,188 @@
+
+<%a5
+
+
+
+if eval_valid("request.variables.file1.filename") then 
+	'for IIS
+	dim file1 as p
+	file1 = request.variables.file1
+else
+	dim file1 as p
+	dim file1.filename as c = default ""
+end if 
+
+
+'Passed in on the URL:
+'relativePath - folder in the applicationRoot where images are stored
+'windowId - id of the Insert Image window
+'insertType - image or file
+
+
+
+if atc("::storage::",relativePath) then 
+	dim cs as c 
+	cs = word_i(relativePath,2,"::storage::")
+	dim ps3 as p 
+	ps3 = a5DialogHelper_parseStorageConnectinString(cs)
+	if ps3.error then 
+		dim jsCmd as c 
+		jsCmd = "alert('Could not decode S3 connection string');"
+		dim returndatatype as c = default ""
+		if returndatatype  = "javascript" then 
+			?jsCmd
+		else
+			?"<script>"+crlf()+jsCmd+crlf()+"</script>"
+		end if 
+		end 
+	end if 
+	if file1.filename <> "" then
+		dim ext as c 
+		ext = file.filename_parse(file1.filename,"e")
+		
+		
+		''---------
+		
+		dim jscmd as c 
+		if inlist2(ext,".jpg,.jpeg,.png,.gif,.bmp") = .f. .and. insertType = "Image" then 
+			jsCmd = "window.parent.A5.windows.getFromElement('"+windowId+"').hide();alert('Not a valid image type. The following image extensions are allowed: .jpg,.jpeg,.png,.gif,.bmp');"
+		else if inlist2(ext,".exe,.com,.dll,.bat,.ocx,.a5i,.a5w,.a5wcmp") = .t. .and. insertType = "file" then 
+			jsCmd = "window.parent.A5.windows.getFromElement('"+windowId+"').hide();alert('Not an allowed file type.');"
+		end if 
+		if jsCmd <> "" then 
+			
+			if returndatatype  = "javascript" then 
+				?jsCmd
+			else
+				?"<script>"+crlf()+jsCmd+crlf()+"</script>"
+			end if 
+			end 
+		end if 
+		'----
+		
+		
+		
+		
+		if eval_valid("file1.savetofile") then 'it SHOULD
+			dim fntemp as c 
+			fntemp = request.GetRequestTempFileName(file.filename_parse(file1.filename,"e"))
+			file1.SaveToFile(fntemp)
+			
+			dim itemName as c 
+			itemName = "AAFile_" + remspecial(api_uuidcreate()) + ext 
+			dim flag as l
+			dim pr as p
+			flag = 	a5storage_savefile(relativePath,fntemp,itemName,"",pr,null_value(),.t.) '.t. allows public read
+			dim jscmd as c 
+			if flag = .f. then 
+				jsCmd = "alert('Error uploading file to S3');"	
+			else
+				dim url as c 
+				url = "https://" + ps3.container + ".s3.amazonaws.com/" + itemname
+				if insertType = "Image" then 
+					jsCmd = "ele = window.parent.$('"+windowId+"');"+crlf()+\
+						"window.parent.$sa(ele,'a5imagetoinsert','"+url+"');"+crlf()+\
+						"window.parent.$sa(ele,'a5inserttype','image');"+crlf()+\
+						"window.parent.$e.execute(ele,'a5insert');"
+				else if insertType = "file" then 
+					jsCmd = "ele = window.parent.$('"+windowId+"');"+crlf()+\
+						"window.parent.$sa(ele,'a5filetoinsert','"+url+"');"+crlf()+\
+						"window.parent.$sa(ele,'a5inserttype','file');"+crlf()+\
+						"window.parent.$e.execute(ele,'a5insert');"
+				end if 
+			end if 
+			if returndatatype  = "javascript" then 
+				?jsCmd
+			else
+				?"<script>"+crlf()+jsCmd+crlf()+"</script>"
+			end if 
+			end 
+		end if 
+	end if 
+end if  'end of ::storage:: handler
+
+dim relativePath as c = default ""
+if relativePath <> "" then 
+	relativePath = rtrim(relativePath,chr(92) + "/") + chr(92)
+end if 
+relativePath = stritran(relativePath,"/",chr(92))
+
+dim windowId as c = default ""
+dim insertType as c = default "Image"
+dim jsCmd as c
+
+
+if file1.filename <> "" then
+
+	dim ext as c 
+	ext = file.filename_parse(file1.filename,"e")
+	
+	if inlist2(ext,".jpg,.jpeg,.png,.gif,.bmp") = .f. .and. insertType = "Image" then 
+		jsCmd = "window.parent.A5.windows.getFromElement('"+windowId+"').hide();alert('Not a valid image type. The following image extensions are allowed: .jpg,.jpeg,.png,.gif,.bmp');"
+	else if inlist2(ext,".exe,.com,.dll,.bat,.ocx,.a5i,.a5w,.a5wcmp") = .t. .and. insertType = "file" then 
+		jsCmd = "window.parent.A5.windows.getFromElement('"+windowId+"').hide();alert('Not an allowed file type.');"
+	else if inlist2(insertType,"file,image") 
+		
+		dim approot as c 
+		approot = Request.ApplicationRoot 
+		dim filename as c 
+		filename = approot + relativePath + file1.filename
+		filename = get_unique_filename(filename)
+		
+		dim filenameRelative as c 
+		filenameRelative = substr(filename,len(approot) + 1)
+		filenameRelative = stritran(filenameRelative,chr(92),"/")
+		filenameRelative = js_escape(filenameRelative)
+		
+		dim dirname as c 
+		dirname = file.filename_parse(filename,"dp")
+		dir_create_recurse(dirname)
+		
+		
+		
+		'if the uploaded file has a saveToFile() method, call it directly to avoid reading the blob into memory		
+		if eval_valid("file1.savetofile") then
+			dim fntemp as c 
+			fntemp = request.GetRequestTempFileName(file.filename_parse(filename,"e"))
+			file1.SaveToFile(fntemp)
+			'if filename has high order characters  (e.g. hebrew), must usse the *utf8_to_wchar() function on the filename
+			file.rename(fntemp,*utf8_to_wchar(filename))
+		else
+			'if filename has high order characters  (e.g. hebrew), must usse the *utf8_to_wchar() function on the filename
+			file.From_blob(*utf8_to_wchar(filename),file1.data)
+			'file.from_blob(filename, file1.data)  'can't use this on a filename with wide characters
+		end  if 
+		
+		
+  
+		
+		if insertType = "Image" then 
+			jsCmd = "ele = window.parent.$('"+windowId+"');"+crlf()+\
+				"window.parent.$sa(ele,'a5imagetoinsert','"+filenameRelative+"');"+crlf()+\
+				"window.parent.$sa(ele,'a5inserttype','image');"+crlf()+\
+				"window.parent.$e.execute(ele,'a5insert');"
+		else if insertType = "file" then 
+			jsCmd = "ele = window.parent.$('"+windowId+"');"+crlf()+\
+				"window.parent.$sa(ele,'a5filetoinsert','"+filenameRelative+"');"+crlf()+\
+				"window.parent.$sa(ele,'a5inserttype','file');"+crlf()+\
+				"window.parent.$e.execute(ele,'a5insert');"
+		
+		
+		end if 
+	end if 
+else
+		jsCmd = "window.parent.A5.windows.getFromElement('"+windowId+"').hide();"
+end if
+
+
+
+
+dim returndatatype as c = default ""
+if returndatatype  = "javascript" then 
+	?jsCmd
+else
+	?"<script>"+crlf()+jsCmd+crlf()+"</script>"
+end if 
+
+%>
+

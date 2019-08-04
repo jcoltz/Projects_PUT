@@ -1,0 +1,383 @@
+/*****************************************************************************************
+ACDS Gantt V1.03  
+Copyright © 2015 Alpha Custom Database Solutions, LLC
+www.a5customsolutions.com 
+******************************************************************************************/
+
+function onComponentSave as v (wp as p, vars as p)
+'This function is called when the developer is editing the component in the Builder and he/she clicks the 'Save' icon.
+
+'The function MUST set the following properties of the 'wp' object that is passed in:
+'wp.systemXbasicFunctionDeclarations = A string containing function definitions that the component calls at runtime.
+'wp.serverSideEvents.systemOnInitialRender = A string containing the defintion for this function: function systemOnInitialRender as v (e as p)
+'wp.serverSideEvents.systemOnComponentInitialize = A string containing the defintion for this function: function systemOnComponentInitialize as v (e as p)
+'wp.serverSideEvents.systemOnComponentExecute = A string containing the defintion for this function: function systemOnComponentExecute as v (e as p)
+
+wp.systemXbasicFunctionDeclarations = <<%code%
+'define xbasic functions that the component uses when it is executing
+%code%
+
+wp.serverSideEvents.systemOnInitialRender = <<%code%
+function systemOnInitialRender as v (e as p)
+	e.html = acds_Gantt_html(e)
+end function 
+%code%
+
+wp.serverSideEvents.systemOnComponentInitialize = <<%code%
+function systemOnComponentInitialize as v (e as p)
+end function 
+%code%
+
+wp.serverSideEvents.systemOnComponentExecute = <<%code%
+function systemOnComponentExecute as v (e as p)
+end function 
+
+
+
+
+%code%
+
+dim testv as l
+dim udc_root_folder as c
+dim aexf as c = "acds_dhxgantt.aex" 
+dim ganttVersion as c = "ACDS Gantt" 
+udc_root_folder = a5_getinstallationapplicationdatafolder(.f.)+"\UserDefinedWebComponentTypes\\"+ganttVersion+"\AEX" 'better way to get the directory 
+if .not. file.exists(udc_root_folder) then 'Check that the path created above is valid.
+	txt = "The "+ganttVersion+" UDC files do not appear to be installed where I expected to find them. They should be located at "+udc_root_folder+" but I can't find them there."
+	txt = txt +crlf(2)+"Please verify that they are installed correctly." 
+	acds_install_gantt_files = .f.
+	ui_msg_box("Warning!",txt,UI_STOP_SYMBOL+UI_OK)
+	end
+else
+	a5_load_aex_files(udc_root_folder+"\\"+aexf,214,"acds_gantt_temp.aex" )
+
+end if
+testv = acds_install_gantt_files(ganttVersion,wp)
+
+if .not. testv then
+	ui_msg_box("Error in component's onsave event.","All the files needed to publish, and make the Gantt work correctly, are not present. Please correct before attemping to proceed",UI_STOP_SYMBOL+UI_OK)
+end if
+
+end function 
+
+
+'These are function definitions for functions that are called in the onComponentSave() function, or by 'smart' fields in the Property Grid.
+'If you call one of these functions from a 'smart' field in a Property Grid, you must use the 'bf.' prefix. e.g. bf.tablePicker(tablename).
+
+function table_map as v (BYREF wp as p , tbl as c)
+	
+	DIM varC_result as C
+	dim tbl_col as p
+	dim vend_date as l = default .f.
+	dim tbllist as c
+	dim conn as sql::Connection
+	dim ti as sql::TableInfo
+
+	
+	'wp is the pointer with all the properties passed in by the calling property grid
+	vend_date = wp.Gantt.use_end_date 'true if using end_date, false if using duration
+	if conn.Open(wp.Gantt.connection) then
+		if tbl = "tasks" then
+			tbl_col = wp.gantt.task_map	
+			conn.GetTableInfo(ti,wp.Gantt.task_table)
+		else
+			tbl_col = wp.gantt.link_map
+			conn.GetTableInfo(ti,wp.Gantt.link_table)
+		end if
+		conn.Close()
+		tbllist = ""+crlf()+ti.ListColumns() 'add a blank to the top to allow for clearing of value.
+		'ti.column.count contains the number of columns.
+	end if
+	
+	dim id as p
+	dim id.def as c
+	
+	if tbl = "tasks" then
+		
+		id.def = <<%str%
+hasToolbar=false
+hasHelp=true
+visualtheme=0
+order=category
+
+^^Mapping
+	state=opened
+	show_label=
+	type=category
+	++Id
+		var=tbl_col.id
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required. (integer) The primary key column of the table. This must be the first column in the table and must be an integer type and auto-incrementing.
+	++text
+		var=tbl_col.text
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required. (varchar) The column that holds the text that is shown in the event.
+	++start_date
+		var=tbl_col.start_date
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required. (date-time) The column that holds the start date, in date-time format.
+	++duration
+		var=tbl_col.duration
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		show=vend_date = .f.
+		help=Required (integer)
+	++end_date
+		var=tbl_col.end_date
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		show=vend_date = .t.
+		help=Required (date-time)
+	++progress
+		var=tbl_col.progress
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required (float)
+	++sortorder
+		var=tbl_col.sortorder
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required (integer)
+	++parent
+		var=tbl_col.vparent
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required (integer)
+	++open
+		var=tbl_col.vopen
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required (tinyInt)
+	++type
+		var=tbl_col.vtype
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer		
+		help=Required (varchar)
+
+	++User Defined One
+		var=tbl_col.userdefined1_c 
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+
+	++User Defined Two
+		var=tbl_col.userdefined2_c 
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+
+	++User Defined Three
+		var=tbl_col.userdefined3_c 
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+
+	++User Defined Four
+		var=tbl_col.userdefined4_c 
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+
+	++User Defined Five
+		var=tbl_col.userdefined5_c 
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer		
+
+		
+%str%
+		
+	else ' for links
+		
+		id.def = <<%str%
+hasToolbar=false
+hasHelp=true
+visualtheme=0
+order=category
+
+^^Mapping
+	state=opened
+	show_label=
+	type=category
+	++Id
+		var=tbl_col.id
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required. (integer) The primary key column of the table. This must be the first column in the table and must be an integer type and auto-incrementing.
+	++source
+		var=tbl_col.source
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required (integer)
+	++target
+		var=tbl_col.target
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required (integer)
+	++type
+		var=tbl_col.type
+		event=
+		type=combo
+		data=@tblList
+		smartbutton=$a5_hammer
+		help=Required (char)		
+%str%
+		
+		
+		
+	end if
+	
+	heading_string = "Map your table from the drop down fields on the right to the list of required columns on the left."
+	ok_button_label = "&OK"
+	cancel_button_label = "&Cancel"
+	varC_result = ui_dlg_box("Table Mapping",<<%dlg%
+{region}
+{text=115,1:heading_string};
+{endregion};
+{region}
+| {propgrid=100,25id};
+{endregion};
+{line=1,0};
+{region}
+<*15=ok_button_label!OK> <15=cancel_button_label!CANCEL>
+{endregion};
+%dlg%)
+
+
+
+	if tbl = "tasks" then
+		wp.gantt.task_map = tbl_col
+	else
+		wp.gantt.link_map = tbl_col
+	end if	
+	
+end function
+
+function conn_string as c (vconn as c)
+	dim ret as p 
+	ret =  a5_defineconnectionstring(vconn,"AlphaDAO")
+	if ret.lastbutton = "OK" then
+		conn_string = ret.connstring
+	else
+		conn_string = vconn
+	end if
+end function
+
+function table_selector as c (vconn as c, vtable as c)
+	dim ret as c = ""
+	ret = a5_sql_table_selector(vconn,vtable)
+	if ret <> "" then
+		table_selector = ret
+	else
+		table_selector = vtable
+	end if
+end function
+
+function csstxt as c (css as c)
+	csstxt = a5_css_editor(css,"","Custom Gantt CSS",.f.)
+end function
+
+function htmltxt as c (html as c)
+	dim phtml as p
+	dim oldhtml as c = html
+	phtml = a5_html_modal(html,"Custom gantt HTML",.t.,.f.,0,0,"","default","",.t.)
+	if phtml.lastbutton  = "OK" then
+		htmltxt = phtml.text
+	else
+		htmltxt = oldhtml
+	end if
+end function
+
+function jstext as c(js as c)
+	DIM  varC_result as C
+	dim oldjs as c = js
+	heading_string = "Enter your Javascript code below."
+	ok_button_label = "&OK"
+	cancel_button_label = "&Cancel"
+	varC_result = ui_dlg_box("JS Code",<<%dlg%
+	{font=Arial,10}
+	{region}
+	{Region}
+	{text=135,2:heading_string};
+	{Endregion};
+	{Region}
+	 [%mwk%.120,40js];
+	{Endregion}; 
+	{Region}
+	;
+	{Endregion};
+	{line=1,0};
+	<*15=ok_button_label!OK> <15=cancel_button_label!CANCEL>;
+	{endregion};
+	%dlg%)
+	if varC_result = "OK" then
+		jstext = js
+	else
+		jstext = oldjs
+	end if	
+end function
+
+function custom_sql_filter as c (sql as c)
+	DIM  varC_result as C
+	dim oldsql as c = sql
+	heading_string = "Enter your SQL filter below."
+	ok_button_label = "&OK"
+	cancel_button_label = "&Cancel"
+	varC_result = ui_dlg_box("SQL Filter",<<%dlg%
+	{font=Arial,10}
+	{region}
+	{Region}
+	{text=135,1:heading_string};
+	{Endregion};
+	{Region}
+	 [%mwk%.120,40sql];
+	{Endregion}; 
+	{Region}
+	;
+	{Endregion};
+	{line=1,0};
+	<*15=ok_button_label!OK> <15=cancel_button_label!CANCEL>;
+	{endregion};
+	%dlg%)
+	if varC_result = "OK" then
+		custom_sql_filter = sql
+	else
+		custom_sql_filter = oldsql
+	end if		
+
+end function
+

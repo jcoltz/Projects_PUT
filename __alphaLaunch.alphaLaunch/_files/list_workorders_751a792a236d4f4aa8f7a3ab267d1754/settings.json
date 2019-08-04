@@ -1,0 +1,34 @@
+{
+	"id": "One",
+	"name": "ListWorkOrders",
+	"url": "",
+	"version": "1.0.1",
+	"installMessage": "",
+	"minSize": "",
+	"maxSize": "",
+	"description": "",
+	"other": {
+		"developerName": "",
+		"deveroperEmail": ""
+	},
+	"BackgroundColor": "#5345f2",
+	"icontype": "SVG",
+	"iconbitmap": "",
+	"iconstyle": "",
+	"svg": "<svg  style=\" stroke: #000000;\" height=\"42\" width=\"42\"  id=\"alpha-icon-comment\" viewBox=\"0 0 26 26\">\n<path d=\"m 3.5,5.5 v 15 H 10 l 3,3 3,-3 h 6.5 v -15 z\" transform=\"\" style=\"opacity: 1; fill: none; fill-opacity: 1; stroke: inherit000; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0; stroke-opacity: 1;\" />\n<path d=\"m 6.5,8.5 13,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" />\n<path d=\"m 6.5,11.5 13,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" />\n<path d=\"m 6.5,14.5 13,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" />\n<path d=\"m 6.5,17.5 8,0\" transform=\"\" style=\"fill: none; stroke: inherit000; stroke-width: 1px; stroke-linecap: round; stroke-linejoin: miter; stroke-opacity: 1;\" />\n</svg>",
+	"advancedMode": false,
+	"advancedModeJson": "",
+	"options": {
+		"iOSStatusBar": {
+			"statusBarOverlaysWebView": 1,
+			"statusBarTextWhite": 0,
+			"statusBarBackgroundHexColor": "#FFF"
+		}
+	},
+	"downloadtype": "singleWithHeader",
+	"publishing": {
+		"aexfiles": true
+	},
+	"additionalResources": "",
+	"downloadLocation": ""
+}

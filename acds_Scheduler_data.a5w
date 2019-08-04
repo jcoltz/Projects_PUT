@@ -1,0 +1,29 @@
+<%a5 
+'copyright 2014 Alpha Custom Database Solutions, LLC
+'www.a5customsolutions.com
+'required code for the ACDS_Scheduler control to function. Alter at your own risk.
+'debug(1)
+
+if variable_exists("Context.Request.HttpMethod") then
+	'if Context.HostContextName <> "IIS" then 'Xbasic server running
+	'	if  "XMLHttpRequest" !$ request.headers then 'security check to prevent generic GET or POST retrieving data 
+	'		end
+	'	end if
+	'else 'IIS running
+	'	if  "XMLHttpRequest" !$ context.request.variables.Http_x_requested_with then 'security check to prevent generic GET or POST retrieving data 
+	'		end
+	'	end if
+	'end if
+ 	'changes to fix Change in AA V3.3 released 10/26/16 that removed context.request.variables.Http_x_requested_with   
+	if "XMLHttpRequest" !$ Context.Request.Headers.Get("X-Requested-With") then 'security check to prevent generic GET or POST retrieving data 
+        end
+    end if
+	dim context.request.variables.SchedulerId as c = default ""
+	if request.variables.SchedulerId <> "" then
+		?ACDS_Sched_resp(context.session)
+	else	
+		end
+	end if
+end if
+
+%>

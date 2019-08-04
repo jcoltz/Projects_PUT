@@ -1,0 +1,37 @@
+<%a5
+'This page is used for external authentication methods to get credentials, add a user, or login from an AJAX call
+dim __ajax as c
+dim code as c
+dim ext as webSecurity::ExtAuthentication
+if ext.AllowExtAuthentication = .F.
+	goto redirect
+end if
+ext.GetAuthenticationTokens()
+dim isAuthenticated as l
+isAuthenticated = ext.IsAuthenticated()
+
+if isAuthenticated = .F. 
+	if code = "" ' need JavaScript code to open login form
+		if ext.Javascript <> ""
+			?ext.Javascript  
+			end
+		else
+			goto redirect 
+		end if 
+	else  
+		goto redirect  '-- request should have authentication code
+	end if
+end if 
+if isAuthenticated
+	ext.ProcessAuthenticationRequest()
+end if 
+
+redirect: 
+
+if __ajax = "true"
+	?ext.Javascript  
+else
+	?ext.html
+end if 
+
+%>

@@ -1,0 +1,1548 @@
+{
+    "$schema": "UX",
+    "$definition": {
+        "style_name": "MobTan",
+        "style_type": "Alpha Five",
+        "resolveAbstractClassNames": true,
+        "builderVersionNumber": 1,
+        "overrideStyleName": "Default",
+        "FontSize": "Medium",
+        "LocalCss": "<style>\n\n\n</style>",
+        "A5ContainerClassPadding": "0px",
+        "A5ContainerClassPaddingForContainerWidthMode": "4px",
+        "layoutType": "ContainerWidth",
+        "previewMode": "Default",
+        "useDragScrolling": "Auto",
+        "pageTitle": "UX",
+        "waitMsg": {
+            "message": {
+                "text": "Wait...",
+                "waitIcon": "css/A5System/Images/wait.gif"
+            },
+            "cssAnimation": {
+                "size": "32"
+            }
+        },
+        "globalSettings": {
+            "labelWidth": "1in"
+        },
+        "serverSideEvents": {
+            "canAjaxCallback": "",
+            "afterAjaxCallback": ""
+        },
+        "onTimerEventInterval": 60,
+        "securityDeniedAction": "Redirect to login page",
+        "clientSideEvents": {
+            "_canAjaxCallback": "",
+            "__afterAjaxCallbackComplete": "",
+            "onAjaxCallbackFailed": "",
+            "onAjaxCallbackNotAvailable": "",
+            "onAjaxCallbackNotAllowed": "",
+            "onBeforeCreate": "",
+            "onServerSideEventHandlerError": "",
+            "onFieldValidationError": "",
+            "beforePrepare": "",
+            "afterPrepare": "",
+            "afterValidate": "",
+            "onTabPaneChanged": "",
+            "beforeRptSectionRowPrepare": "",
+            "afterRptSectionRowPrepare": "",
+            "canRptSectionRowAdd": "",
+            "afterRptSectionRowAdd": "",
+            "canRptSectionRowDelete": "",
+            "afterRptSectionRowDelete": "",
+            "onStateChange": "",
+            "onDataStateChange": "",
+            "afterControlBasedOnClientSideDataCacheRefreshed": "",
+            "onControlFocus": "",
+            "onRptSectionFocus": "",
+            "onRptSectionRowChange": "",
+            "canResetForm": "",
+            "afterResetForm": "",
+            "canRecordNavigate": "",
+            "afterRecordNavigate": "",
+            "onSynchronizeDialog": "",
+            "afterPopulateFromTable": "",
+            "onRenderComplete": "",
+            "onAndroidBackButton": "",
+            "onPanelActivate": "",
+            "afterSaveToRepository": "",
+            "afterLoadFromRepository": "",
+            "afterGoogleVisualization": "",
+            "canDeleteParentRecord": "",
+            "afterDeleteParentRecord": "",
+            "onOrientationChange": "",
+            "onKeyboard": "",
+            "onCordovaReady": "",
+            "onPhoneGapReady": "",
+            "onImageError": "",
+            "onSignatureCaptureToggle": "",
+            "onSignatureCaptureAccept": "",
+            "onTimer": "",
+            "beforeOnTimer": "",
+            "canLogin": "",
+            "afterLogin": "",
+            "afterFailedLogin": "",
+            "canLogout": "",
+            "afterLogout": "",
+            "onSessionTimeoutWarning": "",
+            "onServerSideListSummaryCompute": "",
+            "beforeHTMLReportExport": "",
+            "onConnectionChange": "",
+            "appCache_cached": "",
+            "appCache_checking": "",
+            "appCache_downloading": "",
+            "appCache_error": "",
+            "appCache_noupdate": "",
+            "appCache_obsolete": "",
+            "appCache_progress": "",
+            "appCache_updateready": "",
+            "onOAuthCompleted": "",
+            "onControlBlur": "",
+            "onControlChange": "",
+            "onBeforePersistControlValuesToLocalStorage": "",
+            "onPersistControlValuesToLocalStorage": "",
+            "onRestoreVariablesFromLocalStorage": "",
+            "onRestoreComponentStateFromLocalStorage": "",
+            "localStorageEncryption": "",
+            "localStorageDecryption": "",
+            "securityNotAuthenticated": "",
+            "securityPermissionDenied": "",
+            "webSocketOnMessage": "",
+            "webSocketServerClose": "",
+            "webSocketSendMessageFail": "",
+            "onOAuthAuthorize": "",
+            "afterGoogleAddressSelect": "",
+            "onBeforeClientSideDataCacheRead": "",
+            "afterClientSideDataCacheAjaxCallback": "",
+            "onWatchEvent": ""
+        },
+        "onlyValidateChangedFields": true,
+        "edit": {
+            "field_error_style": {
+                "type": "Block",
+                "showWarning": true,
+                "icon": "<Specified by Style>",
+                "controlContainer_classname": ""
+            },
+            "row_errors_window_title": "Error",
+            "row_errors_window_style": "color: red; width: 6in; height: 2in;",
+            "fieldValidationErrorMessage": "Form has errors."
+        },
+        "submitDialogIfHasClientSideValidationErrors": true,
+        "activeLanguage": "<Default>",
+        "datePicker": {
+            "dayNames": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+            "monthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+            "firstDayOfWeek": 1,
+            "todayButtonText": "Today",
+            "closeButtonText": "Close"
+        },
+        "clientSideDateFormat": "MM/dd/yyyy",
+        "fontScalingOption": "All",
+        "helpTableType": "DBF",
+        "fieldHelpWindowStyle": "modal-resizeable",
+        "customization": {
+            "resetFormMessage": "Are you sure you want to reset the form?",
+            "resetFormTitle": "Warning",
+            "resetFormIcon": "<Specified by Style>",
+            "resetFormYesButton": "Yes",
+            "resetFormNoButton": "No",
+            "windowTitleDirection": "ltr",
+            "dirtyWarning": "You must first save your changes or cancel changes by clicking the Reset button.",
+            "dirtyWarningTitle": "Notice",
+            "dirtyWarningIcon": "<Specified by Style>",
+            "deleteRecordWarningTitle": "Delete Record",
+            "deleteRecordWarningMessage": "Are you sure you want to delete this record?"
+        },
+        "dataBinding": {
+            "computeDataBindingCodeAtDesignTime": true,
+            "computeDataBindingCodeAtDesignTimePrompt": "Prompt",
+            "autoRefreshSchemaOnLoad": true,
+            "autoRefreshPromptFirst": "Prompt",
+            "precalc": {
+                "flagCodeComputed": false
+            }
+        },
+        "info": {
+            "createdBy": "jcoltz",
+            "dateCreated": "2017-3-22",
+            "dateLastEdited": "2018-11-12"
+        },
+        "flagShowCommentsInTree": true,
+        "treeCommentOffset": "6",
+        "renderUXLocation": {
+            "type": "window",
+            "sizeToElement": true
+        },
+        "checkSessionEvery": 1,
+        "warningIntervalBeforeExpiration": 1,
+        "sessionTimeOutWarningMessage": "Your session will expire in {secondsToSessionEnd} seconds. Click the button to extend your session.",
+        "sessionExtendSessionButtonLabel": "Extend Session",
+        "sessionTimeoutWarningDialogTitle": "Warning",
+        "sessionHasExpiredMessage": "Your session has expired.",
+        "sessionHasExpiredButtonLabel": "OK",
+        "sessionHasExpiredAction": "Nothing",
+        "sessionHasExpiredRedirectPage": "<self>",
+        "sessionHasExpiredDialogTitle": "Notice",
+        "sessionHasExpiredOKButtonJavascript": "<ReloadThisPage>",
+        "login": {
+            "errorMessageStyle": "color: red;",
+            "logoutDoesFullPageReload": true
+        },
+        "applyResponsiveDesignSettings": true,
+        "responseDesignRulesMode": "FirstTrue",
+        "localStorage": {
+            "namespace": "<Default>",
+            "__version": 1,
+            "workingPreviewTestingMode": "Browser",
+            "variablesToNotPersist": ""
+        },
+        "securityAppliedClientSide": true,
+        "preRenderUXatDesignTime": true,
+        "preRenderComputeWhen": "Every time component is saved",
+        "page_fields": [
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{Data=e04af1c9-aa9c-44a8-ae4f-6494920f15bd}{I:'$$control.checkBox'} [CheckBox1]",
+                "displayODFlat": "{Data=1ef9dcec-3828-4d4f-9e47-795e4c9afcaf}{I:'$$control.checkBox'}[CheckBox1]",
+                "idInternal": "1ef9dcec-3828-4d4f-9e47-795e4c9afcaf",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=e04af1c9-aa9c-44a8-ae4f-6494920f15bd}{I:'$$control.checkBox'} [CheckBox1]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=e04af1c9-aa9c-44a8-ae4f-6494920f15bd}{I:'$$control.checkBox'} [CheckBox1]",
+                "crc": "4294958402",
+                "v": {
+                    "controlType": "CheckBox",
+                    "variableName": "CheckBox1",
+                    "type": "Character",
+                    "isArray": true,
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "lookup": {
+                        "editCombo": {
+                            "openLookupOnFocus": false
+                        }
+                    },
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Check Box1",
+                    "class": "<Default>",
+                    "width": "75px",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "textboxSubTheme": "",
+                    "getFunction": "",
+                    "setFunction": "",
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false,
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        }
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "choices": "Joe|1",
+                        "errorinlinestyle": "",
+                        "datasource": "AlphaDAO",
+                        "additionalChoicesPre": "",
+                        "additionalChoicesPost": "",
+                        "choicesVariableName": "",
+                        "logicalCheckboxText": "",
+                        "absoluteLayout": {
+                            "freeformPosition": false,
+                            "hideLabels": true
+                        },
+                        "choicesClassName": "",
+                        "dbf": {
+                            "table": "",
+                            "displayValueField": "",
+                            "storedValueField": "",
+                            "filter": "",
+                            "parameter_string": ""
+                        },
+                        "cs": {
+                            "connectionString": "",
+                            "sql": "",
+                            "parameter_string": ""
+                        },
+                        "maxchoices": 0,
+                        "stylefieldiferror": true,
+                        "notInListRule": "Add to List",
+                        "orientation": "Vertical",
+                        "verticalSpacing": "",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "autoSubmitSearch": false,
+                        "flagIsDefined": true,
+                        "renderAsButtonList": false,
+                        "alignment": "Left",
+                        "buttonList": {
+                            "checkedImage": "images/$$generic.check.png.a5image",
+                            "checkedImageUnselected": "",
+                            "javascript": {
+                                "onSelect": "",
+                                "onClick": ""
+                            },
+                            "fillWidth": false,
+                            "buttonStyle": "Image followed by text"
+                        },
+                        "hasCustomDesign": false,
+                        "customStyleCSS": ""
+                    },
+                    "listView": {
+                        "class": ""
+                    },
+                    "radiobutton": {
+                        "renderAsButtonList": false
+                    },
+                    "buttonList": {
+                        "direction": "Vertical",
+                        "width": "",
+                        "allowMultipleSelection": true,
+                        "methodForDefining": "ButtonListBuilder",
+                        "dataSeriesMapping": "",
+                        "buttons": {
+                            "isDefined": false
+                        },
+                        "javascript": {
+                            "onSelect": "",
+                            "onClick": ""
+                        },
+                        "buttonInlineStyle": "text-align: left;",
+                        "buttonClassName": "",
+                        "buttonFirstClassName": "",
+                        "buttonMiddleClassName": "",
+                        "buttonLastClassName": "",
+                        "buttonHoverClassName": "",
+                        "buttonPressedClassName": "",
+                        "buttonDisabledClassName": "",
+                        "buttonIconStyle": "float: right;",
+                        "buttonIconClassName": "",
+                        "buttonStyle": "Image followed by text"
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX1\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX1} \n</div>\n[[dialog.checkboxParameters.CheckBox1||name=V.R{grid.rownumber}.CHECKBOX1[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX1|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'CHECKBOX1': {info: {controlType: 'CheckBox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: true, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "layout_directive_statictext",
+                "display": "{B=White,Light Blue}{Data=527e4fef-7bfd-4dfe-885b-e91960feea90}{I:'$$format.text'} [Static Text:     ] �",
+                "displayODFlat": "{Data=6d9cff41-f093-4dd1-a7c6-b03a93436c05}{I:'$$format.text'}[Static Text]",
+                "idInternal": "6d9cff41-f093-4dd1-a7c6-b03a93436c05",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=527e4fef-7bfd-4dfe-885b-e91960feea90}{I:'$$format.text'} [Static Text]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=527e4fef-7bfd-4dfe-885b-e91960feea90}{I:'$$format.text'} [Static Text:     ] �",
+                "crc": "4294924157",
+                "v": {
+                    "StaticText": "&nbsp;&nbsp;&nbsp;&nbsp;",
+                    "Class": "<Default>",
+                    "Style": "background-color: #ff0000;",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "STATICTEXT_2",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_2\" title=\"\"  class=\"\" style=\"background-color: #ff0000; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "shortControlType": "STATICTEXT",
+                "p": {
+                    "control": "[Static Text]",
+                    "controltype": "layout_directive_statictext",
+                    "icon": "$$format.text",
+                    "lastbutton": "OK"
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{Data=0b4a236e_39cb_4896_aa5f_5e3a8ac5f231}{I:'$$control.checkBox'} [CheckBox2]",
+                "displayODFlat": "{Data=3df9ac7a-4485-4531-abf9-e0b8141e731f}{I:'$$control.checkBox'}[CheckBox2]",
+                "idInternal": "3df9ac7a-4485-4531-abf9-e0b8141e731f",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=0b4a236e_39cb_4896_aa5f_5e3a8ac5f231}{I:'$$control.checkBox'} [CheckBox2]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=0b4a236e_39cb_4896_aa5f_5e3a8ac5f231}{I:'$$control.checkBox'} [CheckBox2]",
+                "crc": "4294939752",
+                "v": {
+                    "controlType": "CheckBox",
+                    "variableName": "CheckBox2",
+                    "type": "Character",
+                    "isArray": true,
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "lookup": {
+                        "editCombo": {
+                            "openLookupOnFocus": false
+                        }
+                    },
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Check Box1",
+                    "class": "<Default>",
+                    "width": "75px",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "textboxSubTheme": "",
+                    "getFunction": "",
+                    "setFunction": "",
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false,
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        }
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "choices": "Fred|2",
+                        "errorinlinestyle": "",
+                        "datasource": "AlphaDAO",
+                        "additionalChoicesPre": "",
+                        "additionalChoicesPost": "",
+                        "choicesVariableName": "",
+                        "logicalCheckboxText": "",
+                        "absoluteLayout": {
+                            "freeformPosition": false,
+                            "hideLabels": true
+                        },
+                        "choicesClassName": "",
+                        "dbf": {
+                            "table": "",
+                            "displayValueField": "",
+                            "storedValueField": "",
+                            "filter": "",
+                            "parameter_string": ""
+                        },
+                        "cs": {
+                            "connectionString": "",
+                            "sql": "",
+                            "parameter_string": ""
+                        },
+                        "maxchoices": 0,
+                        "stylefieldiferror": true,
+                        "notInListRule": "Add to List",
+                        "orientation": "Vertical",
+                        "verticalSpacing": "",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "autoSubmitSearch": false,
+                        "flagIsDefined": true,
+                        "renderAsButtonList": false,
+                        "alignment": "Left",
+                        "buttonList": {
+                            "checkedImage": "images/$$generic.check.png.a5image",
+                            "checkedImageUnselected": "",
+                            "javascript": {
+                                "onSelect": "",
+                                "onClick": ""
+                            },
+                            "fillWidth": false,
+                            "buttonStyle": "Image followed by text"
+                        },
+                        "hasCustomDesign": false,
+                        "customStyleCSS": ""
+                    },
+                    "listView": {
+                        "class": ""
+                    },
+                    "radiobutton": {
+                        "renderAsButtonList": false
+                    },
+                    "buttonList": {
+                        "direction": "Vertical",
+                        "width": "",
+                        "allowMultipleSelection": true,
+                        "methodForDefining": "ButtonListBuilder",
+                        "dataSeriesMapping": "",
+                        "buttons": {
+                            "isDefined": false
+                        },
+                        "javascript": {
+                            "onSelect": "",
+                            "onClick": ""
+                        },
+                        "buttonInlineStyle": "text-align: left;",
+                        "buttonClassName": "",
+                        "buttonFirstClassName": "",
+                        "buttonMiddleClassName": "",
+                        "buttonLastClassName": "",
+                        "buttonHoverClassName": "",
+                        "buttonPressedClassName": "",
+                        "buttonDisabledClassName": "",
+                        "buttonIconStyle": "float: right;",
+                        "buttonIconClassName": "",
+                        "buttonStyle": "Image followed by text"
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX2\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX2} \n</div>\n[[dialog.checkboxParameters.CheckBox2||name=V.R{grid.rownumber}.CHECKBOX2[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX2|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'CHECKBOX2': {info: {controlType: 'CheckBox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: true, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "layout_directive_statictext",
+                "display": "{B=White,Light Blue}{Data=61410c62-5993-4fc8-8ee1-3632c205d080}{I:'$$format.text'} [Static Text:     ] �",
+                "displayODFlat": "{Data=a5bb2334-1f60-450c-b748-bdb336eda4f0}{I:'$$format.text'}[Static Text]",
+                "idInternal": "a5bb2334-1f60-450c-b748-bdb336eda4f0",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=61410c62-5993-4fc8-8ee1-3632c205d080}{I:'$$format.text'} [Static Text]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=61410c62-5993-4fc8-8ee1-3632c205d080}{I:'$$format.text'} [Static Text:     ] �",
+                "crc": "4294944397",
+                "v": {
+                    "StaticText": "&nbsp;&nbsp;&nbsp;&nbsp;",
+                    "Class": "<Default>",
+                    "Style": "background-color: #1fee10;",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "STATICTEXT_1",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_1\" title=\"\"  class=\"\" style=\"background-color: #1fee10; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "shortControlType": "STATICTEXT",
+                "p": {
+                    "control": "[Static Text]",
+                    "controltype": "layout_directive_statictext",
+                    "icon": "$$format.text",
+                    "lastbutton": "OK"
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{Data=3a6c7e16_0da5_499c_b100_b123f9b0666e}{I:'$$control.checkBox'} [CheckBox3]",
+                "displayODFlat": "{Data=d9df5d06-1651-4847-ba8e-c1d3217ec966}{I:'$$control.checkBox'}[CheckBox3]",
+                "idInternal": "d9df5d06-1651-4847-ba8e-c1d3217ec966",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=3a6c7e16_0da5_499c_b100_b123f9b0666e}{I:'$$control.checkBox'} [CheckBox3]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=3a6c7e16_0da5_499c_b100_b123f9b0666e}{I:'$$control.checkBox'} [CheckBox3]",
+                "crc": "4294957396",
+                "v": {
+                    "controlType": "CheckBox",
+                    "variableName": "CheckBox3",
+                    "type": "Character",
+                    "isArray": true,
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "lookup": {
+                        "editCombo": {
+                            "openLookupOnFocus": false
+                        }
+                    },
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Check Box1",
+                    "class": "<Default>",
+                    "width": "75px",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "textboxSubTheme": "",
+                    "getFunction": "",
+                    "setFunction": "",
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false,
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        }
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "choices": "Sally|3",
+                        "errorinlinestyle": "",
+                        "datasource": "AlphaDAO",
+                        "additionalChoicesPre": "",
+                        "additionalChoicesPost": "",
+                        "choicesVariableName": "",
+                        "logicalCheckboxText": "",
+                        "absoluteLayout": {
+                            "freeformPosition": false,
+                            "hideLabels": true
+                        },
+                        "choicesClassName": "",
+                        "dbf": {
+                            "table": "",
+                            "displayValueField": "",
+                            "storedValueField": "",
+                            "filter": "",
+                            "parameter_string": ""
+                        },
+                        "cs": {
+                            "connectionString": "",
+                            "sql": "",
+                            "parameter_string": ""
+                        },
+                        "maxchoices": 0,
+                        "stylefieldiferror": true,
+                        "notInListRule": "Add to List",
+                        "orientation": "Vertical",
+                        "verticalSpacing": "",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "autoSubmitSearch": false,
+                        "flagIsDefined": true,
+                        "renderAsButtonList": false,
+                        "alignment": "Left",
+                        "buttonList": {
+                            "checkedImage": "images/$$generic.check.png.a5image",
+                            "checkedImageUnselected": "",
+                            "javascript": {
+                                "onSelect": "",
+                                "onClick": ""
+                            },
+                            "fillWidth": false,
+                            "buttonStyle": "Image followed by text"
+                        },
+                        "hasCustomDesign": false,
+                        "customStyleCSS": ""
+                    },
+                    "listView": {
+                        "class": ""
+                    },
+                    "radiobutton": {
+                        "renderAsButtonList": false
+                    },
+                    "buttonList": {
+                        "direction": "Vertical",
+                        "width": "",
+                        "allowMultipleSelection": true,
+                        "methodForDefining": "ButtonListBuilder",
+                        "dataSeriesMapping": "",
+                        "buttons": {
+                            "isDefined": false
+                        },
+                        "javascript": {
+                            "onSelect": "",
+                            "onClick": ""
+                        },
+                        "buttonInlineStyle": "text-align: left;",
+                        "buttonClassName": "",
+                        "buttonFirstClassName": "",
+                        "buttonMiddleClassName": "",
+                        "buttonLastClassName": "",
+                        "buttonHoverClassName": "",
+                        "buttonPressedClassName": "",
+                        "buttonDisabledClassName": "",
+                        "buttonIconStyle": "float: right;",
+                        "buttonIconClassName": "",
+                        "buttonStyle": "Image followed by text"
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX3\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX3} \n</div>\n[[dialog.checkboxParameters.CheckBox3||name=V.R{grid.rownumber}.CHECKBOX3[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX3|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'CHECKBOX3': {info: {controlType: 'CheckBox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: true, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "layout_directive_statictext",
+                "display": "{B=White,Light Blue}{Data=9c9adbd9_9fa1_4419_bb25_153c1c371afd}{I:'$$format.text'} [Static Text:     ] �",
+                "displayODFlat": "{Data=f22ed89f-05c7-4f45-8fa4-1c047b92731b}{I:'$$format.text'}[Static Text]",
+                "idInternal": "f22ed89f-05c7-4f45-8fa4-1c047b92731b",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=9c9adbd9_9fa1_4419_bb25_153c1c371afd}{I:'$$format.text'} [Static Text]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=9c9adbd9_9fa1_4419_bb25_153c1c371afd}{I:'$$format.text'} [Static Text:     ] �",
+                "crc": "4294917548",
+                "v": {
+                    "StaticText": "&nbsp;&nbsp;&nbsp;&nbsp;",
+                    "Class": "<Default>",
+                    "Style": "background-color: #ff6600;",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "STATICTEXT_3",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_3\" title=\"\"  class=\"\" style=\"background-color: #ff6600; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "shortControlType": "STATICTEXT",
+                "p": {
+                    "control": "[Static Text]",
+                    "controltype": "layout_directive_statictext",
+                    "icon": "$$format.text",
+                    "lastbutton": "OK"
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{Data=bcf1f92d_ae9f_4c81_8016_8ed710105acd}{I:'$$control.checkBox'} [CheckBox4]",
+                "displayODFlat": "{Data=12bac677-ac55-4c47-9b5b-fc3fcff4c847}{I:'$$control.checkBox'}[CheckBox4]",
+                "idInternal": "12bac677-ac55-4c47-9b5b-fc3fcff4c847",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=bcf1f92d_ae9f_4c81_8016_8ed710105acd}{I:'$$control.checkBox'} [CheckBox4]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=bcf1f92d_ae9f_4c81_8016_8ed710105acd}{I:'$$control.checkBox'} [CheckBox4]",
+                "crc": "4294936920",
+                "v": {
+                    "controlType": "CheckBox",
+                    "variableName": "CheckBox4",
+                    "type": "Character",
+                    "isArray": true,
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "lookup": {
+                        "editCombo": {
+                            "openLookupOnFocus": false
+                        }
+                    },
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Check Box1",
+                    "class": "<Default>",
+                    "width": "75px",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "textboxSubTheme": "",
+                    "getFunction": "",
+                    "setFunction": "",
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false,
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        }
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "choices": "Andy|4",
+                        "errorinlinestyle": "",
+                        "datasource": "AlphaDAO",
+                        "additionalChoicesPre": "",
+                        "additionalChoicesPost": "",
+                        "choicesVariableName": "",
+                        "logicalCheckboxText": "",
+                        "absoluteLayout": {
+                            "freeformPosition": false,
+                            "hideLabels": true
+                        },
+                        "choicesClassName": "",
+                        "dbf": {
+                            "table": "",
+                            "displayValueField": "",
+                            "storedValueField": "",
+                            "filter": "",
+                            "parameter_string": ""
+                        },
+                        "cs": {
+                            "connectionString": "",
+                            "sql": "",
+                            "parameter_string": ""
+                        },
+                        "maxchoices": 0,
+                        "stylefieldiferror": true,
+                        "notInListRule": "Add to List",
+                        "orientation": "Vertical",
+                        "verticalSpacing": "",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "autoSubmitSearch": false,
+                        "flagIsDefined": true,
+                        "renderAsButtonList": false,
+                        "alignment": "Left",
+                        "buttonList": {
+                            "checkedImage": "images/$$generic.check.png.a5image",
+                            "checkedImageUnselected": "",
+                            "javascript": {
+                                "onSelect": "",
+                                "onClick": ""
+                            },
+                            "fillWidth": false,
+                            "buttonStyle": "Image followed by text"
+                        },
+                        "hasCustomDesign": false,
+                        "customStyleCSS": ""
+                    },
+                    "listView": {
+                        "class": ""
+                    },
+                    "radiobutton": {
+                        "renderAsButtonList": false
+                    },
+                    "buttonList": {
+                        "direction": "Vertical",
+                        "width": "",
+                        "allowMultipleSelection": true,
+                        "methodForDefining": "ButtonListBuilder",
+                        "dataSeriesMapping": "",
+                        "buttons": {
+                            "isDefined": false
+                        },
+                        "javascript": {
+                            "onSelect": "",
+                            "onClick": ""
+                        },
+                        "buttonInlineStyle": "text-align: left;",
+                        "buttonClassName": "",
+                        "buttonFirstClassName": "",
+                        "buttonMiddleClassName": "",
+                        "buttonLastClassName": "",
+                        "buttonHoverClassName": "",
+                        "buttonPressedClassName": "",
+                        "buttonDisabledClassName": "",
+                        "buttonIconStyle": "float: right;",
+                        "buttonIconClassName": "",
+                        "buttonStyle": "Image followed by text"
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX4\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX4} \n</div>\n[[dialog.checkboxParameters.CheckBox4||name=V.R{grid.rownumber}.CHECKBOX4[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX4|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'CHECKBOX4': {info: {controlType: 'CheckBox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: true, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "layout_directive_statictext",
+                "display": "{B=White,Light Blue}{Data=51ec2e62_2a23_4a14_8d88_eb18ba5891a0}{I:'$$format.text'} [Static Text:     ] �",
+                "displayODFlat": "{Data=89d39fca-255a-441d-9e3a-aebaa5acfde8}{I:'$$format.text'}[Static Text]",
+                "idInternal": "89d39fca-255a-441d-9e3a-aebaa5acfde8",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=51ec2e62_2a23_4a14_8d88_eb18ba5891a0}{I:'$$format.text'} [Static Text]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=51ec2e62_2a23_4a14_8d88_eb18ba5891a0}{I:'$$format.text'} [Static Text:     ] �",
+                "crc": "4294936416",
+                "v": {
+                    "StaticText": "&nbsp;&nbsp;&nbsp;&nbsp;",
+                    "Class": "<Default>",
+                    "Style": "background-color: #808000;",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "STATICTEXT_4",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_4\" title=\"\"  class=\"\" style=\"background-color: #808000; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "shortControlType": "STATICTEXT",
+                "p": {
+                    "control": "[Static Text]",
+                    "controltype": "layout_directive_statictext",
+                    "icon": "$$format.text",
+                    "lastbutton": "OK"
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{Data=2dd9635c_11d1_407c_b180_6d7424bfe4d7}{I:'$$control.checkBox'} [CheckBox5]",
+                "displayODFlat": "{Data=c2f1b819-c588-49ec-a6af-dd3e113955fa}{I:'$$control.checkBox'}[CheckBox5]",
+                "idInternal": "c2f1b819-c588-49ec-a6af-dd3e113955fa",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=2dd9635c_11d1_407c_b180_6d7424bfe4d7}{I:'$$control.checkBox'} [CheckBox5]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=2dd9635c_11d1_407c_b180_6d7424bfe4d7}{I:'$$control.checkBox'} [CheckBox5]",
+                "crc": "4294951116",
+                "v": {
+                    "controlType": "CheckBox",
+                    "variableName": "CheckBox5",
+                    "type": "Character",
+                    "isArray": true,
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "lookup": {
+                        "editCombo": {
+                            "openLookupOnFocus": false
+                        }
+                    },
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Check Box1",
+                    "class": "<Default>",
+                    "width": "75px",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "textboxSubTheme": "",
+                    "getFunction": "",
+                    "setFunction": "",
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false,
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        }
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    },
+                    "CheckBox": {
+                        "type": "Static",
+                        "choices": "Betty|5",
+                        "errorinlinestyle": "",
+                        "datasource": "AlphaDAO",
+                        "additionalChoicesPre": "",
+                        "additionalChoicesPost": "",
+                        "choicesVariableName": "",
+                        "logicalCheckboxText": "",
+                        "absoluteLayout": {
+                            "freeformPosition": false,
+                            "hideLabels": true
+                        },
+                        "choicesClassName": "",
+                        "dbf": {
+                            "table": "",
+                            "displayValueField": "",
+                            "storedValueField": "",
+                            "filter": "",
+                            "parameter_string": ""
+                        },
+                        "cs": {
+                            "connectionString": "",
+                            "sql": "",
+                            "parameter_string": ""
+                        },
+                        "maxchoices": 0,
+                        "stylefieldiferror": true,
+                        "notInListRule": "Add to List",
+                        "orientation": "Vertical",
+                        "verticalSpacing": "",
+                        "columnFlow": "LRTB",
+                        "columnCount": 3,
+                        "rowCount": 3,
+                        "autoSubmitSearch": false,
+                        "flagIsDefined": true,
+                        "renderAsButtonList": false,
+                        "alignment": "Left",
+                        "buttonList": {
+                            "checkedImage": "images/$$generic.check.png.a5image",
+                            "checkedImageUnselected": "",
+                            "javascript": {
+                                "onSelect": "",
+                                "onClick": ""
+                            },
+                            "fillWidth": false,
+                            "buttonStyle": "Image followed by text"
+                        },
+                        "hasCustomDesign": false,
+                        "customStyleCSS": ""
+                    },
+                    "listView": {
+                        "class": ""
+                    },
+                    "radiobutton": {
+                        "renderAsButtonList": false
+                    },
+                    "buttonList": {
+                        "direction": "Vertical",
+                        "width": "",
+                        "allowMultipleSelection": true,
+                        "methodForDefining": "ButtonListBuilder",
+                        "dataSeriesMapping": "",
+                        "buttons": {
+                            "isDefined": false
+                        },
+                        "javascript": {
+                            "onSelect": "",
+                            "onClick": ""
+                        },
+                        "buttonInlineStyle": "text-align: left;",
+                        "buttonClassName": "",
+                        "buttonFirstClassName": "",
+                        "buttonMiddleClassName": "",
+                        "buttonLastClassName": "",
+                        "buttonHoverClassName": "",
+                        "buttonPressedClassName": "",
+                        "buttonDisabledClassName": "",
+                        "buttonIconStyle": "float: right;",
+                        "buttonIconClassName": "",
+                        "buttonStyle": "Image followed by text"
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX5\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX5} \n</div>\n[[dialog.checkboxParameters.CheckBox5||name=V.R{grid.rownumber}.CHECKBOX5[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX5|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'CHECKBOX5': {info: {controlType: 'CheckBox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: true, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "layout_directive_statictext",
+                "display": "{B=White,Light Blue}{Data=2f146ab2_7efc_46cc_9879_da6097e7c633}{I:'$$format.text'} [Static Text:     ] �",
+                "displayODFlat": "{Data=b629a1e4-1247-4271-85a8-a318283dafb9}{I:'$$format.text'}[Static Text]",
+                "idInternal": "b629a1e4-1247-4271-85a8-a318283dafb9",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=2f146ab2_7efc_46cc_9879_da6097e7c633}{I:'$$format.text'} [Static Text]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=2f146ab2_7efc_46cc_9879_da6097e7c633}{I:'$$format.text'} [Static Text:     ] �",
+                "crc": "4294948536",
+                "v": {
+                    "StaticText": "&nbsp;&nbsp;&nbsp;&nbsp;",
+                    "Class": "<Default>",
+                    "Style": "background-color: #3366ff;",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "STATICTEXT_5",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_5\" title=\"\"  class=\"\" style=\"background-color: #3366ff; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "shortControlType": "STATICTEXT",
+                "p": {
+                    "control": "[Static Text]",
+                    "controltype": "layout_directive_statictext",
+                    "icon": "$$format.text",
+                    "lastbutton": "OK"
+                }
+            }
+        ],
+        "builderType": "Dialog2",
+        "guid": "bb46f6dc-d2e4-44fa-b87a-911ed7e07e78",
+        "componentName": "CHECK_BOX_COLORS",
+        "componentFilename": "C:\\Dropbox\\Projects\\Projects.WebProjects\\Default.WebProject\\check_box_colors.a5wcmp",
+        "_style_versionNumber": 2,
+        "_style_hasSassOverrides": false,
+        "_style_hasCSSTweaks": false,
+        "_style_hasCSS_or_subtheme_tweaks": false,
+        "useCompactTheme": false,
+        "styleTweaksCSS": "",
+        "styleTweaksSubthemes": "",
+        "controlflowdirection": "ltr",
+        "SVGLinkedFiles": "",
+        "localsvg": "",
+        "createAppCacheVersion": false,
+        "createAppCacheVersionC": "No",
+        "appcache": {
+            "pageName": "<Default>",
+            "pageTitle": "",
+            "hasHomeScreenIcons": false,
+            "homeScreenIconName": "",
+            "icons": {
+                "precomposed": false
+            },
+            "pageHeadSection": ""
+        },
+        "clientsideNumberFormatDecimal": "period",
+        "clientsideNumberFormatThousands": "comma",
+        "dataSeriesPublishToClientSide": false,
+        "showLineNumbersInControlsList": false,
+        "saveFileType": "Formatted JSON",
+        "keyboardShortcutsJSON": "",
+        "preRenderWarningMessageShow": false,
+        "autoSetPreRenderOnForAllUX": false,
+        "selected": "1ef9dcec-3828-4d4f-9e47-795e4c9afcaf",
+        "designPaneIndex": 1,
+        "masterPaneC": "Overview",
+        "serverSideEventIndex": 1,
+        "clientSideEventIndex": 1,
+        "clientSideEventIndexC": "1",
+        "lastControlSelected": "insert_layout_directive_StaticText",
+        "__WPhostName": "Chrome",
+        "embeddedMode": false,
+        "repeatingSectionsAreDirty": true,
+        "containerSubTypeNew": "",
+        "containerSubTypeOld": "",
+        "flagDropdownCascadingChanged": false,
+        "toolBox_value": "",
+        "addinBuildNumber": "5206",
+        "addinBuildNumberHighestUsed": "5206",
+        "alphaFiveBuildNumber": "12",
+        "openedFromTemplate": false,
+        "builtWithVersionNumer": 1,
+        "_buildCount": "3",
+        "securityEnabled": false,
+        "showHideIsUsed": false,
+        "precalc": {
+            "js_editorSetInitialization": ";\n",
+            "customControl": {
+                "js_beforePrepare": "\n__replaceAtRuntime_CustomControlsSystemBeforePrepare",
+                "js_afterRender": "\n__replaceAtRuntime_CustomControlsSystemAfterRender",
+                "customControl_xbasicFunctions": ""
+            },
+            "jschart": {
+                "js_beforePrepare": "",
+                "js_afterRender": "",
+                "jschart_xbasicFunctions": ""
+            },
+            "rgraph": {
+                "libraries": ""
+            },
+            "getSetFunctions": {
+                "js_beforePrepare": ""
+            },
+            "injectibleHTML": "",
+            "containerWindowHTML": "",
+            "repeatingsectionInfoJs": "",
+            "framesInfoJS": "{dialog.object}.framesInfo = {\n\n};\n",
+            "jsActionJavascriptGlobalFunctions": "",
+            "xbActionJavascriptGlobalFunctions": "",
+            "javascriptSetupForGridLookups": "{\n}",
+            "javascript": {
+                "showWaitMessage": "",
+                "hideWaitMessage": "",
+                "embeddedUXComponents": ""
+            },
+            "fileUpload_controlInfo": "",
+            "javascript_cascadingDropdowns": "{dialog.object}._cascadingControls = [];\n{dialog.object}._cascadingControlsChildren = [];",
+            "template_html": "<!--div GLOBALERRORS-->\n<div class=\"errorTip\" style=\"margin-bottom: 2px; display: none; width: 8in; \" id=\"{dialog.componentname}.GLOBALERRORS\"></div>\n<!--End div GLOBALERRORS-->\n\n<div id=\"{dialog.componentname}.R1\">\n<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX1\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX1} \n</div>\n[[dialog.checkboxParameters.CheckBox1||name=V.R{grid.rownumber}.CHECKBOX1[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX1|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_2\" title=\"\"  class=\"\" style=\"background-color: #ff0000; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX2\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX2} \n</div>\n[[dialog.checkboxParameters.CheckBox2||name=V.R{grid.rownumber}.CHECKBOX2[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX2|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_1\" title=\"\"  class=\"\" style=\"background-color: #1fee10; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX3\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX3} \n</div>\n[[dialog.checkboxParameters.CheckBox3||name=V.R{grid.rownumber}.CHECKBOX3[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX3|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_3\" title=\"\"  class=\"\" style=\"background-color: #ff6600; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX4\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX4} \n</div>\n[[dialog.checkboxParameters.CheckBox4||name=V.R{grid.rownumber}.CHECKBOX4[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX4|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_4\" title=\"\"  class=\"\" style=\"background-color: #808000; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 75px\" >\n\t<!--FldS--><div id=\"{grid.componentname}.V.R{grid.rownumber}.CHECKBOX5\" style=\"display: inline-block;border-width: 1px\" title=\"\">\n{dialog.checkboxchoices.CHECKBOX5} \n</div>\n[[dialog.checkboxParameters.CheckBox5||name=V.R{grid.rownumber}.CHECKBOX5[]|style=|id={grid.componentname}.V.R{grid.rownumber}.CHECKBOX5|js=  |columnFlow=LRTB|columnCount=3|rowCount=3|spanClass=|customAttributes=]]\t\n\t<!--FldE-->\n</div>\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.STATICTEXT_5\" title=\"\"  class=\"\" style=\"background-color: #3366ff; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   >&nbsp;&nbsp;&nbsp;&nbsp;</div>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\n\n</div>\n<!--div DEBUGUPDATECOMMANDS-->\n<div class=\"\" style=\"display: none; \" id=\"{dialog.componentname}.DEBUGUPDATECOMMANDS\"></div>\n<!--End div DEBUGUPDATECOMMANDS-->\n",
+            "panelDisplayNames": "",
+            "controlJavascript": "",
+            "controlJavascriptRepeatingSections": "",
+            "template_js": "",
+            "sessionVarsInShowHideExpns": "",
+            "flagHasShowTimer": false,
+            "themeSearchReplaceString": "",
+            "flagHasHTML5ImageCapture": false,
+            "flagUsesCordova": false,
+            "flagUseAmazonS3FileUpload": false,
+            "flagUseStripe": false,
+            "usesSystemSVG": false,
+            "flagUseAudioPlayer": false,
+            "flagUseInk": false,
+            "flagUsesAudioLibrary": false,
+            "flagUsesPhoneGapFileSystemFunctions": false,
+            "flagUsesGetAccurateLocation": false,
+            "editorSet_for_editor": "{dialog.object}._EDITOR_EDITORSET = {};",
+            "otherJS": "",
+            "javascript_layoutRules": "",
+            "javascript_controlNesting": "{\n\n}",
+            "appcacheEvents": "",
+            "vb_based_on_lists": "",
+            "vb_based_on_javascritFunctions": "",
+            "constrainContainerJS": "",
+            "setScreenHeightJS": "",
+            "actionsheet": {
+                "has": false
+            },
+            "kanban": {
+                "has": false
+            },
+            "requiredPlugins": "",
+            "hasListNavigator": false,
+            "IconMap": "{images.RowExpander.Open}=\"<Specified by Style>\"\n{images.RowExpander.Close}=\"<Specified by Style>\"\n{images.EmbeddedSearch.Search}=\"<Specified by Style>\"\n{images.EmbeddedSearch.ClearSearch}=\"<Specified by Style>\"\n{images.EmbeddedSearch.ShowHideEmbeddedSearch}=\"<Specified by Style>\"\n{images.GridRow.NewRecordRow.NoFocus}=\"<Specified by Style>\"\n{images.GridRow.NewRecordRow.HasFocus}=\"<Specified by Style>\"\n{images.GridRow.SaveRecord}=\"<Specified by Style>\"\n{images.GridRow.SaveRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.UndoChanges}=\"<Specified by Style>\"\n{images.GridRow.UndoChanges.Disabled}=\"<Specified by Style>\"\n{images.GridRow.EditRecord}=\"<Specified by Style>\"\n{images.GridRow.EditRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.DeleteRecord}=\"<Specified by Style>\"\n{images.GridRow.DeleteRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.CancelEditRecord}=\"<Specified by Style>\"\n{images.GridRow.CancelEditRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.HasError}=\"<Specified by Style>\"\n{images.QBE.OperatorIsSelected}=\"<Specified by Style>\"\n{images.QBE.OpenQBEMenu}=\"<Specified by Style>\"\n{images.QBE.ShowHideQBERow}=\"<Specified by Style>\"\n{images.PopUpWindow.Lookup.Close}=\"<Specified by Style>\"\n{images.PopUpWindow.DetailView.Close}=\"<Specified by Style>\"\n{images.CollapseContainer.Open}=\"<Specified by Style>\"\n{images.CollapseContainer.Close}=\"<Specified by Style>\"\n{images.FieldHelpIcon}=\"<Specified by Style>\"\n{images.SearchPart.SaveSearchCriteria}=\"<Specified by Style>\"\n{images.SearchPart.LoadSearchCriteria}=\"<Specified by Style>\"\n{images.SearchPart.RunSearch}=\"<Specified by Style>\"\n{images.SearchPart.ClearSearch}=\"<Specified by Style>\"\n{images.GridRow.SelectionPointer}=\"<Specified by Style>\"\n{images.Grid.SortAsc}=\"<Specified by Style>\"\n{images.Grid.SortAscDisabled}=\"<Specified by Style>\"\n{images.Grid.sortDesc}=\"<Specified by Style>\"\n{images.grid.sortDescDisabled}=\"<Specified by Style>\"\n{images.grid.firstPage}=\"<Specified by Style>\"\n{images.grid.firstPageDisabled}=\"<Specified by Style>\"\n{images.grid.prevPage}=\"<Specified by Style>\"\n{images.grid.prevPageDisabled}=\"<Specified by Style>\"\n{images.grid.nextPage}=\"<Specified by Style>\"\n{images.grid.nextPageDisabled}=\"<Specified by Style>\"\n{images.grid.lastPage}=\"<Specified by Style>\"\n{images.grid.lastPageDisabled}=\"<Specified by Style>\"\n{images.edit.dropdownArrow}=\"<Specified by Style>\"\n{images.edit.datePicker}=\"<Specified by Style>\"\n{images.edit.dateTimePicker}=\"<Specified by Style>\"\n{images.edit.timePicker}=\"<Specified by Style>\"\n{images.edit.calculator}=\"<Specified by Style>\"\n{images.edit.lookup}=\"<Specified by Style>\"\n{images.javascript.deleteRowConfirmation}=\"<Specified by Style>\"\n{images.javascript.cancelEditRowConfirmation}=\"<Specified by Style>\"\n{images.javascript.UndoEditsConfirmation}=\"<Specified by Style>\"\n{images.javascript.UndoAllEditsConfirmation}=\"<Specified by Style>\"\n{images.javascript.dirtyRecordWarning}=\"<Specified by Style>\"\n{images.dv.close}=\"<Specified by Style>\"\n{images.dv.firstRecord}=\"<Specified by Style>\"\n{images.dv.prevRecord}=\"<Specified by Style>\"\n{images.dv.nextRecord}=\"<Specified by Style>\"\n{images.dv.lastRecord}=\"<Specified by Style>\"\n{images.dv.newRecord}=\"<Specified by Style>\"\n{images.dv.cancelEdits}=\"<Specified by Style>\"\n{images.dv.deleteRecord}=\"<Specified by Style>\"\n{images.dv.saveRecord}=\"<Specified by Style>\"\n{images.dv.saveAndEnter}=\"<Specified by Style>\"\n{images.dv.switchToEdit}=\"<Specified by Style>\"\n{images.dv.switchToView}=\"<Specified by Style>\"\n{images.disabled.dv.newRecord}=\"<Specified by Style>\"\n{images.disabled.dv.cancelEdits}=\"<Specified by Style>\"\n{images.disabled.dv.deleteRecord}=\"<Specified by Style>\"\n{images.disabled.dv.saveRecord}=\"<Specified by Style>\"\n{images.disabled.dv.saveAndEnter}=\"<Specified by Style>\"\n{images.dv.cancelNewRecord}=\"<Specified by Style>\"\n{images.grid.editError}=\"<Specified by Style>\"\n{images.dialog.editError}=\"<Specified by Style>\"\n{images.tabbedUI.menuExpandLeft}=\"<Specified by Style>\"\n{images.tabbedUI.menuCollapseLeft}=\"<Specified by Style>\"\n{images.tabbedUI.menuExpandRight}=\"<Specified by Style>\"\n{images.tabbedUI.menuCollapseRight}=\"<Specified by Style>\"",
+            "absoluteLayoutSetButtonSizes": "",
+            "viewBoxesToRefresh": "",
+            "AdditionalGridStyles": ""
+        },
+        "FieldsInRepeatingSectionsDeletedBySecurity": "",
+        "repeatingSectionsToRecalc": "",
+        "dialogObject": "if(typeof {dialog.componentName}_DlgObj == 'object') {dialog.componentName}_DlgObj._destroy();\nvar {dialog.componentName}_DlgObj = new A5.DialogComponentHelper('{dialog.componentName}',{\n\tajaxURL: '{dialog.ajaxUrl}',\n\t_embeddedMode: {dialog.embeddedMode},\n\t_livePreviewInBuilder: {livePreviewInBuilder},\n\tcomponentGUID: 'bb46f6dc-d2e4-44fa-b87a-911ed7e07e78',\n\tcolumnInfo: {columninfo},\n\toriginalValues: {dialog.jsOriginalValues},\n\tdefaultValues: {dialog.jsDefaultValues},\n\tdatePickerMonthNames: [{datePickerMonthNames}],\n\tdatePickerDayNames: [{datePickerDayNames}],\n\tdatePickerTodayButton: '{datePickerTodayButton}',\n\tdatePickerCloseButton: '{datePickerCloseButton}',\n\tdatePickerFirstDayOfWeek: {datePickerFirstDayOfWeek},\n\tresetFormMessage: '{resetFormMessage}',\n\tresetFormTitle: '{resetFormTitle}',\n\tresetFormIcon: '{resetFormIcon}',\n\tdirtyFormMessage: '{dirtyFormMessage}',\n\tdirtyFormTitle: '{dirtyFormTitle}',\n\tdirtyFormIcon: '{dirtyFormIcon}',\n\tdeleteRecordDialogTitle: '{deleteRecordTitle}',\n\tdeleteRecordDialogMessage: '{deleteRecordMessage}',\t\n\tssDateFormat: '{serverSideDateFormat}',\n\tstyleName: '{dialog.style}',\n\t_fieldHelpers_DIALOG2: [],\n\tparentComponentAlias: '{parentComponentAlias}',\n\tsubmitIfHasClientSideErrors: true, \n\trowErrors: {\n\t\t\t\tshowMessageBox: false,\n\t\t\t\tmessageBoxTitle: 'Error',\n\t\t\t\tstyle: 'color: red; width: 6in; height: 2in;'\n\t\t},\n\tfieldErrors: {\n\t\ttype: 'block', \n\t\tclassName: 'errorText',\n\t\tinputClassName: '[class.gridInputError]',\n\t\tedit: { \n\t\t\tcontainer: { className: '[class.gridInputContainerError]'}\n\t\t},\n\t\ticon: '{images.dialog.editError}',\n\t\tglobal: {\n\t\t\tcontId: '{dialog.componentname}.GLOBALERRORS',\n\t\t\thoverClassName: 'errorTextHighlight',\n\t\t\thoverInputClassName: 'errorInputHighlight'\n\t\t}\n\t}\n\n\t});\n\n",
+        "xbasiccode": {
+            "blankInitialValueIfVarNotFound": "",
+            "setValueProperties": "value.CHECKBOX1=\"\"\nvalue.CHECKBOX2=\"\"\nvalue.CHECKBOX3=\"\"\nvalue.CHECKBOX4=\"\"\nvalue.CHECKBOX5=\"\"",
+            "setValueProperties2": "value.CHECKBOX1=\"\"\nvalue.CHECKBOX2=\"\"\nvalue.CHECKBOX3=\"\"\nvalue.CHECKBOX4=\"\"\nvalue.CHECKBOX5=\"\"",
+            "setValueUnformattedProperties": "value.CHECKBOX1=convert_type(\"\",\"C\")\nvalue.CHECKBOX2=convert_type(\"\",\"C\")\nvalue.CHECKBOX3=convert_type(\"\",\"C\")\nvalue.CHECKBOX4=convert_type(\"\",\"C\")\nvalue.CHECKBOX5=convert_type(\"\",\"C\")\n"
+        },
+        "componentType": "Dialog2",
+        "version": 1,
+        "recNav": {
+            "slider": {
+                "showSlider": false
+            }
+        },
+        "A5SaveTimeStamp": "20181112074422875",
+        "Livepreview_permissions": "",
+        "livePreview_permissions_friendly": "",
+        "__allowCascadingRecalc": true,
+        "_flagDoTreeview": true,
+        "_flagCreateDialogUsingXbasic": true,
+        "style_color_palette": "",
+        "customTabOrder": "",
+        "friendlydatesCustomizationJSON": "",
+        "captureJSErrorStackTrace": false,
+        "optionalSystemLibraries": "",
+        "minimumBuildNumber": "",
+        "__idinternalCurrentControl": "c2f1b819-c588-49ec-a6af-dd3e113955fa",
+        "__nameCurrentControl": "CheckBox5",
+        "__flagHasMacro": false,
+        "showPulseEffect": true,
+        "useIphoneXStyling": false,
+        "iPhoneXStylingJSON": "",
+        "SavedFileType": "Binary",
+        "preRenderOptimization": false,
+        "_flagStaticHTMLMode": false,
+        "__componentnotfound": false,
+        "jsRunAtBeginning": "",
+        "__flagUseFakeRequestVariables": false,
+        "__specialMode": false,
+        "alias": "{UXPRERENDEREDALIAS}",
+        "systemXbasicFunctionDeclarations": "",
+        "localPreviewFlag": false,
+        "flagStaticHTMLMode": false,
+        "flagInitialLoadIsAjax": false,
+        "_forceInitialLoadIsAjax": false,
+        "override_settings": "",
+        "flagForcerecalc": false,
+        "flagSaveDialogCache": true,
+        "flagExecuteOnDialogInitializeEvent": true,
+        "flagExecuteOnDialogExecuteEvent": true,
+        "__livePreviewMode": false,
+        "iconMapOverrides": "",
+        "resolveAbstractIconNamesAtDesignTime": true,
+        "customizationString": {
+            "javascriptDialogs": "",
+            "DetailView": {
+                "toolbar": ""
+            }
+        },
+        "__argumentsFromGrid": "",
+        "linkedResources": "",
+        "flagReloadComponent": false,
+        "__flagstatichtmlorphonegap": false,
+        "__changeAJAXURL": "",
+        "__phoneGapInstantUpdate": false,
+        "temp": {
+            "_onRenderComplete": ""
+        },
+        "disableAbstractEvents": false,
+        "flagLoadDetailViewImageCaptureJS": false,
+        "forceLoadPhoneGapFileSystemFunctions": false,
+        "_flagUsesAudioLibrary": false,
+        "_flagUsesInk": false,
+        "_flagUsesControlBar": true,
+        "__staticHTML_setStaticHTMLFlag": false,
+        "_isPartial": false,
+        "sassProcessor": true,
+        "__flagCreateAppCache": false,
+        "debugMode": false,
+        "__jsLibraries": "<script type=\"text/javascript\" src=\"javascript/a5.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/a5_url.js\"></script>\n",
+        "prerendered": {
+            "_styledataVersion": 2,
+            "output": {
+                "Head": {
+                    "JavaScript": "*gzip:H4sIAAAAAAAAC5WMsQ6CQBAFexP/Aa/Hq+gOOjsqf2Cznq84PPGyuyD8vSQUFlaWM5NM0CipWGVrQesMi/mBZ96tq1Ri677Cc3Me1HXB79wdD+HfAU2Sfyanun/x/bIYZOTcp5uwJGi9NSJByRzBdp1GS08QRVW1NcPe4IcSfQAk7ywxxgAAAA==",
+                    "CSS_Link": "*gzip:H4sIAAAAAAAAC81YbU/jOBC+zyvtf7AKaEHa0NJeJUiBFQu7t0igOwF3fFy5idN4cePIcSjdiv9+45ckTpqWstyHUwSNx+OZecbjx3aOMzlnBMl5Sk46kjzJbpBlndP372I5ZWiBvBkZP1DpSZx6MZ3EDP6kF3DGhY/EZIx3ex/1szcqdfOMCC8jjATSRwlPCHRNM0/yPIg9HEjKEyt/fv+ORgJPCVq0DlYBKaX9s2HAE4lpQgRaRIxj6TMSyVGKw5AmE7+XPlm98/srPOe5RIuiD/0OncgMQnoUGvMnL6M/de+YixBcgkiFyX96qzuz1X02+hX9JrQ/BA2/0ZB8EYKLc86QlZXtRUizlOG5b5JWjbrhM610CVloaDmmcVboobXjaMIgkd6Y8eBhVHPyDyWzax6SSrdF6UtIZV2pEQjoXCal1jrrGw5c9tgS1gUVcr7O9DkjeCkLDe+ZsbLS6maDGp7KUIiaizuoabQwK0iQcBRBYauaIf5hKutq34oFBzWvtGZENfwxZ6uH0dQ1PsbBw0TwPAn9rSiKcIRRLtjuBzrFE5J1t6E4u9vKSvfw6bC7HVHGun+nO8OvFxRPeIKZfx9TSXYGZzv9QX843Omf9wdH5v9+mkz28VCb+rA3MuXuH6RPKOOMhmgrOjwcTbGY0ATWfur3YRkWa1K9r0BwmaR5LUFLhpXQ2FXCxkgnZ0sm+m0mKuq41axDws+5lGq98BQHVM79/eEIEiPBAGZpjHet/GQIpGdGXiaPNKNjRq6gLNHCyXqTI42+JiNVJcBmKFC/ii5kDDRVJgWpwNCMhjK277GZftPgj0SAmZmPYhqGJBmhku90v0VnGha/oRUdKmUKWTEUojKPItCCaM8gjck5SaTi3DqZ2llVZOrjXPJimoUOUEsUdXtYmfBRoI0UBF2zfwUmVlhfYUwz+DNqsXVjpv2FUF1b2sXoeR3yU+RsKh9RO4CXlExkL2m5Hsvtbq3LdVqOz2rvrEgJ1XaBYnssqKp6YPhZEED9wK59RyUjfybaWUMYRS3SC5phWBSh49W4s/WIHLI4Ojoq2QEpetDzFBKwh50TQ5CLTB09Uk51TdnphcUj+dQMRK6Z5zqCv3ACu8gK93bDVlxlnLUYd/gMef2SOu7w+I6nNjW2YVNiWitT4Z5L1sdVhOGGZtYIcqn1Fcmrx44WDbzeQWW2FA5czJ+1sIJt2xVyI3gL+P8WaBFwUQPOZBdAtaSGUq23CqNuVQhV87V13lJXbwFl4iunz6aqNntWpmBZ4FbiHJPAkuaMCqppVlh1+7VgrT9NwCuX1Vvg26BL/MZTDb4RDRrLVZFBvVBdicqq29Zu1vJHjXgKFrXmcRJuMK5XW1wwBn6c1WUFzvIykmpKUp5RkzNBGGTvkYxeNUsvcIzLfr84bTN1nvQyOEIRpTETOG2B/CtcBGNvSYrBO1yAylzrINzF3gBeHKoGLpyePZ6qN4mwoJjVHaniuA0EZ2yTnNfStCmw9nRuvMjaJrQGQdfz/xCDS0wvgnCKv2WzbePoVi5r367WnmiKywGC2wGy1wNUux/4CC4IJtp7moR8hhb2+4LBiUOaZyZPzveDpT7XgrpetLFIr9dzr3poq9/vj6oI++UFphlhf7hXHn+bxzw/VneM9sOe01cjprrcnILqMrt91oXFRtMwW5wmjHixVE2AlYjiQq4xXJMkv5RkipaUndqBuy3jk5vbJbaoCCIE1zDLW0EQjJA+J1ueGDp3Cq09LKeoMPuVc31lcrUOetWOYJ7jrv7ydqrfwcMD7AKMgNeTTkctwpOO7s9iQmSn+X0OxYJEJx147V7z8R1OjLF9EHwa55SFAdSB/D5QH/KOs0BQYDHHxA/8iI20gzIRtBj6kX2CwRCj1jotQnxFXN+zGMMt+1YrrwlPBbjiE2SVouPypRT99i+TanHAuhQAAA==",
+                    "title": "*gzip:H4sIAAAAAAAAC7MpySzJSbULjbDRh7AAiMez8hEAAAA="
+                },
+                "body": {
+                    "body_tag": "*gzip:H4sIAAAAAAAAC7NJyk+pVEjOSSwutlXyzU8KScwLSExPVbIDAOQ6e68ZAAAA",
+                    "dialog2_html": "*gzip:H4sIAAAAAAAAC+19a3fbtrLo/Zqslf/A+PSEUk3Ldh7tPlKUvRzbbbx3Eufa7uNc18eLJiGbDU1qkZQdV9F/v/MAQIAPSc6jO90n6apF4jEYDAYzg8EAfJoXN7FwipuxGK4U4l2xHuT5yrN7d5+uUw4+6QeZ9DQaZf6lcOhtuBJG+Tj2b/pJmojBihOFw5XpT7++Odg92H29A392tl7ubR3Oeqenez8cbL3a3Vx59nSdQSDQKBlPConARRSGIllxrvx4Aq9zgL3ZQlBHuwfPf9r+5+7RynoV1CiKxYpCcZzmURGlSd8/y9N4UoiBU6Tj/trmxsbG+N3gKsqjsyiOips+YwDd8INAjIvhSnTpn4v1b+f168fdozcv9o/2AYlPikICFGIo+fHJinM5iYtoDIM1dOZRBtH5Ye/l7qufXh7tfWaUFiJB4wIjE0ZXThD7eT5cEVmWZkfRWKNx6WfnUbJ2lhZFetl3HkLTjuIph5jKuY7C4qLv/C1KBs6cVn98uf986+XuwcH+wSEyGbRKzUsEWusdbBLHG0huPdn+5aV/k04KjabE4fsn43crDhS/Mx/mzwC1t/1id/ufz/d/3VypThYnSuIoEWtncRq8HZylWSiyNdnEJrZQRAWWR8SmYeTH6XkvuBDB27P0XXCRRoHIS+gzBycn9/b4uFL6jY8zrRAZVMCk5+m7zffvaSBtHI9P3jOS76FTS/Tp/e/50HHeB8A6l8kPcXo9fHlw9Fy+b6eTpBg+ep+l1+oxH/vJNpH3fTDJYay3iiKLzoDv8uHJyR2gaNmL5cZi6XE4PNo62ts+2v316PRhSVpHtaDhnvnB2/MM8A3XoBtp1nf+YzSC2bAxcICSa3n0R5Sc9x05XJA0cNYu0z/W2jPz9rxrcfY2KtryATvn2YPkLB8P6n81mej36VnmqB4EsfCzPsylC5wp65+XrR9+VrZ+eFu2ftjE1g9vydYP/5psvXlLtt4cCbH5la0bWeDRZ2XrR7dl60dNbP3olmz96K/J1o9uLa2/++6rtG5mgcefla0f35atHzex9eNbsvXjvyZbP74lW/9t429fjZAWFnjyWdn6yW3Z+kkTWz+5JVs/+Wuy9ZNbsvWjR999Nxr9hdmalpZ6mWkSts6UvJKds3rd2X3+048/vdnZOtrd3n/1auv1TnURmwdZNC5MZ83v/pXPqStO7CfnE/8csoxUWTUade5vPekFaVJkafzcz7rO1AGeWP/23t3tdHyTRecXhdMJus7DjY1ND/5u/s3ZiscXvnOYjoprPxPOdpqN08xHj8G9u1tx7Bxgpdw5ELnIrkTYu3f36CLKnX9A64eMaRydZX5240BqDNMqyUXoiHdBPMmjKxHfOKM0cya5gPV9cSGb20puri9EJjz5/gOU9LA99eJsjccAjPBwDrHlzKvUbSpigTiYJM5ucg5CwnP8JKxWL7N7zl6B2OdjEUQjABnHN/fuJmlR9kf1AZryHaJE5hQXfuGEqcgdLHrhQ5NRkhdQGypAwahw/Ht3NYgARsBJR1BNOHM76qSZUWhOd2Esvl2HLptDPgRZlwdxmk8y0Z+GYuRP4mIbsn3oaNZ33ZkXFeIy70/di+IydvvTKIkKEHjRH6I/miQBwu+gcPOi0Ms9QORSdKffTHppD3g+Ok86uTfNsbTreggCf8+iJOxP84v0GluYeUU2Ed3BlZ85WGKY9/BnQM9uRTJpzPcALT2h3NVvgJvzHjZ0fwgtuFB0//XRwf7L51sHe0e7rw73/t9u33FXucyqO4AybnfVXXnmrmJDqy7PKndAgBDDHiKI0LpTRmX6bTQiEDp31Z2p6tNvRRJGo5k7mN27m/cAO5jihRhSV6CPLgjeIk0+koK5KAqQXDAeVK5Pfz2iAg2WT+Age2YT2YNh9s+A07jUpEhfRKHYKcfexTRXDQVQSTbUYwq7SlVubPzngKho5Q8s6nfr1ZuHow2a5gTgVSYbs0QHKaQLe67/ZA25E8cfCQijiaMq+1COo+o7jyUCD18cvXr5QdAVLNVKE2eoMsQd1BSxR5yLZm75d2J0T1yJpCgZG/WSR9xN/nuSJp6IhQc8DgiQ2hq6YXqdyKEBVQjZvSgkLhgHyRCrlBwyzkQO8pEMm9cAF7sBpQj9b/wg6SBwSCAGaKy6B+KPewsMMOlF8NqbjEPoQ+ebDre96vb2gKxu12uF0B0Y7HM6Po7Ck+E06EPLXtS3a2ELs8EMGcCpV4IaSEmFrZzBx0iZE8mtfuEPp5jbnyIp+yU9+0xVENzU5gxJe4kDQCSmoRAAvAAdLCE3tOJhA10QUlpKrRXp+XksPquw8rDtvltcp2ugBQvhem+FGL9hCvdxdjWIM+40yjNAmdr4K8o3hqbS5BygrRxJCh73/LDIhv843H8N1TIoGo1ujHrQC8zHP71MwBwMRGf9t+n6uef+9tvUbc6ecfasObvPuX1Xy7WqiPzNdVdxevzmepod0rALDSLCqTNEsQEwQe44JlekHpQaOJkoJlnipANAoVPKSxjLVfdYv9Mgr7onXe+3BiH8m9tF2YOzafrpFIUeDYMJm8WhxA7k4Yc0KiWIbHu+XviraLCvKuyrCpP8KokRwNLjraRGMMl+HhKa6dnvIih656LokELCec/YlROroc+N8hGhrq4SgcOloLOOA+BY89kw7MUiOS8uuoTexoCqSBJWUPKwSFdKnHnl7suCX5w2j6O8+Cy6HBav6fXrSRwfAoYEsD/ygUyeikuQr4FidQSVmOW3zRxGtz+tGQINloAyALRFoJaTi7U/jkKRD6cz5H/qSK56XOSeqZmpk5KKL5GI3YFFn1LWQsUS+JekuBHtuvJWWtqrKGFPS2dFA4ZiqkXPVITQLPyH0rlRWTuQJAN3oG9QS7yDTkgdTtLhkA0otzSxhijYVPp8P+6KW9HezbxlKgZTR1mmmebRVVYenarG7/aK9JDGs9N1hkMHOz6zQDS3XuobaJD7terWVBmLl+VxnAvrq0K+lUKWPD5PL09txdyiA1uV4G10FJa/GobHryeXZyLrsFo8QWSudP/SERQZugwP2xheMZsiAT+J1lUSnJpEaOg1BHE2CYo0Gw63ssy/kQp+LwnfDakITfB9RJQ0LWUM1zZZXffGk/wCs66osLQmKCdHX6XgCt5mAzZ1RTMcDkm3PHhAEFibD4cb3avh8dXJgGDbDQH6KXBBnJ53XIoHc9YcQ0FygKFzOYHHM+H42EEHeFaH2OXUNHl+ReEUqYMCv+cqy2A5nLHOgwdXhigZMunKhLkUh97pzrlSajjzywM1lNHQYrhcfVFGS+mRXvskPtNGeyC+9m9ychto73cirRD2S9jO1NL8ITOjxft6Aa205M3zxzZ5JaDYYteELmRWRSQWVi0LVVwb0xYklnZwLMRpWUgGilKmIezFy15CYcGSn/wGAH8JaFjs83qa5yFcXaxrEtxmwa4qmXp2GbzmdL3mRFDEvJUjQVaq6H/t1GFYx2gNnPRo4dcr5ytRLXEePGgtgNiynYboVDJW2XizUGin1ldr6qt7o8GywxRUa6c8BEm31R/JSFdwXUK0sKa/FdQlxd94F7gVAYz9DPjhdRqKAaaBDZeITEmHieaenng39pPQsCERhe4XtHUhwuhjvRzMZH1XboS7zSZA427GNVTMLv3sLeSLdwUmmV6PWW0Ho2n7+zZeCeruYn/Ep925qNdvXpg76ZXIRmD/9h15TqRlm/f6cmikayL2kIaIO+Qj3vDjciiOO6joh+oy3bkvl+Y6Tom9HuSLqLonFi2ydaDSnxyN5NTJtdqgDpEHWhQhZWF3lQrUWs84w6MGRzsonk1r+xysjKR6/AQ0tbtWjvj/arI/FXngj8VTd/X6ctV99kwT/c80QAYOzro1kJ3nSd+JxagYfJk2yb9e28y80/403hEjVAe0XtQqw/J1a/Vghzx5Z2KU4pqTg6uOT2beJbBEbKX4I5gaRsLMQ9W2kybKq46vJc2IMnZAX++0p6pIUyrIib/ZI5FmHbdn8tGLNPvDsVJegkjHXUt1KtDJBAxbdCVsXgmAfiIbuGRyfVgr25O8aG7pY6A+JzoD3BpnfwzULRyZClCKlvxgqDiDeVnVoEw/iqzwBoOj6VDS1z7g6eDpTqIMP36CNhWV5jdJdPv4NrmDC/rvOcsO7i06hXI/CpZEfjuNY3+ci2UQcZ45IHKb2nIqfPIZGq9wd5RciCxalr9/FllhcnOBPoCBcyF4rNm4XBpSI3I27LVAxPHAAZuzwHhchTXL1I9qSoqlpuY+Bqyej0v1A2bLR7WmmHapxvjM9ccR7TZC5xM0NE/SqCPkH9vUhwiYOaPx5wqYZkSWETC30UC3aRtabefyRguGtk7I9qIY9hLckDxNvSAT6CBqXP8jwL2QzDe9jjf30lQarDUnCVhygGCIvnCVjBUHZF3iFq/eTmGwQ/5pRLxjL9Cxlif9B2AU4iI5wz0D98zPgSQiPMeIyHRcsSJL32VuxUtASTt+gnjdSkKNbiWQvrVScjH2Mx+Gsz+9SLPoD4z+j60SaqTMRH0wwNoniencEDVMT5RobrIE+myBTS7DPVs9heD5SXRJBxn603DCh036jzY2vOJaiKTvCqDdWpSsQXOAVYBEtbCnFDDTPwWxYN3wDmZp+AnBoVftk4GTtNOrEp7P5ckLi63SZM+YK7SkSBMWZDuZf62TrJdDs/AhrmfMl+0U1nWiKEvgxhu/zExGYL7AEB70rOHKGZZTmndwEc2LJRVPRGs6yAFOLfi3uOAOG7xlVqhs5smphd62Sn8a+vsmHU9wcVopU0vevvCTc9U78rRVxAm76u5bQqXu3EOZUHXulTPDbZAgZSQRQFNCxAZoQvBIWKlyXY51K8Ukrj3yDjsgA/QKfyPlZXcQ2A5hckBI34S8QoZ9QYY0XHV7uzt7R/ULZRYsOBy+8kW+VE7I/fmHAdfZ1UEEoJ70VEdgOFVP3G5D/tBVK1d3YGb7YQjNDF3on5WhPKVDl71C7oA2SbAED5yes3LkTtGXsIsui5xKqeTL4RQlpZoA6ISeXvi5fAfqSrdCfpMEMO1mNODiHCEP3dJD1LOGkyMskSvCNJigx0Qq2l32n3RcNCG6g5A4JRzanLCzd7j9cv/wp4PdQ+hWnnewmOf+sUaBIrQSoDPMSzOJsVq0LLsKw2iEbNadx5M1h/XKMzsMizc+amqq4i9umg8lFXqmK27nv19vvdrb1jPFpsrDZqrY/WQcl5uRgMVff1LKnvLf0hfdSm/83W2h8OZyFDZPAMu5Geq52WSZsSaocIu2e3gbtD2/2/PHY7Awti+iOKSW5C6gnn9naXgDnJ2DUcaKifGx80dRlhcEo0Fq0NwIMDMTyfHGifkM6kb0QFYxUNAvYU9cJcTmUfDWk/udEXRXvXosYFiS6Orzh8SdCznNRSt4oC1UHcU+Ougn43GaFflROgkuulMTcbCiIe0SZrVxUkWwmxidz0dDKH0uCqoq8o7aFd0RI15o4BhiOV4m4JOKGK8mPNvsUjXCUwVSYUoXmhhn5FzeYWGBzcy6ev1wGg6nsJTqE8am9RJMsowc4qUoZyuDlTTL48og8gYiZdEihQR3yM/AJR16d6LEqTJudxpKuW0kHocnlt0RhlWG1wJQbjQWS2iJYpGaAOUTylJarA7DsHyRmVWVqzWylS+n8tDFqWxn/bGHkmDosqwFhUx55tQreO7BWEL7cuNfbVu43dqcKoypWlSUDwCgfQ6GZZrddsjeD5JRu7VSfhyzXSebkWEygs21urB3mZ1F2FYASO7quSpoxrwVN5OxNBZP0QT/JybMmeIi/MB6VO0snmRmrefwvrixZWvJEjy/qEGs3xfGVNuwp9mMhgeWJPdpzvAIj6XN3+GdHx5dzMjECGbJRYcY5L6WSFH+Kj2LYIQk1tfAIBiOAWVhHBXiaCDiWocRx+mj8aZQ0kplWJQDlrTuDWjJsQQcU0xG+4c/iyynANS1zQ9GDXhOSVg5yT2XNfYI6JXDhBfL41eDBEbDpwDzL4LBe3PGesrcl6Ogqf2z30u5HB1Zr7ToY5lIjwOVAH8pNhoEaN/t9vKLaIQuJSXOaZ9ZSXRyx4ByQshlwjH+PRlwg7bLReZDBok3ijCncl36a6wQaSvUs4WIu0qJWF0G1fDsYHhqe1cGWnPhVddZc5A6dFuJgzEEqnE0nfFajBHeBXOfNolVJ5nmupvSr2R678z0Y/496Z0W9rp7Ggp0TLQV7qH3cUER6RlfUIp2FxeU4c1C3EaGdTuMx43JLsCPmUDL5ccsnYw7rUuzbrk2U1FoguN5SUdMdZQXaSMjzAvNEyxB4V7clGltAlZj7epQaJH8I5C4xhxKysPqgOZMfrx5YpH772YOy1fCdrSLFl+9+sPW6g9P6AgY1aala73yo9bKj1TbyiKv+nKa9e+DB4wndxgE5LClslbL+nShRA7rDN2zNI2Fn3Ck4H00teQB6NJU1OF0GPhVdfRwnB3DtrQOjgEv5LtG15bsVK10pRczFQanB3/sXc0b+7mDt3js5w7forF/3Fr5sTn2XG0MY8In8mBIxsPjMRjN6nyElqnDjUH0dCxt+0G0uto1j9Hk1jGa8XF04l3BHxoGxTTliLCHsMXIq5TRozCm8xiSNZpGnGIR+Yaucozisl0tcE4+wYxtofsSY27gMozb+XfO6RyprJyzUg2A0ogtZYHnbzwJt6p0mzu+0Yr6xhIdX4JsOiz4socYdKfqDRdyvQs/5xWmlYruueFxSZeTgS0qaFHJFJvSnWNH0aUAgpQtYR5oMenHjUhkDaq5Q+AcVdMgVhCpocElUHzTCSIP0nRFxK6rlFoQAcU3uhXYZQcaUbcEKHrb508Ks5yeGO6lHyVyZRPLI6MGk7VAjIdWGQVNmitWruxSYCXiPOIMjvCzOfo0SC/HYPAfSYuno0CwuYTbDpZnvaa/VWD3vEjrqcrqK+hgRBzrBk5m3pT3UEo0Zx53Uk2DnXRYsnaQYAy74dcsYa262o/lnuBEk/G224eHJsWxKAhTtHXc9+/NJDJt3C5XqIR8YHWeEaVMxvf75UlGmrK8eUWTQW/4PdnYoBXafUzu0dZft3wcWruAqh0yLfWhRHcNuec+LIHev2/KxZpzsjlkb14JCtjjAqUwlmTBTd3uVNcalvXVIW5Cz3PXqKSRimhBMhufVs6Ziq9Yo3Ews3wZRbAmh6M8KGgipWAuhVcDAhK1KsYfjRdXWwqrWgsSJwm/Easqvhop1cVmrCTIpdCqNy/xquF7K7Sk2yeN+fiWK8/Q12ULLNBw2bD7Gj1BuI9FG0VTVTGwN/YGKl3+lhcLoHv9+H9WTlZX8IYBA711HfhtZiu/VPEmS8dDHTIyhjcMIRCwvs38JIceXw50uZ39V/OLQgEu7RNYqlTSSRfDkDV8Jpcgd7thluZxFIo1t4tHhclIuAKxODymbTkP3YH/CT/8skZvJxYgtCAJAg+krNxQjd/kWd1GCJJHJIg1C8aSIBRnWH1ogCSdw/7PPqg2ouKqixHgBT/CE8FWwnbVvcxVGolXjBE3Y9Dd1QDSmvZeJNftv9yZu9lkH0xFZUFYFCVqmiP0+D7c6cg+4V+KV4ca2Cc+OyeZV4WqL4eoETbPWCxGAokNpqJHv5sndUTsgHmpfY+n475id++qv7B7oNMXVyAUHkpUHp10Zyel6Gri/Wt/3Mr6bdyOdSxmX4K/sY7N3svVaeRng4MvdibZsGPx6vrD7kLmxmpfefqDedopxepaKGhvtKRpwxGRz87xBqKNHA/sNPJDdY1elTPSsR9Exc0XIvQkNpD8WYZeg99YVkipKi4Mgbvp0qhYaRuuJrpBndsgVW+/Bu72PW08qkTLELpPqLrlzduAvD5BQ4q9EPNLkSQa1AqVG320y2eu/YfaI8AUZo6MFxhsXCadUwhYDcoRnF46GsGq/hdkLplCWB9zi4jg+GRYvlwNGLRdatMstYmlTDdCs9eAdhg5XixqwbD1lLHpdhbodUZ3g/RBbAEWKpCwY7od5BN6ueUjwhrMPGsid+0R4LBh0wmx2P3Q6HjwArUhrNztfOjbPAYudxR7uBOoXAItBTBCsZdPzgCLzob3fRfXPTICUp5maxr/+bFEbrfm6f5QX0u50a8YkpDbxbVQtTNlVot7oSyw2L9gtKMdDFaa5WGoOxj0lK9FuTRO+QWleMrXClUDy1hcNYmk27p2QvLtlB2e49yxJN0H87Yx0J7cANJ3qzYFhjRz8slgGZaVsrxWW4VZLMG0tVLl7gUhT/SWhzvRWy+PVehwpuUGA1o5LdopX+K7CNNGHOkAqS/vS1TylN9LYaFOnvKvecL1Q3zSTSDrOz/LueK5Orri+anujx+lwSS3r18wtsGN3WlmHdx4xn1ndb1IdacZSw1KbROFXVVFmXt8GQLSTuitTz8rhiZ3D65hAgsscH9oBcupehiYZLbdnTIMkv6Ds0z4b1GRiLpKM9RL9YS4tEGNiXEqNPdjTwo7VkgVwRb4RreijFoqz5DT5V8qjEwDlIefaVM+CvtR6I372AfynFJnZG+6OnrIaK+8bcTKQZ4dCDski2hfP91PMb4UbWMXkCfpbxHo+yUFnqpgqqt5F+phf80L9YhgfPWluFLhSMAVb1KMtadcmiXqhW+X63QHjVxk7BhV7hkY0uSo5tBY45+GnOJiWMEWBBINvTCQAgmFLRuXpunpnDfcfDNVr7ibNZQbTxfWrWsdU7PgJPoQOcYSgCzGyh0u9okPPqbjenl5XEWyFB616W/QaRr44YDyDXnepr8xM04bUYSPuj2O34LawaLy/E1FU/bs7Fl5H4s6JdJjjDD0BPqd0HWPeEVLmSz9ommCJ7B+SqIi75jZxqWBnotL6Cbo2NEm8Jg+Dz7mL9UAkbCpBcqY1wQVWKoNHp6mRjhnXitcot4MyWVUH3zFtGq2dJdJK4J3dB48uE+qhWpQORmYtWYEZpVXRLFt4XbpVb5Jj34pt8HYM3blwNjSq8XPtjwoG7a2OO32vufrRu/rwnbcCuFX6gK+V6h8r86D+kGJgbk8kgs0kgxN9qayLxGhMLQxWc7mNGzMeXhbYcYtYb/TOuYlt5LRWDlCyrscL9RWTWHFA8+L46NKxypw7oRtfNqcUfwJJXivkYFyJjMlZvV+TyMZRmREAmrrl0NMjJp6Z6fpupj188jj2ySRhxbVOtx9s/1y6/AQmI5qsg5Sx0x7DadMYZVPxLMNdKiQC+61umjsf9EigVSyxW86oKISIG9OLSPGHRWI65opUljaiaQI7KRMLZGNNBr9Slq5lrYkXxwFyhzHmJ+g8JPzuC0MikPsAjAazKKaGLkndFx9U1FJJ53FMguMs9LwOEDDiq4UIlBNzgzc4l1C7pa9RKlJO3C8ffv+fSWdRT0nN2gK3PCgCGO3a6CCHWBU5saWhLFXVvqMHp+vfpy/uB+HN+PDoBIibJ0aMmNWgfu0ILGjp8PAljh2WTkClTIoKgJbGnWoHjytmmYsEADPxJqFpaDi8vyyWjHoGmqRJOM6+Lhq2bIN5VnMcQV6XrVNU1mF7h4WxSvKkUK4FILHetaeyMO9hoBkaC/rEpYzjlhCwxgQkFEUxxyWcwGTRX8NAZMxgL0i2attKeFeTWf5Xk2VIp6S9Q6aiYXU9tOPh8Rz8LY90Leq3ydYdElIt3wcuny7T0k9TgbyyUCtqcowQrDevzdT1HZzcxdLsVJF2e6laleGf31QsyYNq+02U+UDe/YExWBjzyinZHN524q8ebvws+IIt2FNdrVC24wi83Z6OXjAuJb0wQN9VSHx+YMHKI7gjZbPNtNIYc4VlNOigo2OaVsSoc+Nj4xlW4iNGVXxgeiwhTYXGxXDthCdT46NNForBzO14dhsI8lVNKy9GU7X0mJtK87yKLa8bdT2xEBi061FrnG67yNb4HXpJKsthbVvSW9W8qqQQljbC1M+m2RyW3QHwzBMd4EubF1rVCabHwuxK5T7pohxU0alBRl8y0jX0vUHSPJ8Z//V4jhAFdwH+bjvO78C+Y6xhqF+y4ZOhiVbV0oo0CfIcuYQ1/gxLLfUX9D0boU0t1vEF6EOO2LStGC9MDJmYA+74TD5l1F6Mc5f4gDIjyoqJfdhutq06dbc1Y6BMAVhrD+UdmNVzRo2X6Ued1RXVKe7Y7EnfYKEN65eOY03qzQd9e5P3qfl8l7Yp7985plvq0C69Mv5gYH1ffjfWEn2y0cvwvtcEz8uL3ia6dbIw2/sKqo9gKE+qxWeNQa41C6BACY5Cxq0Ah/XN/YYTHQePGA/bGUj2SxSYiKe4+Kf6HUuiue4QRkl59sxHqg+4P0WEsD7o9Fwgz0D/LjwCo9p9VBH42Ue6g4hWVyiQ31uw4dwkSXpVGpsJtDpUtKmZ9W1VVllDWGo9c5ZbYFkgFqLW0qy9pYl6aWhkLR/ZCl+ayimx5UuEyz9382f9KhtdVW+3DFkH01LCe2eb8mnaW3Eq5CLjs7cincimBTyMhXXfyLPxZdePOSseV48zq948XTlBZc9HNrXPOjKluSXXDQ3KAvjqOyNu8ZQqhkKgNXNDeVn5OnUWhEDFuzdvMrF0y0hUdV9TDAYG3Yq76td6am559zDux46XWPvFC97KImkysmbH8iVokTnB5z8K6UXmEEb5VGlqqAxtNEidXtSi5Qq2DZRpqEJdpIh8g1n+y7C4Gi/6VgfZbSf6Du1B6ydDWizl9l92fGlRWGtD3l1T838aMon9wt/06m2T0qv+6mcxe3wF3vV/n0cXwu25CrCs2myNAvT28nDJrhdM+ymxRKQW6VL2yOGzdA2/F8NiT/TkKBPLdQmaOVLEULRhSb1/AAPvglUb/p46MeofayHha3FBzIkbO7oy1HRy3Iy2BdboMuxSGGh03x13DzkkB7IAIUx/gQ3HRvJyCc0ZdKAFjMqnUZO5fByRWXxcBkLUtXShgl/wwarA/DUw67cjQ0I718amltQRS4Wyw91zXUpdadKIg8Dg90J14EhfIe6/TVZTgplsyjNhsCcDEyBQSlgh6rnCgyLXVWw4bSwfaxauzVLx7ryq9eiTvRR5Wm5kmU/pHGw1aqgXNdGefYUtlVQoTF639NOX1P+QJwEJV2edQwiraqXa7lo7ja139py16BtRxPXaEzRVpoD84pbY6Gi1Gq0W4AKMYEJUHNB2b5ZxmKU2cxolEeX91+WG1zkl1uMrWSmTze40L4eWzRy1POF8mt0G9tfQFFlC5VTsGxOzj9zcFuLWzO2YXiJegtwQUFhgVOyomzfKGLIErqv3t4urXl6ucVyI9HaXLdHqVmojeIbur2g6daBFjnSeD9BSQSGeCsitFVW/DKHSDYRg6Ym9MbXPARrMrvGMLdAtQ2YrQBq/FdTGEbjrJxuLRHlhqcMH/wwSSZhSOlh6K1mcaSpbfCI3MpaMAYL5OBSpG9FrCJKg6ZmluKUilJu0Bu3QLcZmK3hq0qoag9YTVt8srRwbWCTD5CJTYzSKtoqNFKa4YuyrQydSpEVgwXSmDrxEcJYBXYZKqZaeJyO2e4vi+gYKTNJbtc22HwlO1nWQuO8Zdn+6anZYKFg0H0506ZV5mkQ6U5b9bUaMzVwYMm2rYqjNWav0ZZeaDHbAX6LYCgr2pgprUb9v2JsllCYtxml5VSmMWpL6MwvePykQvyE0q59Ydc0eu2q9jaD1m4FlOPUrm2XGx7JjouWLHMGpw5Br2KaB0eFuvzLRmcJE+M2w7SMkWGM2BJWxhcxdEssjpAmrfoY69OJECwwmHkte1iLtzNuc9ZZOr7NnUHV0KIdwrLcIuc2ej6bt3Dmd8belDc26lv2W+2t/Po2V3Vf/iOJhYfp5hGJ82/l+ceIBNlve/StEjVQ7M+Xk2ZOTIr8ekAl2EIfxqCM8j54HLaGiyzMMWNQ1RtCVKq6JbTh3lBjqOz7Og1SGReKdq17qM0ciWVcuUS2bW7IfcfG7cksxN3J8nneFaP2FqO5EznznmzYwyqWRkAYCIi5O6LlAdxqw0AO9VGTkhzCCyIiCdbVI2/t2OibT+QGbQoMzV8W2YZH/V0RYX4aQ4r3H7L08k0aJUUHa0kv9q+e8fLf/HUB3EaQQo42qY1z7IgFBcS0HWkHrtkqiiw6w90513+yxkf23W4XMJcfupZ7E83lvKlo+FJ2V6+OsWdDiz48RU2ERduJ+QpdsbM2qLynzt9aAKFQ/WyxHkP1+ZjqQDbW8spPVjQPfOW8NW/ISNyNk/z4sXC+NxtKhCgxkMKcUgGDR7B5ssqz4g338nNJIjcLwyDSX9qoI2VAw1w+71cvdsJfLpA8CdC2YSiGuHONYbCheP9e9GQqMp4qMNx8xIG3MiBjJomG4RgNNNOMiCx0pT4Bc3/IBBPIsPOLhMTUbaTnMqbqWpZ8NCqfgnpSmzYoCbuWiWQdHgY7VhkjU4fpWrlreGvuUsMFgq96QfacaylQDtN+syGQVf7Yvkai9RaJ6iUSxh5pMW/nmq7vMDZOS7nRWkW0bmGPy2cdl9m+jT02XmrF2/ayxRIb2Y2xri1Xe6gPAVqK0Az7Ncg9z1gRc6w4G7b6IAFIUPoKlT2paWudJqe/i5qHb+uiYFL8nEdpwmQy/kznTKM+zEjvCv5e4Y0kWY9DV+lCkm/O/Q4lYITIGuCHX6UO8bi9i33FsH8ur7KMO2T0PAXw1QtkbvWtk6l6YmnRNZ5NyXGduB72hPqB16sw4vIyn3t3pT2RoUKpa5I6AZlYfykioOppIQEpc4qGCzP/HBhgJxo9xe/q4DFakPH8jSz+0FsvDwCf+JX/Tt/3U4o8zTlaxeqUXjQcQvOQEQ4VG/Fa5JBYmA0HYmd9O1C5POEuYpoyKEozAL/oCYkkUivBxkNlblTWFRXoTAqeFhUAcmYpc6n50qIGtWEJ6Io2qN8apHXrEncGWcCabgzKemOan1lV0CMyuqXKbUGl6v56V1DjXUFAoGVuCrKXKXPuCWoyNTS3ViwNmDdNpgYMcC256XYgmt63kBQ0z+cLC560INx4yuDClEy+ynKgZcby5EBjvtQ9LUXxYGZ87d/kbpfKywWJMRsbBUIi0PVWQclcjpTAAA6+dFsWJeaaNsUbxmD68luUh0GJz9RINF0yWAck3ayuZ8KzuG3Ber8EVr8x5S+viaDj81msRqqskVD/FsRASDB7bkkQtGhepHH4b0kS7NwFdG55cuTX0Vi0OH4Mm6Skjk407iXM1MIJKTWXTl8ElajP80gEdEEmMMhSD1b+M51fhgQT+SQujLuzIrRtlvWL3efq8Dw0RwrJyRHqEX8C9MGDqAy/vSoPC/yMWpHvoJOIwDIHFzlXGIlMfrJx37yPY0aB1q1eMHahEcYSM/4B80vePam3ODB5wBHRhIUxNioG+srqFGlw7tUV3qby/j380PdNr9QpQgn8CuGWH7RtgLzwW/HqU632h6OVmlL+d/O15VuviLyUazB0E/0BzmUqmi2DHFCtqselKsrP1/ZO53/HlmgslzilzCkbRAG7bH05G+U5LHxpqglDVLkUqBynIKbYdvMAOH0oyr6RjJOms0Gl1DHfYNJwe9lLeMmHxyfyu1vlV0uj8hmvCpI3nAFeqnAir4Epbz5TL3wjmv3NPUAjxqbMT+9N46FKPo7sL1LHni0NT3vxjhipr1EjQuYpf+wEX0vUU1cWTHIdCRn3+DIR6TxkBOgzGZTJ26K1zKY2nGrCFkdj8c26y1R4LgOv5K52U51tQN0dMKX53iJ9TRNdX+SuxuU6Cy9n0vcZxWp5tfKMP/URq8WoJgcPVPyl3FAHL73xJL/Q18CpCKfGYbmPY1bWsYhToyJf+sb0Xnn24D++e/Lw+//CFZzq9Vvgy7dPGxsavEXuJAa384/fEl0TvmFwzV0KHfoobtsNeiVq8poo4/tU2MzxBk7bp65Ex7jADG+73PQogbGGoehB8iWeDloOK807TbcC4ndAEmKxwcqzOnLGyNJOcNcYzEpW26C7JVRSlY0T9QMG/RVBmTvoDQ1Zg27mfx30zzvoFFTysWNOknjukNebsUbcyP464J9pwFvSWd6jSwodXWyVU7lJwoG37vTbaESKT5dadWdu1wI3/VYkYTSaMWexYSMxxUKkjgCy4js7yk8W1w220fNnkRUriLMJ363TrRoDKotn6HjK0Xe0bIMv0uyPWzSo4uI+uL1lOrg0tRYhr4ZpKPPVGA0q4/P+fWP3hrqXiy63VZfUDZaouOB+W7yDOgqs221NoiyPk75w96NRarxyl64bKE3/xrt3qUlyB8CfweD0VLbug5mdFNGlOJUm+JmfyYue9XnUe3cB5Ok1zMf0ekdeAj2cFlEBi+RpkaZx3p+qy6H7UxdXy8LtT+WHMeS7x/e6y5fo0j+HN/rJ17/5hoH3ziYwiZIeFeqNk/Oe/4SKuNJrCnjkIoNxOUQHLXTvhzS79Atn6LivXq2H4foN/HMH+ugoLIqmP/365mD3YPf1DvzZ2Xq5t3U4O92Jz/fPfneGUE/dpjWvIKwCBQjo9AZmF99LMReqk4hr0A+9nciP03MMHEsTOtgaj0UG0quhrutN79294//uv/vp4CUIarPM1j+2foVUKANFTsXlmQhDEb5KQ9FnVwqlx9GVeANCIBLXe8nzSRSHIjPyA4XFjz/t7UADZ2ePvxt9FwZr4UPxeO3x45G/dva37/21/9rcFOH3YuN78f3fXK4YTy6TvWSU9p2pu/1id/ufz/d/3XThLeJEyThHeF+/425fiODt8/SdO/Mc3v/+2Y8VInSnBBSKkvGk8GL/TMSu50T5th8HusxFPIYilL6VZbgFRFf20zdTVCOu48w8jc3DLwqbR18UNo+/KGyefAHYzJCtQY6eR4kfk/ct7zvHOP8s9naJ/S0eqyQ9qic9ric9oaR7d2cnmCzlpGoWW9WNqqq6yWrCo2rC42rCE9kWNQXy8U0UvBXZK6D0BeoK7Kj7Dz+Z+NmN67k/iLNMPr7ys+ACfrfGWRTTO6b+Y4KRVvAT49vW5BwdFp57KMaFoO83eO5+UKT89Dq9Uok7IuDHExuRHf9Go3E4wS8sA2rw92iCzfwiQny+mCBqWYQN+UUVxFEa+jfPSU9AX+nNtUtQ4KAuUcn8IcryAtDYH/0ixNu+s4nZmchFgarklchzVEyOu5UJ5yadOOj3pYdrPymcInWorFNcCAcvB/q7a9U/Ip3ouL/4WQLmvJ25FxBCQZ6vv0rPjvxkXTb3f4EV6OLFsawSRllxY+Pz34DCJVDfGWEHnNy/IrQyJ7jwE9ChTgqPfhKIWKec3Ti0mQSIEL4HhLlUsXY7Cu/XKRg8ws5rRRt1QokybcIciCDNQtZ7CuYOb89wVkvZJehuREDjEQGoCrS/A9DyvDQE+pYdgG3ReoiuA4EsQp/V6CgSccgaOT/d2dt6uf8jTLdjYjZ27Gu9vRVHfq44CZZql1GxN3rh5xy3hpbIbpalWa7kDY55eq3ScIbDP1zIyF6CkDMUM/y71OmKZlTZldnUBRyBNE5BpWci1J8g/S5KBo66cv0hvLhYhWY/ddBCQspQvryN0LxTXpbiuALLHol3BbdLonbbyGfq7YZRYWCHwQYAnoDd0QYjpgSNVZ//yJVnGs87UY2/dBuau+6cx+kZqoOpbmgvrJhJypTq/fhy//nWS/rg2aGk4YX9hR+jsy+AdjGtGIySe9W+U3FKLctTD+AP/Y92IRrJp9rOYktwjp0INbQVvlUcSCv88CYH0Uoujr0kKmB2RH+IOSXZ6wmGHzKtUQ7mhA9z4sAPo3Q/U8r1ANbNAhhoK2f5+DLKixLi6b27c43gwj/bJ2s5h54dnwzmF4/T9O1kjEVh0GYLCp+myX6G04luoN0mCQY1HWPLEngKlPcCOCDhDjEKBmVTB5ll5fQ0LEaXxUrfWSlFw4rHWSpHvYckjX6cRCGmLmMjc019AR3FtB6l2ylaNrkJOj/P6BVo0V1EjMDPA59CY9lEWore9Vrb8iIzVRsY9DI/BzbogTq4FLRqYpFoZbKGoONmWGQzovwFyyOyan6hVRwJsZ0Iz3Hh5wUBRFxkC0FIa3BbyRBinNmCSowqF13MGT/7WYRb9XlnungM0Gqk0bzVGID1dAkG1RE2Q3oDu7+w7xd+/sZPBLXBe+GLK+wnhzdJcJGlCQgI2uo1KpMoIr6vLo0pR2W4qugo9s9/STM0FeQasgoMS+ztHTYlH0aXE3Q1cDbFQS1AX83qHIMYAmPiI3gd2U7CfvmFvLHf6citcOrgHVyvp1Yb85A7F4WBEC34EQkbAvK0n4Qw38bC7UqttL6u0+gdas0XeQbE+40Q78ynIkyxX/wiuACG3iQ8F9WwqWA0uExleTUgsVrHbZDXrjc1Guib8GcSPdKVDjkyqYfr6+M0KzI/KsgSuCXBVN0/i166vc9DLg3eohboC/iByYZTDSM0sjC98l+mfijCcrrdKbIbJkJ5JCfkCBDU8SJBx1MIMzsA9e+HYBtXJ9qC7sh2D7Cy0SwOoR+LDLqI5HWAULKkQ+04D9F1f1tabRuNAZkUPW4F480FmGE/+uMqkMS/is7Jl3ouwKAO+Mp7PDYXBHhPvngjw5VNWWQUPZwEAdjrnmOkkbHqOemYhBrTE6XOKZiQBdleIjTAUrSFLqJgXNGaY0JyfAOzJTh4VU/v37OeU1k9GVuDA4LXyd67CyaSxto5DbDpl7KBzjhl1Bz5rwU7KDYwC9XwW1018qOR00HIPYz4CvHTxEjF4MZ5qtHuhSKP0OiUWV3nwQOn09TxZ7pKdJ6keEUkxklRXtdCHf9ZJ0hP0YDN9na6A7tQ82hTVRIFndNr/KlXPKWPICuyEO2MEjOHn2dViudFOlYEJ9J2NN53OMYeWUXZK5xMSUC/UMiRN5Pl2hDFj+xr33mdygiy3DVw+qCuNvLA36u9byrVdfq1KcAxiRXm9KgjqtEaxWTVDpcyB3nhAH9Qjz8FznXeMPGuC4vmNgyeki3gZLqvil36734BbcDrHv1PckelELDH5gb8Gyi+vNMAsDYNNWO2zVQA+7CE2QCy4NGxul/JK8WXQhYFGEK7Y8OqT3mSo86dO60lsNsKmtk0NAQ26eXWOc8ox84VCVrnuJA3+kkKTRYkuSxZB8V1I5tRfjlDLFHrabYulcLAgC15GWAbR9zrssOrUq6LGLLrxPHYEGettmBpbenCio3tLK1aFRS6wl6EHcJmoZ2rbTMywxc5RVAR01KIHQ0dZaZBGynCgj/y+gGVRfpQO2ICmvcwe7uLF4/XQNEfgQWH7HzaesIelfU93pTE7N55NFq4euPLF16x/Ha1E0zelrKgMnRmDCMcXYmDCaxMFRTy8lKU+SIAauH8Gn3Iybl0tyxCGWzCfOfnpZa0WPZWa2CcIvEhzBcg46E8DYZo4QZwPvYDcvO+fPNi61Q5WNC/gu4V9K7YG5AjtJDD+Eb64VwPJFSQRWNpMrse+m8BQbW0V/sq7F49PcWYCCq6qUpqty75iVTJa2vxe8S0/CHlTVRoBoYJOgTFMZSWnQiqKjoK1HNuwJx56AuEiuif1iUuoyQa3ag3DewofZ0WbxhDarARId7zdZ9n6XWO+yyqATTxjUZg9BdyTUZDee+uDGHm/XfPlfe7e/VV+IKlVQJKA68AeEmTAXl5wY56UxWa0zMP7WMZL93s4WV/vbvQh4PDEQUYbyrnlfwGz9xKuzt7R/sH8udw92gp55LaZbB9agur/MzsiXp2fulRhpMHvZpL+lOTVHKTHOf5dMpDEUSXfozo9xDzbya9hiTgt0sfE7yFYukSCJ4lPxDaioL4X4Mje5silpWIaXRrz2tqzIWAd+aWSsfkpJrLx/am8PHGyUIOq/kU8D88mqIX7BHI9LMIp0PLVPswT9mtJgk5XCrNG76HQPkjlvSFsP/ihQ+CWWTzalEM/0fO4VYKdJjckub8X+ONQWDjzLwNNTi3ciKUWzDq+qeFCEe6iuGeKf9bkv9pA4h3axYinSZcUKFYNfDm2x+T5B+H+wn6k9Cg+xCR7czQEJxDflAgt6K63R2i+FwAONFqJFAeKjK4scSbH7fGY8N/bbiWT8fStC3NFbTBZBeUe9GCoh1g699K16U6hCPdX3Zs2Yc72Ex36a0g6H5KE/nbdbSRNTOWjrsod3xnfO74Y4yfcVZNcq1CgmNB5iLLI6Ic6PdLqJIei+xiNLjweOFLw55kq7+kiXQi4/Cd+2PsgocRDo5OufRvnCQtnBsMfRBOTH5TriW7n4lz9JBmFCOh200zq12MQCAH5/WFSEroFIuA/kWWLgv6FOLC6SiKY2s9Nt+yaqHDPKnLJEJ8QO6RUhpIMUlLsIdVVzYMjgy/5HsoKJzAeeqYibQb2JWVrX2D+YYFXaGM+v+i79Qb8Zzrfr0ZWPb2oSVm1bngca8mwUNlaMvT1Qr37kpHOGi7TFymV+LHLJ2MOy63cpqORlj+lI7Q0qhV1SIXsC1gZ+ESd5GNsJ+AfE94R5TVp5J2sr0ujJVj6vSlEU4a8P2cCCe3wffe3fV1OcC1/YgVWXalgvsnISZSal7TSUPLn4IotIJxSjfEdMbilqdgu32CX/BbNJt8qXuT84l0CeMEfLrOK+Jn8KifjOT/8/8ByNWCnAcEAQA="
+                },
+                "ajaxResponse": "*gzip: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"
+            },
+            "iconMap": "{images.RowExpander.Open}=\"css/{grid.style}/Expand.png\"\n{images.RowExpander.Close}=\"css/{grid.style}/Collapse.png\"\n{images.EmbeddedSearch.Search}=\"css/{grid.style}/GridSearch.png\"\n{images.EmbeddedSearch.ClearSearch}=\"css/{grid.style}/GridSearchClear.png\"\n{images.EmbeddedSearch.ShowHideEmbeddedSearch}=\"css/{grid.style}/GridSearchToggle.png\"\n{images.GridRow.NewRecordRow.NoFocus}=\"css/{grid.style}/GridRowNew.png\"\n{images.GridRow.NewRecordRow.HasFocus}=\"css/{grid.style}/GridRowNewSelected.png\"\n{images.GridRow.SaveRecord}=\"css/{grid.style}/GridRowSave.png\"\n{images.GridRow.SaveRecord.Disabled}=\"css/{grid.style}/GridRowSaveDisabled.png\"\n{images.GridRow.UndoChanges}=\"css/{grid.style}/GridRowUndoEdits.png\"\n{images.GridRow.UndoChanges.Disabled}=\"css/{grid.style}/GridRowUndoEditsDisabled.png\"\n{images.GridRow.EditRecord}=\"css/{grid.style}/GridRowEdit.png\"\n{images.GridRow.EditRecord.Disabled}=\"css/{grid.style}/GridRowEditDisabled.png\"\n{images.GridRow.DeleteRecord}=\"css/{grid.style}/GridRowDelete.png\"\n{images.GridRow.DeleteRecord.Disabled}=\"css/{grid.style}/GridRecordDeleteDisabled.png\"\n{images.GridRow.CancelEditRecord}=\"css/{grid.style}/GridRowCancelEdits.png\"\n{images.GridRow.CancelEditRecord.Disabled}=\n{images.GridRow.HasError}=\"css/{grid.style}/GridRowError.png\"\n{images.QBE.OperatorIsSelected}=\n{images.QBE.OpenQBEMenu}=\"css/{grid.style}/GridQBEMenu.png\"\n{images.QBE.ShowHideQBERow}=\"css/{grid.style}/GridQBEToggle.png\"\n{images.PopUpWindow.Lookup.Close}=\"css/{grid.style}/WinClose.png\"\n{images.PopUpWindow.DetailView.Close}=\"css/{grid.style}/WinClose.png\"\n{images.CollapseContainer.Open}=\"css/{grid.style}/Expand.png\"\n{images.CollapseContainer.Close}=\"css/{grid.style}/Collapse.png\"\n{images.FieldHelpIcon}=\"css/{grid.style}/EditHelp.png\"\n{images.SearchPart.SaveSearchCriteria}=\"css/{grid.style}/GridSearchSave.png\"\n{images.SearchPart.LoadSearchCriteria}=\"css/{grid.style}/GridSearchLoad.png\"\n{images.SearchPart.RunSearch}=\"css/{grid.style}/GridSearch.png\"\n{images.SearchPart.ClearSearch}=\"css/{grid.style}/GridSearchClear.png\"\n{images.GridRow.SelectionPointer}=\"css/{grid.style}/GridRowSelected.png\"\n{images.Grid.SortAsc}=\"css/{grid.style}/GridSortAsc.png\"\n{images.Grid.SortAscDisabled}=\"css/{grid.style}/GridSortAscDisabled.png\"\n{images.Grid.sortDesc}=\"css/{grid.style}/GridSortDesc.png\"\n{images.grid.sortDescDisabled}=\"css/{grid.style}/GridSortDescDisabled.png\"\n{images.grid.firstPage}=\"css/{grid.style}/GridPageFirst.png\"\n{images.grid.firstPageDisabled}=\"css/{grid.style}/GridPageFirstDisabled.png\"\n{images.grid.prevPage}=\"css/{grid.style}/GridPagePrev.png\"\n{images.grid.prevPageDisabled}=\"css/{grid.style}/GridPagePrevDisabled.png\"\n{images.grid.nextPage}=\"css/{grid.style}/GridPageNext.png\"\n{images.grid.nextPageDisabled}=\"css/{grid.style}/GridPageNextDisabled.png\"\n{images.grid.lastPage}=\"css/{grid.style}/GridPageLast.png\"\n{images.grid.lastPageDisabled}=\"css/{grid.style}/GridPageLastDisabled.png\"\n{images.edit.dropdownArrow}=\"css/{grid.style}/EditDDArrow.png\"\n{images.edit.datePicker}=\"css/{grid.style}/EditDP.png\"\n{images.edit.dateTimePicker}=\"css/{grid.style}/EditDTP.png\"\n{images.edit.timePicker}=\"css/{grid.style}/EditTP.png\"\n{images.edit.calculator}=\n{images.edit.lookup}=\"css/{grid.style}/EditLookup.png\"\n{images.javascript.deleteRowConfirmation}=\"css/{grid.style}/MessageQuestion.png\"\n{images.javascript.cancelEditRowConfirmation}=\"css/{grid.style}/MessageInfo.png\"\n{images.javascript.UndoEditsConfirmation}=\"css/{grid.style}/MessageInfo.png\"\n{images.javascript.UndoAllEditsConfirmation}=\"css/{grid.style}/MessageInfo.png\"\n{images.javascript.dirtyRecordWarning}=\"css/{grid.style}/MessageInfo.png\"\n{images.dv.close}=\"css/{grid.style}/GridRecordClose.png\"\n{images.dv.firstRecord}=\"css/{grid.style}/GridRecordFirst.png\"\n{images.dv.prevRecord}=\"css/{grid.style}/GridRecordPrev.png\"\n{images.dv.nextRecord}=\"css/{grid.style}/GridRecordNext.png\"\n{images.dv.lastRecord}=\"css/{grid.style}/GridRecordLast.png\"\n{images.dv.newRecord}=\"css/{grid.style}/GridRecordNew.png\"\n{images.dv.cancelEdits}=\"css/{grid.style}/GridRecordCancelEdits.png\"\n{images.dv.deleteRecord}=\"css/{grid.style}/GridRecordDelete.png\"\n{images.dv.saveRecord}=\"css/{grid.style}/GridRecordSave.png\"\n{images.dv.saveAndEnter}=\"css/{grid.style}/GridRecordSaveAndEnter.png\"\n{images.dv.switchToEdit}=\"css/{grid.style}/GridRecordSwitchToEdit.png\"\n{images.dv.switchToView}=\"css/{grid.style}/GridRecordSwitchToView.png\"\n{images.disabled.dv.newRecord}=\"css/{grid.style}/GridRecordNew.png\"\n{images.disabled.dv.cancelEdits}=\"css/{grid.style}/GridRecordCancelEditsDisabled.png\"\n{images.disabled.dv.deleteRecord}=\"css/{grid.style}/GridRecordDeleteDisabled.png\"\n{images.disabled.dv.saveRecord}=\"css/{grid.style}/GridRecordSaveDisabled.png\"\n{images.disabled.dv.saveAndEnter}=\"css/{grid.style}/GridRecordSaveAndEnterDisabled.png\"\n{images.dv.cancelNewRecord}=\"css/{grid.style}/GridRecordNewCancelEdits.png\"\n{images.grid.editError}=\"css/{grid.style}/EditError.png\"\n{images.dialog.editError}=\"css/{grid.style}/EditError.png\"\n{images.tabbedUI.menuExpandLeft}=\"css/{grid.style}/PanelLeftExpand.png\"\n{images.tabbedUI.menuCollapseLeft}=\"css/{grid.style}/PanelLeftCollapse.png\"\n{images.tabbedUI.menuExpandRight}=\"css/{grid.style}/PanelRightExpand.png\"\n{images.tabbedUI.menuCollapseRight}=\"css/{grid.style}/PanelRightCollapse.png\"\n{images.dialog.repeatingSectionActiveRowIcon}=\"css/{dialog.style}/DialogRSRowSelected.png\"\n{images.dialog.repeatingSectionAddRowIcon}=\"css/{dialog.style}/DialogRSRowAdd.png\"\n{images.dialog.repeatingSectionDeleteRowIcon}=\"css/{dialog.style}/DialogRSRowDelete.png\"\n{images.dialog.repeatingSectionErrorRowIcon}=\"css/{dialog.style}/DialogRSRowError.png\"\n{images.dialog.deleteRowMessage.icon}=\"css/MobTan/MessageQuestion.png\"\n{images.dialog.resetForm.icon}=\"css/MobTan/MessageQuestion.png\"\n{images.dialog.dirtyForm.icon}=\"css/MobTan/MessageInfo.png\"\n{images.dialog.editError}=\"css/MobTan/EditError.png\"\n{images.dialog.listNav}=\"css/MobTan/ListNav.png\"\n{images.dialog.listNavSubtle}=\"css/MobTan/ListNavSubtle.png\"\n{images.dialog.menu}=\"images/menuPanel24x24.png.a5image\"\n{images.dialog.refresh}=\"images/$$generic.refresh.color.png.a5image\"\n{images.dialog.refreshDisabled}=\"images/disabled/$$generic.refresh.color.png.a5image\""
+        }
+    }
+}

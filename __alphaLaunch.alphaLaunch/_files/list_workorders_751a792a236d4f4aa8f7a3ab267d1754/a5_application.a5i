@@ -1,0 +1,250 @@
+<%A5
+'This part of the .A5I page is generated dynamically based on the Application Variables, 
+'Aliases and Connection Strings specified in the Profile that was selected when the Web project was published.
+
+'Note about Application Variables
+'Because the Application Variables are dimmed as Global, they can be seen inside all functions
+'in the code contained in an .A5W page
+
+
+'----------------------------------Application Variables ----------------------------------------------------------------------
+'No Application Variables have been defined
+
+'----------------------------------Aliases ----------------------------------------------------------------------
+
+Dim _aliases_ as c
+_aliases_ = <<%txt%
+[PathAlias.ADB_Path]|C:\Dropbox\Projects
+%txt%
+
+'Creates a global collection called '_A5_Aliases' 
+'At run-time, your Xbasic scripts can lookup an alias as follows:
+'myAlias = _A5_Aliases.get("myAliasName")
+DIM global _A5_Aliases as U
+_A5_Aliases = makeAliasCollection(_aliases_)
+
+
+
+'-----------------------------------AlphaDAO Connection Strings ----------------------------------------------------------
+'This is a CR-LF delimited list of AlphaDAO connection strings.
+'Connection strings are encrypted. If you want to edit a connection string shown here, you can enter
+'an unencrypted connection string by ommitting the 'Encrypted:' prefix.
+
+Dim _AlphaDAO_ConnectionStrings as c 
+_AlphaDAO_ConnectionStrings = <<%txt%
+A5WebSecurity|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJaBSyDofCDjq/5ew2hOGdocqTdqC4piyiGktor1Ela6HHH87NkhVJn1ie8k0UqJP0
+AADemo-Northwind|Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUVjHe+KcTHcVeSKOFQR02r1TaEEC5S7GXuib3bOrlmTYk4hxl3WQGbLVmaT6Sgyl09ZXfq9423DQl1U3UmCL9IjUwsBnlJ7hXp897cwBk2BPAnmteeJtlV0kJXFLWJUd2FmCfGXPXOdLiVaoQ/htuIa
+Access|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuV1Kx41CXXKlIWjIzvDhg2UAkx337ax4zHEmvM+cC5Y5Ug9HvE13M4o=
+Access_gantt|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/19jL8zzzWNDAuWe8JGiuGy4egsMqiJcg29KVxEuCQqTuxgjbliTV+OmshenirxEfM=
+Access_Northwind_local|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AbicLiYUYmO+9KABPGth15Gqh9XkZrwlfOXcuBkWIR74j1PB7poInZL
+CHSTablesForNewChart|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==
+cking|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==
+conn|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2UlwQAuUTmYKQtzgt8TtaoaFIpXx0kisoOiMlux9uP8Y3hqKWcu+HI5iNzIrZbpH3P4Xyac9jmVTFNxFAjGvA2GQxG8QuLV+xOPx+xI/thD6MVBqaQfNh9ZFgoqyb8A1O//SMsnZZ6ZluOXROO211ww+d1hy05o6ewE62tsWK6YQ==
+Connection1|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==
+Connection2|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3QjLyAf+Ldgi9xpi4+/ex+hxNtjUAGz3tLXR9PkFRZFBbHBjWvSv2Y
+ContactManager|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJpK0oC5s51ClNuKbqFjVCfui78UgeniB7g7MWDjhk/cWwkLLSNpLgo9t5aI17B7/3
+copy|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17G//Cct8YLCgEd9oYwj5URXZwwkvpp56JL
+CSH_Gantt|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F86c+aqDC9uJu6M/jcOeEhH5/LcWJS+41DAKk/7XBMn8eMp3XwX+qvt/wcHcPM4IiDlsZRg/SCvA==
+Dot_net_SQL_SERVER_LOCAL|Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFgoHfOK+0OUrx3LBnq5LgTEr5H2WSVi4ETTTn6yyLmpaBC2lexH1NIqnYXbSRarPMv9qv8geGc54qEHq3xZubsTP5lfOACQLuA=
+DynamicConnection_chsdatafilepath|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3H+UXapXlWGyAoZPrknTsigMriwHEIxAQZEIGA8Xv5gVmv0aMfPvqCvLoq8d8rsOSA=
+DynamicConnection_CHSTablesForNewChart|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==
+DynamicConnection_testconnection|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/cX90xYpbtjWB0glm1m9l2r4LEm4sa1t2GbLnIN7zZ+fM9a/lWMKJYg==
+ed_sicard|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagy4wpKIqid+h/aluTXuZi6OR0cx8E9yeWsCdo7nmAYeV+3n0Jr5z5tinYS9ESJHeY5FaYsBL5Y6d2jQmlmtK8K+4pAsPCBsbFIUf5ogQ5OwezATKAIxkrXg==
+gantt|Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRMSROlrWA37D0Lql5Uh9CYk=
+gantt_test|Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRPEfw3YCPWpOIpJ5aAMO/iTUnuFgGG3HDg==
+mapped_access|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagnqE24SxbMH1Wn3+PhHimWsUAWhD/M5e/Yf512NoMflFrMNvaq55DLOKdALfc5Hn2mhOvd1O/jBa9TYDUyR8K1w==
+mysql|Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKJeiojvIdIRq4gA9psFVkF8KUocMvdCnEhwEdVtWnPxuAYfsxTmBPnU1b0BMna1JgeDgxmsA82hM=
+mysql_local|Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==
+mysql_s_D|Encrypted:xI3OKMADTTvO769EkBNhYpxTqSgsTS2APSqxaG1TyTpPlfTeg91sHFZKxKlJ+MsvcdwMO2CjZLpoOqbdvUFU7Q6G0OUksbGqh8FecKN0pDkVKxTUfC3vXI3RCQ06k88C4AuwEnYATSVMGIxOB6MAXw==
+mysql_server|Encrypted:xI3OKMADTTvO769EkBNhYoS7neEqHqxHzhTxEfpKL2PN1ekUuoWB0SSD0HRBi6WKq0NcToqI4xvFB7jSDlwsvmPdkFjWxbUmP1WzCvnU0c9dTepcUFJwRFxdVGu9XaxpelRgf+B1FP3VEigfet4R7g==
+Northwind_Access|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2ige/1olHJNS50p4xc6WsJZyWfojT7zjgPxo/tW6MB+QEQsPLR8JS0Q00CYKBfQC+Swj3GUL4veA==
+Northwind_local|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOubjJFQu+xJng92S9D9of9LOlCpZM+NenOTqNyVPVWFh57b83F48i/AZJvfy/sNN6GgxKGxCeJGDJQAXwMzfQkxggZw/2XZ5D6/1G40SGoYgA
+oracle|Encrypted:dQNDbLdo5xI6zjQPoI5XJt0SSqutvqbK4oYNeD+SZvn7X3fUOuZwIjLy3XfEy/kBYu2vbd3TFXw/fTCc7Rg1oazmE4soPijVCsRcCzdzZn7BicZ8u5W/Z2wT4dN1zCwye3q4X9uWoPM+nJp+vjCY1sNc545NSZ97rGeS6xueqkZF7/gshMeFY27YGw63I0QEFUtEnB2GChau+4SHMfQAM2UMwttcfcQUoEOvBFr8q2A=
+postgreSQL|Encrypted:YVKwF22JJmDqkse7TzVnMvav9USWBxvwJbjo7pLsOiLj8HinTGOWT7gf+iQ9bM1OS+ob6PTORsCDFomk2BbDJgso7JINDV84R3bCFSb/svwnwNi+112SN0iI3QrnlPvuiVRxTGxKRG2OJeDJ6o4TWTVxuLhT2rtz
+Projects|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOuUogE1Xzk17GV+SXoxuIEAnZO9RkvYF+7dYj2FMFju4VqeqZUzFmaUQ=
+R1Mdb|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXFzr33IVoEWFdlhaOBeI34XW9Q4JvIyXPwGEWknmkjRYg==
+RandallBldrs|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3H+UXapXlWGyAoZPrknTsigMriwHEIxAQZEIGA8Xv5gVmv0aMfPvqCvLoq8d8rsOSA=
+rolodex|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/1qx8WlT5GOue9qrRrffN/rtalTYkNEG/sVFpoRXEFKmqn5DncNGtriJoBOZJRT0sc=
+sched2|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRB0ZL3XYHY76FuiNTwpIl06b1cg/tQqeUptQoCc4bNoti5YEZXqt7aEA==
+Scheduler_access|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/24CcFR0ulViGSRtJIHwCxwb2JNu60456gzfplzw+dwBdzIv5mEecwG0RP/ov125qgmB7l3jbexHZ0NDNGdlfpEqJpxaqQvzdx/7Ia9AqXyrhx2wY2Pc6Kk6v5G/O4kMEzY7XPsYZ0bNA7RLEuhknDs
+sheduler|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/3VU17HshHh7va2lx1SZRRBZVtF2s5cQ2AFq1hkx52nfw4FPl6pUzbMo7h6piMrc54=
+sql_server_2008_home|Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUUuRVcU+j88CF3vmrAk3v1Ez97jqx7H0vHR7FgWhSsMpxOykXIIUF+YBWS24ubc375KbiqAqa5Fz/IWRCeBupFU5LhTItfiX0JIzvx06rWkOJ6F6ONQjsPanT6MPwuh/d8=
+sql_server_local_ado|Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==
+sql_sever_Local_dot_net|Encrypted:3MLNR/D8BLZ9UM33go1zhngNfjYeQOQvGZwZAz8CsW9uRgJv/E6o/dRHf1SZB08CgNhTKCJ+5Bm/3BrRd1TsoU2qv88XFkAh4eRj2WvZQFigrwepo8Re/f3x9z2gXsUS1iENkLVq1Vf+mF04+O8YF3wM4Cw9AKkwkQmy20ZCwydMzJH5zgwj4qTNU8pJsMbW0h9W5NssJAusLkFkpc5lFw==
+sqlserver|Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==
+sqlserver_2012_home|Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8weWeZBmbidZT07Wz7VJBpV57zeZ9FYh895L2krzMb6XYi7XtsCz6zOPtRHleCFdZxkIryUqSZWgPJBNjV3lHsS3cME0m0D/AggL/MPaAIoMcG746AMUnBmvFqPNiKmqSuAw==
+SQLSERVEREXPRESS_Projects|Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUW8NybBUh1UEmBouTMWJk8iXfvtw2VccwjzWLjoCADcwjcFlH+IUyZKVy0rTu5bw3yW1dIRfAQHMFCKI2Gf6+sob0D1Aq7Ekv6b6wmQfLYpwBS+SrJEvY9vMqNi+adfrRQRiilsj83wh3lHeLGwot3WxcRuHYBYNRjxFgkUeJg/VA==
+WebCHSMaster|Encrypted:odGUptyi4wOcpaG3h0t4maeExwKcIFagdKLeZoi2r/2P9Ug14Tki0v4bNWqWkNdyAOaNZdq8dRaNCAJ4+poqKBCOOB5LEGGT7cGcvAP+/3F9gcyvj49f1e9v3uxA7LK+fWPWOKadoXHDBt1Q/DlDk/Nl0lE91zhGibc8XtCSenOWHV/HwhqKFQ==
+%txt%
+
+'Create a global collection called '_A5_AlphaDAO_ConnectionStrings'
+'At run-time, your Xbasic scripts can lookup a connection string as follows:
+'myConnectionString = _A5_AlphaDAO_ConnectionStrings.get("myConnectionStringName")
+
+DIM global _A5_AlphaDAO_ConnectionStrings as U
+dim gv as p 
+gv = global_variables()
+_A5_AlphaDAO_ConnectionStrings = loadConnectionStrings(gv, _AlphaDAO_ConnectionStrings, "AlphaDAO")
+
+
+
+'-----------------------------------Web Project Properties ----------------------------------------------------------
+'This code loads Project Properties. At runtime, your Xbasic code can read Project Properties as follows:
+'dim projProp as p
+'projProp = a5_getWebProjectProperties()
+
+
+dim _webProjectProperties as c 
+_webProjectProperties = <<%txt%
+DIM aexFiles as P
+DIM aexFiles.fileNames as C = <<%str%
+Projects.aex
+acds_dhxgantt.aex
+jqcalendar.aex
+ACDS_DHX_Scheduler.aex%str%
+DIM fileDownload as P
+DIM fileDownload.allowedFilenamePatterns as C = "*.xls*,*.pdf,*.jpg,*.jpeg,*.bmp,*.png,*.rtf,*.ttf,*.woff"
+DIM fileDownload.allowedFolderPatterns as C = "C:\A5V12Webroot\projects\images,C:\A5V12Webroot\projects\files"
+DIM fileDownload.blockedFilenamePatterns as C
+DIM projectStyle as C = "GrGray"
+DIM useMicrosoftXPSPrinterForPDF as L = .T.
+DIM convertXPSToPDF as L = .T.
+DIM jsLibraries as P
+DIM jsLibraries.jQueryCore as C = "Load from Google"
+DIM jsLibraries.jQueryUI as C = "Load from Google"
+DIM jsLibraries.links as C
+DIM jsLibraries.includeImageGallery as L = .T.
+DIM jsLibraries.includeGoogleJSAPI as L
+DIM jsLibraries.jQueryCoreVersion as C = "1.6.2"
+DIM jsLibraries.jQueryUIVersion as C = "1.8.16"
+DIM jsLibraries.cordova as P
+DIM jsLibraries.cordova.loadFrom as C = "BuiltIn"
+DIM jsLibraries.includeCKEdit as L
+DIM cssLibraries as P
+DIM cssLibraries.jQuery as C = "Humanity"
+DIM cssLibraries.links as C
+DIM email as P
+DIM email.smtp_server as C
+DIM email.smtp_username as C
+DIM email.smtp_password as C
+DIM email.smtp_port as C
+DIM email.smtp_SSLOption as C
+DIM email.from as C
+DIM email.from_alias as C
+DIM email.outbox as P
+DIM email.outbox.tableType as C = "SQL"
+DIM email.outbox.connectionString as C
+DIM email.outbox.tableName as C
+DIM email.outbox.fieldmap as C
+DIM email.outbox.sequenceName as C
+DIM email.mandrillKey as C
+DIM email.sparkPostKey as C
+DIM repository as P
+DIM repository.tableType as C = "SQL"
+DIM repository.connectionString as C
+DIM repository.tableName as C
+DIM repository.fieldmap as C
+DIM workQueue as P
+DIM workQueue.tableType as C = "SQL"
+DIM workQueue.connectionString as C
+DIM workQueue.tableName as C
+DIM workQueue.fieldmap as C
+DIM helpTable as P
+DIM helpTable.tableType as C = "SQL"
+DIM helpTable.connectionString as C
+DIM helpTable.tableName as C
+DIM helpTable.fieldmap as C
+DIM textDictionary as P
+DIM textDictionary.tableType as C = "SQL"
+DIM textDictionary.connectionString as C
+DIM textDictionary.tableName as C
+DIM textDictionary.fieldmap as C
+DIM applicationGlobalVariables as C
+DIM calendar as P
+DIM calendar.license as C = "not licensed"
+DIM css as P
+DIM css.webkit as P
+DIM css.webkit.AllowSelectionOfText as L
+DIM reportServer as P
+DIM reportServer.disable as L
+DIM NamedResources as C
+DIM siteDefaults as P
+DIM siteDefaults.guessedDefaultPage as L = .T.
+DIM siteDefaults.defaultpage as C = "TabbedUI_Projects.a5w"
+DIM siteDefaults.sessionTimeout as N = 900
+DIM siteDefaults.maxUploadSizeMB as N = 100
+DIM siteDefaults.sessionCookieName as C = "XBasic_SessionId"
+DIM siteDefaults.authenticationCookieName as C = ".ASPXFORMSAUTH"
+DIM PDFPrintTimeout as N = 30
+DIM PDFPrintTimeoutMessage as C
+DIM HTMLReportOffload as L
+DIM datasynclogtable as P
+DIM datasynclogtable.tableType as C = "SQL"
+DIM datasynclogtable.connectionString as C = "::Name::Projects"
+DIM datasynclogtable.tableName as C = "sync_log"
+DIM datasynclogtable.fieldmap as C
+DIM datasynclogtable.sequenceName as C
+DIM stripe as P
+DIM stripe.keysJSON as C
+DIM websocket as P
+DIM websocket.enable as L
+DIM websocket.port as C = "8091"
+DIM websocket.using as C = "Redis"
+DIM websocket.redis_url as C
+DIM websocket.redis_host as C
+DIM websocket.redis_port as C
+DIM websocket.longpolling as L
+DIM reportEvents as P
+DIM reportEvents.afterPrint as C
+DIM reportEvents.library as C
+DIM reportEvents.beforePrint as C
+DIM useBSONforSQLreporting as L = .T.
+DIM PDFOptions as C = "DIM Concatenate as L||DIM HasWatermark as L||DIM MultilingualSupport as L = .T.||DIM EmbedFonts as L = .T.||DIM LinearizeForWeb as L||DIM Colors2GrayScale as L||DIM ConvertHyperlinks as L||DIM WatermarkType as C = \"Text\"||DIM WatermarkText as C = \"D R A F T\"||DIM WatermarkFontName as C = \"Times New Roman\"||DIM WatermarkFontSize as N = 172||DIM WatermarkRotation as N = 450||DIM WatermarkColorHex as C = \"E8FED2\"||DIM WatermarkHorizPos as N = 120||DIM WatermarkVertPos as N = -120||DIM WatermarkOnTop as L||DIM WatermarkPDF as C||DIM Encrypt as L||DIM OwnerPassword as C||DIM UserPassword as C||DIM CanPrint as L = .T.||DIM CanModifyDocument as L = .T.||DIM CanCopy as L = .T.||DIM CanAddNotes as L = .T.||DIM Use128BitKey as L = .T.||DIM JpegQuality as C = \"Low\"||"
+DIM useDirectPdf as L
+DIM googleMapsAPIKey as C
+DIM googleStaticMapsAPIKey as C
+DIM debugger as P
+DIM debugger.allow as L
+DIM transform as P
+DIM transform.enable as L
+DIM transform.settingsJSON as C
+DIM auditTable as P
+DIM auditTable.on as L
+DIM auditTable.tabletype as C = "SQL"
+DIM auditTable.connectionString as C
+DIM auditTable.tableName as C
+DIM auditTable.fieldmap as C
+DIM auditTable.expressionForGettingUserId as C
+DIM authenticationKeys as P
+DIM authenticationKeys.tableType as C = "SQL"
+DIM authenticationKeys.connectionString as C
+DIM authenticationKeys.tableName as C
+DIM authenticationKeys.fieldmap as C
+DIM googleGeocodingAPIKey as C
+DIM packages[3] as C
+packages[1] = "graphviz@2.38"
+packages[2] = "phantomjs@2.1.1"
+packages[3] = "wkhtmltopdf@0.12.4"
+DIM extendedUserInfo as P
+DIM extendedUserInfo.connectionString as C
+DIM extendedUserInfo.tableName as C
+DIM extendedUserInfo.userIdField as C
+%txt%
+
+dim gv as p 
+gv = global_variables()
+a5_loadWebProjectProperties(gv,_webProjectProperties)
+
+dim gv.__buildNumberExe__ as n 
+dim gv.__buildNumberAddins__ as n 
+dim gv.__guid as c 
+dim gv.__A5PublishVersion as n 
+gv.__A5PublishTimestamp = 2019313102123127717
+gv.__buildNumberExe__ = 5667
+gv.__buildNumberAddins__ = 5254
+gv.__guid = "1d67e18a-52e7-4eda-bdcc-56997327b87c"
+gv.__control = <<%txtcontrol%
+NxK11dOxMrWcOgZohOqtJVISV3wYbARn3qa0qYj9ldpTLVoV5Sq8r7QJ8IRcVLJ4aIY7ll8/LxITppDit1eZTRgig10ixcZe3zResA0bqCNSwFdS38Skmw==
+%txtcontrol%
+
+%>

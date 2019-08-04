@@ -1,0 +1,11 @@
+AlphaDAO||Access_gantt_on_D||{A5API=Access,FileName='D:\Dropbox\ACDS\gantt\gantt.mdb',UserName='Admin'}||Access_gantt_on_D
+AlphaDAO||Acess_gantt_on_C||{A5API=Access,FileName='C:\Dropbox\ACDS\gantt\gantt.mdb',UserName='Admin'}||Acess_gantt_on_C
+AlphaDAO||CHSTablesForNewChart||{A5API=Access,FileName='C:\Dropbox\Carol King\carolking.WebProjects\Default.WebProject\CHSTablesForNewChart.mdb',UserName='Admin'}||CHSTablesForNewChart
+AlphaDAO||CSH_Gantt||{A5API=Access,FileName='C:\Dropbox\Carol King\carolking.WebProjects\Default.WebProject\chstablesfornewchartr3.mdb',UserName='Admin'}||CSH_Gantt
+AlphaDAO||DynamicConnection_chsdatafilepath||{A5API=Access,FileName='C:\Dropbox\Carol King\carolking.WebProjects\Default.WebProject\RandallBuilders.mdb',UserName='Admin'}||DynamicConnection_chsdatafilepath
+AlphaDAO||DynamicConnection_CHSTablesForNewChart||{A5API=Access,FileName='C:\Dropbox\Carol King\carolking.WebProjects\Default.WebProject\CHSTablesForNewChart.mdb',UserName='Admin'}||DynamicConnection_CHSTablesForNewChart
+AlphaDAO||gantt||{A5API=MySQL,Server='localhost',Port='3306',UserName='calendar',Password='דבלומהבע',Database='gantt'}||gantt
+AlphaDAO||gantt_test||{A5API=MySQL,Server='localhost',Port='3306',UserName='calendar',Password='דבלומהבע',Database='test_gantt'}||gantt_test
+AlphaDAO||R1Mdb||{A5API=Access,FileName='C:\Dropbox\Carol King\carolking.WebProjects\Default.WebProject\CHSTablesForNewChartR2.mdb',UserName='Admin'}||R1Mdb
+AlphaDAO||RandallBldrs||{A5API=Access,FileName='C:\Dropbox\Carol King\carolking.WebProjects\Default.WebProject\RandallBuilders.mdb',UserName='Admin'}||RandallBldrs
+AlphaDAO||WebCHSMaster||{A5API=Access,FileName='C:\Dropbox\Carol King\carolking.WebProjects\Default.WebProject\CHSTablesForNewChart.mdb',UserName='Admin'}||WebCHSMaster
