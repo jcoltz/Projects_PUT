@@ -1,0 +1,6 @@
+chart-client-area {background-color: #b7b7b7; background-repeat: repeat-x; background-position: top; background-image:url('images/$box/$size/1x16/$fill/Gradient_Horizontal:#216 232 247%3A#181 205 236.png.a5image');}
+chart-title {font-family:Lucida Bright;font-size:15pt;color:#3f5be8;}
+chart-x-grid {border-style:none;}
+chart-x-minor-grid {border-style:dotted;border-color:#e5e7f5;border-width:1px;}
+chart-y-grid {border-style:solid;border-color:#99ccff;}
+chart-y-minor-grid {border-style:solid;border-color:#e5e7f5;}
