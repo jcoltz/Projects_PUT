@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Dialog - Default functionality</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<script src="../../codebase/dhtmlxgantt.js"></script>
+	<link href="../../codebase/dhtmlxgantt.css" rel="stylesheet">
+	<script>
+		$(function() {
+			$( "#dialog" ).dialog({
+				resizeStop: function( event, ui ) {
+					gantt.render();
+				}
+			});
+
+			gantt.config.date_grid = "%Y-%m-%d %H:%i";
+			gantt.config.xml_date = "%Y-%m-%d %H:%i:%s";
+			gantt.config.order_branch = true;
+			gantt.init("dialog");
+			gantt.load("../common/data.xml", "xml");
+		});
+	</script>
+</head>
+<body>
+
+<div id="dialog" title="Basic dialog">
+
+</div>
+
+
+</body>
+</html>
